@@ -148,6 +148,10 @@ The actor's source code is **not open-source** (commercial product), but this do
 - 💡 [Open a feature request](https://github.com/ctala/skool-api-docs/issues/new?template=feature-request.md)
 - 💬 Discuss with the community in [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite) (Spanish-speaking founders)
 
+## Articles & deep dives
+
+- 📝 [I Built the Most Complete Skool API — and What I Learned Reverse-Engineering It](https://cristiantalasanchez.hashnode.dev/i-built-the-most-complete-skool-api-read-and-write-and-what-i-learned-reverse-engineering-it) — Hashnode launch post (May 2026)
+
 ## Related
 
 - 🐦 Built by [Cristian Tala](https://cristiantala.com) — operator using AI to run a community of 484 founders solo

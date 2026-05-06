@@ -43,6 +43,7 @@ To get notified of new releases:
 - 8 reference docs: getting-started, authentication, posts, members, classroom, files, groups, error-handling
 - 6 production-grade recipes (n8n + raw)
 - AI agent integration guide (Claude / OpenAI / Gemini function calling, MCP, LangChain, Claude Code Skill)
+- Launch post on Hashnode: [I Built the Most Complete Skool API — and What I Learned Reverse-Engineering It](https://cristiantalasanchez.hashnode.dev/i-built-the-most-complete-skool-api-read-and-write-and-what-i-learned-reverse-engineering-it)
 
 ---
 
