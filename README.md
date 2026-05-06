@@ -39,7 +39,7 @@ This actor is that integration. It powers a real production community ([Cágala,
 | **Files** | — | Upload images for course covers |
 | **Groups** | Get group info | Update description, update Auto DM message |
 
-[See full action reference →](docs/actions.md)
+[See full action reference →](docs/actions.md) · [Use it from AI agents (Claude / OpenAI / MCP) →](docs/agents.md)
 
 ## Quick start (60 seconds)
 
@@ -100,6 +100,8 @@ Real, copy-paste-ready integrations:
 | [Files](docs/files.md) | Image upload flow (cover images for courses) |
 | [Groups](docs/groups.md) | Description, Auto DM, settings |
 | [Error handling](docs/error-handling.md) | Structured `{success:false}` payloads, `errorCode` catalog, `hint` field, retry logic |
+| [AI Agents integration](docs/agents.md) | Function-calling specs (Claude / OpenAI / Gemini), MCP server, LangChain Tool, Claude Code Skill, agent loop patterns |
+| [Changelog](CHANGELOG.md) | Version history, what changed when |
 
 ## Pricing
 
