@@ -3,7 +3,7 @@
 > **The most complete unofficial Skool API.** Read posts, comments, members, and courses. Create posts, reply to comments, approve members, build entire courses programmatically. Drop-in for n8n, Make.com, Zapier, AI agents.
 
 [![Apify Actor](https://img.shields.io/badge/Apify-Actor-FF9900?logo=apify&logoColor=white)](https://apify.com/cristiantala/skool-all-in-one-api)
-[![Latest version](https://img.shields.io/badge/version-0.3.8-brightgreen)](https://apify.com/cristiantala/skool-all-in-one-api)
+[![Latest version](https://img.shields.io/badge/version-0.3.20-brightgreen)](https://apify.com/cristiantala/skool-all-in-one-api)
 [![n8n template](https://img.shields.io/badge/n8n-template-EA4B71?logo=n8n&logoColor=white)](https://n8n.io/workflows/14392-auto-approve-skool-community-members-with-gpt-4o-ai-screening/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -87,6 +87,9 @@ Real, copy-paste-ready integrations:
 - [**Auto DM new members**](recipes/auto-dm-new-members.md) — set/update the welcome message that triggers when someone joins
 - [**Batch update course covers**](recipes/batch-update-course-covers.md) — refresh visual identity across N courses without resetting privacy/tier
 - [**Newsletter to Skool post**](recipes/newsletter-to-skool-post.md) — mirror your Listmonk/ConvertKit newsletter as a community post
+- [**Audit a long welcome thread (>35 comments)**](recipes/audit-welcome-thread-with-getcommentsfull.md) — bypass Skool's REST cap with `posts:getCommentsFull` to find members you haven't replied to yet
+- [**Use the Skool API as MCP tool for Claude / Cursor / Cline**](recipes/use-skool-api-as-mcp-tool.md) — expose all 33 actions to your AI agents via Apify's hosted MCP server
+- [**Community analytics: export Skool data to NocoDB / Airtable**](recipes/community-analytics-to-nocodb.md) — track engagement, churn, conversion to paid via your own BI tool
 
 ## Documentation
 
@@ -150,7 +153,8 @@ The actor's source code is **not open-source** (commercial product), but this do
 
 ## Articles & deep dives
 
-- 📝 [I Built the Most Complete Skool API — and What I Learned Reverse-Engineering It](https://cristiantalasanchez.hashnode.dev/i-built-the-most-complete-skool-api-read-and-write-and-what-i-learned-reverse-engineering-it) — Hashnode launch post (May 2026)
+- 📝 [The Complete Skool API: 9 Months of Reverse-Engineering 33 Actions (n8n + TypeScript + AI Agents)](https://cristiantalasanchez.hashnode.dev/the-complete-skool-api-9-months-of-reverse-engineering-33-actions-n8n-typescript-ai-agents) — full technical deep-dive (May 2026)
+- 📝 [I Built the Most Complete Skool API — and What I Learned Reverse-Engineering It](https://cristiantalasanchez.hashnode.dev/i-built-the-most-complete-skool-api-read-and-write-and-what-i-learned-reverse-engineering-it) — original launch post (March 2026)
 
 ## Related
 
