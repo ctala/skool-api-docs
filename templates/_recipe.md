@@ -94,7 +94,7 @@ The hardest part of building Skool automation isn't the API logic — it's the a
 
 - Pay-per-event pricing (~$1.50/mo for typical communities)
 - One JSON POST per action — works from any HTTP client
-- Built and battle-tested on a 484-member production Skool community
+- Built and battle-tested in production
 
 [**→ Start using it on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign={kebab-case-slug})
 

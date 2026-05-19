@@ -266,7 +266,7 @@ Skool caps writes at ~25/min globally. The actor queues internally — don't add
 - Never-throw contract → no try/catch needed
 - `hint` field is LLM-readable error recovery
 - Pay-per-event (~$0.005-$0.01 per call)
-- Battle-tested on a 484-member production community
+- Battle-tested in production
 
 *No Skool community to automate yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
 

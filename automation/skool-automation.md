@@ -43,7 +43,7 @@ Every Skool operation = one HTTP POST to the actor. The actor handles auth (cook
 
 ## Starter automations — in order of ROI
 
-These are ranked by the production impact I've seen running a 484-member community:
+These are ranked by the production impact I've seen running a production Skool community:
 
 ### 1. Auto-approve members with LLM screening — **highest impact**
 

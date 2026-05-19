@@ -8,7 +8,7 @@ section: Recipes
 last_updated: 2026-05-19
 ---
 
-Copy-paste-ready integrations using the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=recipes). Each recipe is production-tested on a 484-member community.
+Copy-paste-ready integrations using the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=recipes). Each recipe is production-tested in a real Skool community.
 
 ## All recipes
 

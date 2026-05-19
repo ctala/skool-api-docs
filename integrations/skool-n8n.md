@@ -196,7 +196,7 @@ Cost: ~$0.02 per applicant in LLM + ~$0.01 per Skool call. For 30 applicants/wee
 - Pay-per-event (~$1.50/mo for typical community automation)
 - Read AND write — full API surface
 - One n8n `HTTP Request` node per action
-- Battle-tested in production on a 484-member Skool community
+- Battle-tested in production
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
 

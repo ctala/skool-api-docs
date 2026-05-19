@@ -31,7 +31,7 @@ Skool has no built-in automation engine. To automate a Skool community (auto-app
 
 ## Top automations by ROI (production-validated)
 
-These are ranked by impact on engagement and time saved on a 484-member community:
+These are ranked by impact on engagement and time saved on a production Skool community:
 
 1. **Auto-approve members with LLM screening** — saves 25 min/week, improves consistency
 2. **Reply to unanswered posts within 1 hour** — keeps engagement high, reduces churn

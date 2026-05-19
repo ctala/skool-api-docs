@@ -158,7 +158,7 @@ Claude Code reads the Skill, runs the right actor actions in sequence, and repor
 
 ## Real production agent loop
 
-Pattern used on a 484-member production community:
+Pattern used on a production Skool community:
 
 ```
 1. Cron triggers Claude → "review pending applicants and act"

@@ -129,7 +129,7 @@ A custom scraper means: maintaining the WAF token cycle, the `buildId` discovery
 - Pay-per-event pricing — ~$1.50/mo for typical use
 - Read AND write — posts, comments, members, classroom, files, groups
 - Never-throw contract — every failure is a structured response, not an exception
-- Battle-tested on a 484-member production community
+- Battle-tested in production
 
 *New to Skool? [Launch your community here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
 

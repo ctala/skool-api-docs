@@ -1,6 +1,6 @@
 ---
 title: "Skool Community — How to Build One That Actually Retains (2026)"
-description: "What is a Skool community? How to build one that retains. Real production patterns from 484-member community. Gamification, classroom, automation, monetization."
+description: "What is a Skool community? How to build one that retains. Real production patterns from production Skool community. Gamification, classroom, automation, monetization."
 slug: /guide/skool-community
 type: guide
 primary_keyword: "skool community"

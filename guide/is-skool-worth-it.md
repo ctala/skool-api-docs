@@ -1,5 +1,5 @@
 ---
-title: "Is Skool Worth It? Honest Take After Running a 484-Member Community (2026)"
+title: "Is Skool Worth It? Honest Take After Running a Paid Community (2026)"
 description: "Is Skool worth $99/mo? Yes — if you can charge members $30+/mo. No — if you can't yet monetize. Math, real numbers, who shouldn't pay for Skool."
 slug: /guide/is-skool-worth-it
 type: guide

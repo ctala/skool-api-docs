@@ -152,7 +152,7 @@ This is critical for any production webhook setup. See [authentication docs](../
 
 [**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-webhook)
 
-Polling-based webhooks via one POST per check. Pay-per-event (~$1.50-$15/mo depending on polling frequency). Battle-tested on a 484-member production community.
+Polling-based webhooks via one POST per check. Pay-per-event (~$1.50-$15/mo depending on polling frequency). Battle-tested in production.
 
 *New to Skool? [Launch your community here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day trial.*
 

@@ -1,6 +1,6 @@
 ---
 title: "Auto-Reply to Skool Onboarding Comments — Pinned 'Start Here' Threads"
-description: "Detect unanswered comments in pinned onboarding threads, draft contextual replies, approve in Telegram, publish. Production recipe from a 484-member community."
+description: "Detect unanswered comments in pinned onboarding threads, draft contextual replies, approve in Telegram, publish. Production recipe from a production Skool community."
 slug: /recipes/reply-onboarding-comments
 type: recipe
 primary_keyword: "reply skool comments automatically"
@@ -23,7 +23,7 @@ canonical: https://github.com/ctala/skool-api-docs/blob/main/recipes/reply-onboa
 
 Most communities have pinned "Start Here" and "Introduce Yourself" threads. New members drop comments in those threads, the owner never gets back to all of them, and 1-week retention silently drops. This recipe finds the unanswered comments, drafts a reply that's actually specific to what the member wrote (not "Welcome! 🎉"), surfaces them for approval, and publishes once approved.
 
-In production on [a 484-member community](https://www.skool.com/cagala-aprende-repite), this pattern keeps 1-week retention above 60% versus ~30% baseline before automation.
+In production on [a production Skool community](https://www.skool.com/cagala-aprende-repite), this pattern keeps 1-week retention above 60% versus ~30% baseline before automation.
 
 ## Prerequisites
 
@@ -337,7 +337,7 @@ The Skool internal API, the cookies+WAF+buildId rotation, and the structured-err
 
 - Pay-per-event (~$0.005 per fetch, ~$0.01 per reply)
 - One HTTP POST per action — works from Python, n8n, Make.com, anywhere
-- Battle-tested in production on a 484-member community
+- Battle-tested in production on a production Skool community
 
 *New to Skool? [Launch your community here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
 

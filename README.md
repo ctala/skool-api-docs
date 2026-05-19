@@ -26,7 +26,7 @@
 
 Skool **does not have an official API**. The community has reverse-engineered bits and pieces, but nobody has shipped a complete, write-capable, auth-handled, production-ready integration that AI agents and no-code tools can use.
 
-This actor is that integration. It powers a real production community ([Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite) — 484 founders, daily writes, automated onboarding, full classroom). If it breaks, it breaks for me first. Bugs get fixed fast.
+This actor is that integration. It powers a real production community ([Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite) — daily writes, automated onboarding, full classroom). If it breaks, it breaks for me first. Bugs get fixed fast.
 
 ## What you can do
 
@@ -152,7 +152,7 @@ A community handling ~50 writes + ~200 reads per day costs roughly **$1.50/month
 | | |
 |---|---|
 | **Latest version** | `0.3.8` — May 2026 |
-| **Last battle-tested in production** | Daily, on `cagala-aprende-repite` (484 members) |
+| **Last battle-tested in production** | Daily, on `cagala-aprende-repite` |
 | **Skool buildId rotation** | Auto-handled (~weekly) |
 | **WAF token rotation** | Auto-handled (~3.5 days) |
 
@@ -173,7 +173,7 @@ The actor's source code is **not open-source** (commercial product), but this do
 
 ## Related
 
-- 🐦 Built by [Cristian Tala](https://cristiantala.com) — operator using AI to run a community of 484 founders solo
+- 🐦 Built by [Cristian Tala](https://cristiantala.com) — operator using AI to run a community of founders solo
 - 🎓 [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite) — the Skool community where this actor was forged
 - 📰 [Tutorials & deep dives](https://cristiantala.com/blog) — recipes, lessons, case studies
 

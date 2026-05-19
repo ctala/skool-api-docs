@@ -109,7 +109,7 @@ This pattern keeps the scenario running indefinitely without manual cookie refre
 
 [**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-make-com)
 
-Pay-per-event (~$1.50/mo). Read AND write. One HTTP module per action. Battle-tested on a 484-member production community.
+Pay-per-event (~$1.50/mo). Read AND write. One HTTP module per action. Battle-tested in production.
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
 
