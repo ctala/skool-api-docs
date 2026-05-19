@@ -1,0 +1,49 @@
+# Jekyll configuration for GitHub Pages
+# https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
+
+title: "Skool API Docs"
+description: "The complete unofficial Skool API documentation — read AND write to Skool communities via the Apify-hosted Skool All-in-One API actor. Integrations, recipes, glossary, comparisons."
+url: "https://ctala.github.io"
+baseurl: "/skool-api-docs"
+
+author:
+  name: "Cristian Tala"
+  url: "https://cristiantala.com"
+
+# Default theme (GitHub Pages built-in)
+theme: jekyll-theme-cayman
+
+# Plugins (GitHub Pages whitelist — no Gemfile needed)
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Exclude internal files from the built site
+exclude:
+  - templates/
+  - .github/
+  - LICENSE
+  - CHANGELOG.md
+  - "*.py"
+  - "*.sh"
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Permalinks — keep the file paths simple and SEO-friendly
+permalink: pretty
+
+# Social / SEO defaults applied to every page (overridden by per-page frontmatter)
+twitter:
+  username: ctala
+  card: summary_large_image
+
+social:
+  name: "Cristian Tala"
+  links:
+    - "https://github.com/ctala"
+    - "https://cristiantala.com"
