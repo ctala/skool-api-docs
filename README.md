@@ -77,6 +77,21 @@ curl -X POST "https://api.apify.com/v2/acts/cristiantala~skool-all-in-one-api/ru
 
 [Full Getting Started guide →](docs/getting-started.md)
 
+## Browse by topic
+
+This repo is organized into 8 sections. Each section has its own README hub.
+
+| Section | What's there |
+|---|---|
+| 📘 **[Learn](learn/)** | Glossary — what is the Skool API, how does Skool work, features, classroom, courses, affiliate program, live events |
+| 🛠️ **[Integrations](integrations/)** | Tool-specific guides — n8n, Make.com, Zapier, Claude, GPT, MCP, Python, LangChain, Webhooks |
+| 🤖 **[Automation](automation/)** | Strategic overview — bot vs agent, building a Skool bot, building a Skool AI agent, why not to build your own scraper |
+| 🍳 **[Recipes](recipes/)** | Cookbook — copy-paste workflows for auto-approve, reply unanswered, publish course from markdown, more |
+| 🔍 **[Compare](compare/)** | Skool vs X — Circle, Mighty Networks, Kajabi, Teachable, Thinkific, Discord, Slack, alternatives |
+| 📖 **[Guide](guide/)** | Founder decisions — is Skool legit, is Skool worth it, pricing, free trial, reviews, how to start |
+| 🎯 **[For X](for/)** | Audience-specific — Skool for AI agents (more coming) |
+| 📚 **[Docs](docs/)** | Reference — authentication, actions, posts, members, classroom, files, groups, error handling, AI agents integration |
+
 ## Recipes
 
 Real, copy-paste-ready integrations:
