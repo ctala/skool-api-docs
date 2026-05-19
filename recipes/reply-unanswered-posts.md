@@ -34,6 +34,7 @@ Production version of this is what keeps engagement at 40% in [Cágala, Aprende,
 
 ## Step 1 — Find unanswered posts
 
+{% raw %}
 ```json
 {
   "action": "posts:filter",
@@ -46,6 +47,7 @@ Production version of this is what keeps engagement at 40% in [Cágala, Aprende,
   }
 }
 ```
+{% endraw %}
 
 `since` is ISO 8601. Tune the window to your community's pace — for slower communities use 48h, for faster ones 6h.
 
