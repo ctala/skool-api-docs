@@ -20,6 +20,7 @@ All actions use the same shape:
 | Action | Params | Description |
 |---|---|---|
 | `system:health` | — | Healthcheck. No auth, no Skool calls. Returns `{ok, version, node, timestamp}`. Used as the input schema's default action so Apify's daily quality check always passes |
+| `system:debug` | `cookies`, `groupSlug` | SSR diagnostics: returns Skool homepage status + `buildId` extracted + SSR fetch result + REST client probe. Useful for debugging when something doesn't work (added in 0.3.25) |
 
 ## Auth
 
@@ -42,7 +43,8 @@ All actions use the same shape:
 | `posts:pin` | `postId` | Pin to top of feed |
 | `posts:unpin` | `postId` | Remove pin |
 | `posts:vote` | `postId`, `vote: "up" \| ""` | Like / unlike |
-| `posts:getComments` | `postId` | Comment tree (~25 top-level, fast) |
+| `posts:getComments` | `postId` | Comment tree via REST (~2s, max ~35 top-level). Free read |
+| `posts:getCommentsFull` | `postId` OR `postSlug` | **Full thread coverage** via Playwright DOM scroll (~30-60s, no cap). $0.05 scrape-operation event. Use when `posts:getComments` truncates and you need every reply. Added in 0.3.24 |
 | `posts:createComment` | `rootId`, `parentId`, `content` | Create comment or nested reply. For top-level: `rootId == parentId == postId`. For nested: `parentId == commentId` |
 
 [→ Posts & Comments docs](posts.md)
@@ -60,6 +62,15 @@ All actions use the same shape:
 
 [→ Members docs](members.md)
 
+## Events (calendar)
+
+> Calendar events live independently of posts. Useful for community calls, workshops, and live sessions. Added in 0.3.24.
+
+| Action | Params | Description |
+|---|---|---|
+| `events:list` | `page?`, `limit?` | All calendar events for the group (past + future). Returns occurrence list with `nextOccurrence`, `timezone`, `occurrenceId` |
+| `events:upcoming` | `limit?` | Only future events sorted ascending. Convenience wrapper for "what's coming up" use cases |
+
 ## Classroom (courses, folders, pages)
 
 > Skool's classroom UI renders 3 levels: **Course** → **Page direct** OR **Folder** → **Page**. See [Classroom](classroom.md) for the data model.
@@ -74,6 +85,7 @@ All actions use the same shape:
 | `classroom:setBody` | `pageId`, `title`, `bodyMarkdown?` OR `bodyRaw?`, `videoId?`, `transcript?` | Set page body. `bodyMarkdown` is auto-converted to TipTap |
 | `classroom:updateCourse` | `courseId`, `title?`, `desc?`, `coverImage?`, `coverImageFile?`, `privacy?`, `minTier?`, `amount?`, `transcript?`, `videoId?` | Read-then-write update. Any field you don't pass is preserved (avoids the silent privacy-reset bug) |
 | `classroom:deleteUnit` | `id` | Delete course/folder/page (cascades) |
+| `classroom:updateResources` | `pageId`, `fileIds: string[]` | Replace the Resources attached to a lesson page. Each `fileId` must come from a prior `files:uploadFile` call. Passing `[]` detaches all resources |
 
 [→ Classroom docs](classroom.md)
 
@@ -81,7 +93,8 @@ All actions use the same shape:
 
 | Action | Params | Description |
 |---|---|---|
-| `files:uploadImage` | `bufferBase64` OR `imageUrl` | Upload an image; returns `{coverImageUrl, coverImageFile}` ready for `classroom:createCourse` / `classroom:updateCourse` / `groups:update*` |
+| `files:uploadImage` | `bufferBase64` OR `imageUrl` | Upload a **cover image**; returns `{coverImageUrl, coverImageFile}` ready for `classroom:createCourse` / `classroom:updateCourse` |
+| `files:uploadFile` | `bufferBase64` OR `fileUrl`, `filename` | Upload a **private file** (PDF, JSON, ZIP, anything) for classroom Resources. Returns `{fileId}` to pass to `classroom:updateResources` |
 
 [→ Files docs](files.md)
 

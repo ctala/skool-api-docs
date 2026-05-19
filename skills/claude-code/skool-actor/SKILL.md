@@ -74,7 +74,8 @@ Decide the action, then assemble `params` from this table.
 | `posts:createComment` | `rootId`, `parentId`, `content` | **Top-level comment**: `rootId == parentId == postId`. **Nested reply**: `rootId == postId` (always), `parentId == commentId` |
 | `posts:pin` / `posts:unpin` | `postId` | |
 | `posts:vote` | `postId`, `vote: "up" \| ""` | |
-| `posts:getComments` | `postId` | Returns nested tree (`replies` array per comment). Max ~25 top-level |
+| `posts:getComments` | `postId` | REST, fast (~2s). Returns nested tree, max ~35 top-level. Free read |
+| `posts:getCommentsFull` | `postId` OR `postSlug` | Playwright DOM scroll, slow (~30-60s), **no cap** — gets every reply. $0.05 scrape-operation event. Use when `posts:getComments` truncates |
 
 ### Members
 
@@ -86,6 +87,13 @@ Decide the action, then assemble `params` from this table.
 | `members:reject` | `memberId` | |
 | `members:ban` | `memberId` | Permanent — confirm with user before invoking |
 | `members:batchApprove` | `memberIds: string[]` | Per-item results in response |
+
+### Events (calendar)
+
+| Action | Required params | Notes |
+|---|---|---|
+| `events:list` | — | All calendar events (past + future). Optional `page`, `limit`. Each event has `nextOccurrence`, `timezone`, `occurrenceId` |
+| `events:upcoming` | — | Future events only, sorted ascending. Optional `limit` |
 
 ### Classroom (courses, folders, pages)
 
@@ -99,12 +107,14 @@ Decide the action, then assemble `params` from this table.
 | `classroom:setBody` | `pageId`, `title`, `bodyMarkdown` (or `bodyRaw`) | Markdown auto-converted to TipTap. Pass `bodyRaw` if you have `[v2]<JSON>` already |
 | `classroom:updateCourse` | `courseId` + at least one field to change | **Read-then-write**: any field omitted is preserved. Cost: +1 GET (~200ms) per call. Use this for ALL course edits (cover, title, desc, privacy, tier) |
 | `classroom:deleteUnit` | `id` | Cascades. Confirm with user before destructive deletes |
+| `classroom:updateResources` | `pageId`, `fileIds: string[]` | Replace lesson Resources (attach/detach files). Each `fileId` from prior `files:uploadFile` call. `[]` detaches all |
 
 ### Files & Groups
 
 | Action | Required params | Notes |
 |---|---|---|
-| `files:uploadImage` | `bufferBase64` OR `imageUrl` | Returns `{coverImageUrl, coverImageFile}` — pass BOTH to subsequent course/group calls |
+| `files:uploadImage` | `bufferBase64` OR `imageUrl` | Upload a **cover image**. Returns `{coverImageUrl, coverImageFile}` — pass BOTH to subsequent course/group calls |
+| `files:uploadFile` | `bufferBase64` OR `fileUrl`, `filename` | Upload a **private file** (PDF, JSON, ZIP, etc) for classroom Resources. Returns `{fileId}` to pass to `classroom:updateResources` |
 | `groups:get` | `slug` | Group metadata (incl. `label_options` for posts:create labelId values) |
 | `groups:setAutoDM` | `message` | 300-char limit. Tokens: `#NAME#`, `#GROUPNAME#`. Plugin must be enabled in Settings → Plugins |
 
@@ -113,6 +123,7 @@ Decide the action, then assemble `params` from this table.
 | Action | Required params | Notes |
 |---|---|---|
 | `system:health` | — | No auth, no Skool calls. Healthcheck only |
+| `system:debug` | `cookies`, `groupSlug` | SSR diagnostics: homepage status + buildId extracted + SSR fetch result + REST client probe. Use for debugging |
 | `auth:login` | `email`, `password`, `groupSlug` | Returns `cookies` (~3.5 day TTL) + `expiresAt` + `buildId` |
 
 ## Constraints

@@ -47,11 +47,15 @@ SKOOL_TOOL = {
             "action": {
                 "type": "string",
                 "enum": [
-                    "posts:list", "posts:create", "posts:createComment",
-                    "members:pending", "members:approve", "members:reject", "members:batchApprove",
-                    "classroom:listCourses", "classroom:getTree", "classroom:createPage", "classroom:setBody",
+                    "posts:list", "posts:filter", "posts:get", "posts:create", "posts:update", "posts:delete",
+                    "posts:createComment", "posts:getComments", "posts:getCommentsFull", "posts:pin", "posts:unpin", "posts:vote",
+                    "members:list", "members:pending", "members:approve", "members:reject", "members:ban", "members:batchApprove",
+                    "events:list", "events:upcoming",
+                    "classroom:listCourses", "classroom:getTree", "classroom:createCourse", "classroom:createFolder",
+                    "classroom:createPage", "classroom:setBody", "classroom:updateCourse", "classroom:deleteUnit", "classroom:updateResources",
+                    "files:uploadImage", "files:uploadFile",
                     "groups:get", "groups:setAutoDM",
-                    "files:uploadImage", "system:health"
+                    "system:health", "system:debug", "auth:login"
                 ]
             },
             "params": {"type": "object"}

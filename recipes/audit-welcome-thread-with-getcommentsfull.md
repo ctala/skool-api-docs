@@ -133,7 +133,7 @@ curl -X POST "https://api.apify.com/v2/acts/cristiantala~skool-all-in-one-api/ru
 - Use `posts:getComments` (REST, max 35) to get real IDs for the most recent comments and cross-reference by author + content
 - Or do this as a one-shot audit (identify who needs reply, then go reply manually in the Skool UI)
 
-The current limitation: `posts:getCommentsFull` is read-only audit. For programmatic replies to old comments, you'd need to combine with `posts:getComments` paginated by date if you can find the right comment in there. Working on a future `posts:resolveCommentId` action.
+The current limitation: `posts:getCommentsFull` is read-only audit. For programmatic replies to old comments, combine with `posts:getComments` (REST, ~35 most recent) to get real IDs and cross-reference by author + content. Resolving an arbitrary comment ID for older comments programmatically is a known gap — track [issues on the repo](https://github.com/ctala/skool-api-docs/issues) if you hit this.
 
 ## Pricing
 

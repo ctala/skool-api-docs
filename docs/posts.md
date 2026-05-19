@@ -133,9 +133,8 @@ Returns nested replies:
 
 | Method | Speed | Coverage | When to use |
 |---|---|---|---|
-| `posts:getComments` | ~400ms | ~25 top-level | Quick reads, most posts |
-| `posts:getAllComments` | ~460ms | ~35 top-level | Posts with many comments |
-| `posts:getCommentsFull` (Playwright) | ~9s | ~58 top-level | Need everything visible to a human |
+| `posts:getComments` | ~400ms | ~35 top-level | Quick reads, most posts (free) |
+| `posts:getCommentsFull` (Playwright) | ~9-60s | No cap (every reply visible to a human) | When the post has more comments than REST returns. $0.05 scrape-operation event |
 
 Skool's own UI shows max ~58 of 100+ comments. This is a Skool platform limitation, not the actor.
 

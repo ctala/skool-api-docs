@@ -56,7 +56,7 @@ The actor fetches the URL, validates the MIME type, and uploads to Skool's stora
 }
 ```
 
-You **must pass both** `coverImageUrl` AND `coverImageFile` to any subsequent `classroom:createCourse` / `classroom:updateCourse` / `groups:update*` call. The URL is the read path; the file id is the storage reference. They're paired.
+You **must pass both** `coverImageUrl` AND `coverImageFile` to any subsequent `classroom:createCourse` / `classroom:updateCourse` call. The URL is the read path; the file id is the storage reference. They're paired.
 
 ## What Skool does with the upload
 

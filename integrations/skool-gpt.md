@@ -35,13 +35,14 @@ SKOOL_FUNCTION = {
                     "type": "string",
                     "enum": [
                         "posts:list", "posts:filter", "posts:get", "posts:create", "posts:update", "posts:delete",
-                        "posts:createComment", "posts:getComments", "posts:pin", "posts:unpin",
+                        "posts:createComment", "posts:getComments", "posts:getCommentsFull", "posts:pin", "posts:unpin", "posts:vote",
                         "members:list", "members:pending", "members:approve", "members:reject", "members:ban", "members:batchApprove",
+                        "events:list", "events:upcoming",
                         "classroom:listCourses", "classroom:getTree", "classroom:createCourse", "classroom:createFolder",
-                        "classroom:createPage", "classroom:setBody", "classroom:updateCourse", "classroom:deleteUnit",
-                        "files:uploadImage",
+                        "classroom:createPage", "classroom:setBody", "classroom:updateCourse", "classroom:deleteUnit", "classroom:updateResources",
+                        "files:uploadImage", "files:uploadFile",
                         "groups:get", "groups:setAutoDM",
-                        "system:health", "auth:login"
+                        "system:health", "system:debug", "auth:login"
                     ]
                 },
                 "params": {"type": "object", "description": "Action-specific params per https://github.com/ctala/skool-api-docs/blob/main/docs/actions.md"}

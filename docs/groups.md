@@ -82,7 +82,7 @@ Field map:
 | `remove_logo` | (delete icon) | — |
 | `remove_logo_big` | (delete cover) | — |
 
-> **Coming soon as actor action**: `groups:update` to wrap this in a typed call. Until then, use the actor's `auth:login` to get cookies and call `api2.skool.com` directly from your stack.
+> **Not yet wrapped as a typed actor action** (as of 0.3.25 only `groups:setAutoDM` is exposed for writes). For other group settings, use `auth:login` to get cookies and call `api2.skool.com` directly from your stack.
 
 ## Discovery (SEO inside Skool)
 

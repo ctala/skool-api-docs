@@ -24,6 +24,7 @@ Copy-paste-ready integrations using the [Apify-hosted Skool All-in-One API actor
 | [**Audit welcome thread (>35 comments)**](audit-welcome-thread-with-getcommentsfull.md) | Python | Bypass Skool's REST cap with `posts:getCommentsFull` to find unreplied members |
 | [**Skool API as MCP tool**](use-skool-api-as-mcp-tool.md) | MCP server | Expose all 33 actions to your Claude / Cursor / Cline agent |
 | [**Community analytics to NocoDB**](community-analytics-to-nocodb.md) | Python | Track engagement, churn, conversion to paid via your own BI tool |
+| [**Automate event announcements**](automate-skool-events.md) | Python / n8n + cron | 24h + 1h reminders to feed + Telegram. Uses new `events:upcoming` (v0.3.24+) |
 
 ## How recipes are structured
 

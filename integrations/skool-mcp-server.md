@@ -200,15 +200,23 @@ ACTION_MAP = {
     "skool_posts_list": "posts:list",
     "skool_posts_create": "posts:create",
     "skool_posts_create_comment": "posts:createComment",
+    "skool_posts_get_comments": "posts:getComments",
+    "skool_posts_get_comments_full": "posts:getCommentsFull",
     "skool_members_pending": "members:pending",
     "skool_members_approve": "members:approve",
     "skool_members_reject": "members:reject",
     "skool_members_batch_approve": "members:batchApprove",
+    "skool_events_list": "events:list",
+    "skool_events_upcoming": "events:upcoming",
     "skool_classroom_list_courses": "classroom:listCourses",
     "skool_classroom_get_tree": "classroom:getTree",
     "skool_classroom_create_page": "classroom:createPage",
     "skool_classroom_set_body": "classroom:setBody",
+    "skool_classroom_update_resources": "classroom:updateResources",
+    "skool_files_upload_image": "files:uploadImage",
+    "skool_files_upload_file": "files:uploadFile",
     "skool_groups_set_auto_dm": "groups:setAutoDM",
+    "skool_system_debug": "system:debug",
 }
 
 async def rotate_cookies() -> str:

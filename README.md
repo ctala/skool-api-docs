@@ -3,7 +3,7 @@
 > **The most complete unofficial Skool API.** Read posts, comments, members, and courses. Create posts, reply to comments, approve members, build entire courses programmatically. Drop-in for n8n, Make.com, Zapier, AI agents.
 
 [![Apify Actor](https://img.shields.io/badge/Apify-Actor-FF9900?logo=apify&logoColor=white)](https://apify.com/cristiantala/skool-all-in-one-api)
-[![Latest version](https://img.shields.io/badge/version-0.3.20-brightgreen)](https://apify.com/cristiantala/skool-all-in-one-api)
+[![Latest version](https://img.shields.io/badge/version-0.3.25-brightgreen)](https://apify.com/cristiantala/skool-all-in-one-api)
 [![n8n template](https://img.shields.io/badge/n8n-template-EA4B71?logo=n8n&logoColor=white)](https://n8n.io/workflows/14392-auto-approve-skool-community-members-with-gpt-4o-ai-screening/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -151,7 +151,7 @@ A community handling ~50 writes + ~200 reads per day costs roughly **$1.50/month
 
 | | |
 |---|---|
-| **Latest version** | `0.3.8` — May 2026 |
+| **Latest version** | `0.3.25` — May 2026 |
 | **Last battle-tested in production** | Daily, on `cagala-aprende-repite` |
 | **Skool buildId rotation** | Auto-handled (~weekly) |
 | **WAF token rotation** | Auto-handled (~3.5 days) |

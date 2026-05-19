@@ -65,14 +65,15 @@ You save the `cookies` string and pass it in every subsequent call instead of em
 | Resource | Read | Write |
 |---|---|---|
 | **Posts** | List, filter (`unanswered`, `since`, `labelId`), paginate, get single, full comment trees | Create, update, delete, pin, unpin, like |
-| **Comments** | Nested trees with replies | Create top-level + nested, edit, delete |
+| **Comments** | Nested trees via REST (~35 cap) OR full Playwright scrape (no cap, $0.05) | Create top-level + nested, edit, delete |
 | **Members** | List active, list pending applicants | Approve, reject, ban, batch-approve |
-| **Classroom** | List courses, full tree, single page | Create course/folder/page, set body (markdown→TipTap auto), update cover/title/desc/privacy/tier, delete |
-| **Files** | — | Upload images for course covers |
-| **Groups** | Get group metadata + label_options | Update description, update Auto DM message |
-| **System** | Health check, debug info | — |
+| **Events** | List all calendar events, list upcoming with next-occurrence + timezone | — |
+| **Classroom** | List courses, full tree, single page | Create course/folder/page, set body (markdown→TipTap auto), update cover/title/desc/privacy/tier, update Resources, delete |
+| **Files** | — | Upload cover images AND upload private files (PDF/JSON/ZIP) for classroom Resources |
+| **Groups** | Get group metadata + label_options | Update Auto DM message |
+| **System** | Health check + SSR debug diagnostics | — |
 
-See the [full actions reference](../docs/actions.md) for the exact `params` per action.
+**36 actions total** as of v0.3.25 — see the [full actions reference](../docs/actions.md) for the exact `params` per action.
 
 ## Common Skool API use cases
 
