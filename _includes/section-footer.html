@@ -19,9 +19,14 @@ Only renders on sub-pages, not on hub READMEs or homepage.
   | where_exp: "p", "p.url != current_url" -%}
 
 {%- comment -%} Filter out non-md files and README hubs {%- endcomment -%}
+{%- comment -%}
+  Exclude both README and index hubs (each section's hub renders as
+  /section/ — we don't want it listed as a sibling of itself).
+{%- endcomment -%}
 {%- assign sibling_count = 0 -%}
 {%- for s in siblings -%}
-  {%- unless s.url contains "README" or s.path == nil -%}
+  {%- assign s_basename = s.path | split: "/" | last | downcase -%}
+  {%- unless s_basename == "readme.md" or s_basename == "index.md" or s.path == nil -%}
     {%- assign sibling_count = sibling_count | plus: 1 -%}
   {%- endunless -%}
 {%- endfor -%}
@@ -31,7 +36,8 @@ Only renders on sub-pages, not on hub READMEs or homepage.
   <h3>More in {{ section_name }}</h3>
   <ul>
     {%- for s in siblings -%}
-      {%- unless s.url contains "README" -%}
+      {%- assign s_basename = s.path | split: "/" | last | downcase -%}
+      {%- unless s_basename == "readme.md" or s_basename == "index.md" -%}
         {%- if s.url contains section_slug and s.path -%}
           {%- assign s_title = s.title | default: s.name | split: " — " | first -%}
           <li><a href="{{ s.url | relative_url }}">{{ s_title }}</a></li>
