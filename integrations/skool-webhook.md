@@ -9,6 +9,7 @@ funnel: A
 playbook: integrations
 last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-webhook.md
+render_with_liquid: false
 ---
 
 # Skool Webhook Integration

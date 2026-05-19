@@ -9,6 +9,7 @@ funnel: A
 playbook: templates
 last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/recipes/{kebab-case-slug}.md
+render_with_liquid: false
 ---
 
 # {H1 — same as `title` ideally, exact-match keyword if possible}

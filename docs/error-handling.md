@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # Error Handling
 
 The actor **never throws**. Every error — expected or not — becomes a structured `{success:false}` payload pushed to the dataset, and the run terminates `SUCCEEDED`. Your code is responsible for inspecting the payload.

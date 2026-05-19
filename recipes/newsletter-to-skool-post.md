@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # Mirror your newsletter as a Skool community post
 
 You publish a newsletter (Listmonk, ConvertKit, Beehiiv, Mailchimp). 80% of the value should also live inside your community — but you don't want to copy-paste manually every week. This recipe pipes the newsletter HTML/markdown into a Skool community post automatically, with proper formatting and images intact.

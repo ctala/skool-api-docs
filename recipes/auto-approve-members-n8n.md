@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # Auto-approve Skool members with n8n + GPT-4o AI screening
 
 End-to-end recipe: when someone applies to your Skool community, an n8n workflow runs a quality filter (LinkedIn check + GPT-4o AI screening of their application answer) and auto-approves the ones that pass — no manual review required.

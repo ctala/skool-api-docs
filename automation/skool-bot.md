@@ -9,6 +9,7 @@ funnel: A
 playbook: automation
 last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/automation/skool-bot.md
+render_with_liquid: false
 ---
 
 # Skool Bot

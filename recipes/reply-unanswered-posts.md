@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # Reply to unanswered Skool posts automatically
 
 Your community's worst experience: a member posts a question, no one answers for 24 hours, they conclude "this place is dead" and stop coming back. This recipe finds posts with 0 comments and drafts an on-brand reply via LLM, with optional human approval before publishing.
