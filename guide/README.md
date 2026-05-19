@@ -8,7 +8,6 @@ playbook: guide
 last_updated: 2026-05-19
 ---
 
-# Skool Guide — for Founders Considering Skool
 
 If you're evaluating whether to start a community on [Skool](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63), these pages answer the questions founders ask most.
 

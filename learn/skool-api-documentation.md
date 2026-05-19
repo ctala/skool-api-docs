@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/skool-api-documentation.md
 ---
 
-# Skool API Documentation
 
 > **TL;DR.** Skool has no official API documentation because it has no official API. The complete unofficial documentation is this repo + the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-api-documentation). Below: structure, where each topic lives, how to read the actor's structured responses.
 

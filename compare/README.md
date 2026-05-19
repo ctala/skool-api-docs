@@ -8,7 +8,6 @@ playbook: comparison
 last_updated: 2026-05-19
 ---
 
-# Skool vs Other Community Platforms
 
 Side-by-side comparisons to help you pick the right platform for your community in 2026.
 

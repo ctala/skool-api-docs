@@ -8,7 +8,6 @@ playbook: glossary
 last_updated: 2026-05-19
 ---
 
-# Skool Learn — Concept Glossary
 
 Definitions and explainers for Skool platform concepts and the unofficial Skool API.
 

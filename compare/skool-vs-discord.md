@@ -12,7 +12,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/compare/skool-vs-discord.md
 ---
 
-# Skool vs Discord — Which Is Right for Your Paid Community?
 
 > **TL;DR.** Discord is free, real-time chat, no built-in monetization or courses, best for high-engagement chat communities (developers, gamers, hobbyists). Skool is $99/mo, async feed-based, built-in classroom + gamification + Stripe payments, best for paid knowledge communities, coaching, masterminds. They serve different community shapes — usually not direct competitors.
 

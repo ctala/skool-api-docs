@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/skool-courses.md
 ---
 
-# Skool Courses
 
 > **TL;DR.** Skool's "classroom" hosts unlimited courses, included in the flat $99/mo. Each course is a tree of folders and pages. Pages have rich content (text, video, attachments). You can gate access by member tier OR by gamification level. Markdown auto-converts to Skool's internal format via the [API](../integrations/skool-python.md). No assignments or quizzes — for that use Kajabi/Thinkific.
 

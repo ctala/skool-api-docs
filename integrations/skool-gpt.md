@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-gpt.md
 ---
 
-# Skool + GPT (OpenAI)
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** Any OpenAI model (GPT-4o, GPT-5, o1, o3, o3-mini) can read and write to Skool — approve members, post content, publish courses, reply to comments.

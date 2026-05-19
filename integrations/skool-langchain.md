@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-langchain.md
 ---
 
-# Skool + LangChain
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** Any LangChain agent (LLM-agnostic — works with Claude, GPT, Gemini, local models) can read and write to Skool as a Tool.

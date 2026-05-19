@@ -9,6 +9,7 @@ baseurl: "/skool-api-docs"
 author:
   name: "Cristian Tala"
   url: "https://cristiantala.com"
+  twitter: ctala
 
 # Default theme (GitHub Pages built-in)
 theme: jekyll-theme-cayman
@@ -25,6 +26,9 @@ exclude:
   - .github/
   - LICENSE
   - CHANGELOG.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
   - "*.py"
   - "*.sh"
 
@@ -47,3 +51,57 @@ social:
   links:
     - "https://github.com/ctala"
     - "https://cristiantala.com"
+
+# Per-section defaults — avoids editing 60 .md files individually
+defaults:
+  - scope:
+      path: "learn"
+    values:
+      layout: default
+      funnel: A
+      section: Learn
+  - scope:
+      path: "integrations"
+    values:
+      layout: default
+      funnel: A
+      section: Integrations
+  - scope:
+      path: "automation"
+    values:
+      layout: default
+      funnel: A
+      section: Automation
+  - scope:
+      path: "recipes"
+    values:
+      layout: default
+      funnel: A
+      section: Recipes
+  - scope:
+      path: "for"
+    values:
+      layout: default
+      funnel: A
+      section: For
+  - scope:
+      path: "compare"
+    values:
+      layout: default
+      funnel: B
+      section: Compare
+  - scope:
+      path: "guide"
+    values:
+      layout: default
+      funnel: B
+      section: Guide
+  - scope:
+      path: "docs"
+    values:
+      layout: default
+      section: Docs
+  - scope:
+      path: ""
+    values:
+      layout: default

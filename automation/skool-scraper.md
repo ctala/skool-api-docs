@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/automation/skool-scraper.md
 ---
 
-# Skool Scraper — What You Should Know Before Building One
 
 > **TL;DR.** Skool has no public API, so reading/writing data programmatically requires going through Skool's internal endpoints — which are protected by cookies + AWS WAF + a `buildId` that rotates weekly. Building a maintainable Skool scraper is a ~50-hour engineering project that breaks weekly. The legitimate alternative is the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-scraper) — same data, structured response, ~$1.50/mo, maintained.
 

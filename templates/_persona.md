@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/for/{persona-slug}.md
 ---
 
-# Skool for {Persona}
 
 > **TL;DR.** {Persona} use Skool to {primary outcome}. The native gamification + classroom + community feed handle 80% of what {persona} needs without stitching 4 different tools together.
 

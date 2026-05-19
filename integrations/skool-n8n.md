@@ -12,7 +12,6 @@ canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-
 render_with_liquid: false
 ---
 
-# Skool + n8n Integration
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** Any n8n workflow can read AND write to Skool — posts, comments, members, classroom, files, Auto DM.

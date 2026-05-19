@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-mcp.md
 ---
 
-# Skool MCP — Model Context Protocol for Skool
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** Any MCP-compatible AI client (Claude Desktop, Cursor, Cline, Continue) can read AND write to Skool natively as tools.

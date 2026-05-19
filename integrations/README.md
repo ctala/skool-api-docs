@@ -8,7 +8,6 @@ playbook: integrations
 last_updated: 2026-05-19
 ---
 
-# Skool Integrations
 
 Connect Skool to any automation stack via the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=integrations). One HTTP POST per action — read AND write to posts, comments, members, classroom, files, groups.
 

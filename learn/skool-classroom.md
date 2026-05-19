@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/skool-classroom.md
 ---
 
-# Skool Classroom
 
 > **TL;DR.** The Classroom is the courses section of every Skool community. It hosts unlimited courses, each a tree of folders + pages with rich content. Included in [$99/mo](../guide/skool-pricing.md). Gate by tier or gamification level. Drip on schedule. Markdown body content via the [Apify API actor](../integrations/skool-python.md).
 

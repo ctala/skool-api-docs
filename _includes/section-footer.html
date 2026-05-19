@@ -1,0 +1,44 @@
+{%- comment -%}
+Section footer: lists sibling pages in the same section (folder).
+Only renders on sub-pages, not on hub READMEs or homepage.
+{%- endcomment -%}
+
+{%- assign url_stripped = page.url | remove_first: site.baseurl -%}
+{%- assign segments = url_stripped | split: "/" -%}
+
+{%- if segments.size > 2 -%}
+{%- assign section_slug = segments[1] -%}
+{%- assign section_name = page.section | default: section_slug | capitalize -%}
+{%- assign current_url = page.url -%}
+
+{%- comment -%}
+  Find sibling pages — same section, not current page, not the section README.
+{%- endcomment -%}
+{%- assign siblings = site.pages
+  | where_exp: "p", "p.url contains section_slug"
+  | where_exp: "p", "p.url != current_url" -%}
+
+{%- comment -%} Filter out non-md files and README hubs {%- endcomment -%}
+{%- assign sibling_count = 0 -%}
+{%- for s in siblings -%}
+  {%- unless s.url contains "README" or s.path == nil -%}
+    {%- assign sibling_count = sibling_count | plus: 1 -%}
+  {%- endunless -%}
+{%- endfor -%}
+
+{%- if sibling_count > 0 -%}
+<div class="section-footer">
+  <h3>More in {{ section_name }}</h3>
+  <ul>
+    {%- for s in siblings -%}
+      {%- unless s.url contains "README" -%}
+        {%- if s.url contains section_slug and s.path -%}
+          {%- assign s_title = s.title | default: s.name | split: " — " | first -%}
+          <li><a href="{{ s.url | relative_url }}">{{ s_title }}</a></li>
+        {%- endif -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  </ul>
+</div>
+{%- endif -%}
+{%- endif -%}

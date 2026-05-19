@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/{kebab-case-slug}.md
 ---
 
-# {H1 — exact match with keyword in front of question form}
 
 > **TL;DR.** {2-sentence definition that answers the search query directly.}
 

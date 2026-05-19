@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/skool-referral-program.md
 ---
 
-# Skool Referral Program
 
 > **TL;DR.** Skool's referral program pays **40% recurring forever** to anyone who refers a new Skool community owner. Built into the platform. Stripe payouts. No tiers, no caps. This is the same as the "affiliate program" — Skool uses both terms interchangeably. For the marketing-focused breakdown see [skool affiliate program](skool-affiliate-program.md). This page covers the mechanics.
 

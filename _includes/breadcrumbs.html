@@ -1,0 +1,54 @@
+{%- comment -%}
+Breadcrumbs nav + BreadcrumbList JSON-LD schema.
+Renders Home › Section › Current page based on URL segments.
+Hidden on the homepage (segments.size <= 2).
+{%- endcomment -%}
+
+{%- assign url_stripped = page.url | remove_first: site.baseurl -%}
+{%- assign segments = url_stripped | split: "/" -%}
+{%- comment -%}
+  segments[0] = "" (leading slash)
+  segments[1] = section name (e.g. "learn", "compare")
+  segments[2] = page slug (e.g. "skool-api")
+{%- endcomment -%}
+
+{%- if segments.size > 2 -%}
+{%- assign section_slug = segments[1] -%}
+{%- assign section_name = page.section | default: section_slug | capitalize -%}
+{%- assign current_title = page.title | split: " — " | first | split: " |" | first -%}
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ site.baseurl }}/">Home</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="{{ site.baseurl }}/{{ section_slug }}/">{{ section_name }}</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span aria-current="page">{{ current_title }}</span>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ section_name }}",
+      "item": "{{ site.url }}{{ site.baseurl }}/{{ section_slug }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ current_title | jsonify }},
+      "item": "{{ site.url }}{{ page.url }}"
+    }
+  ]
+}
+</script>
+{%- endif -%}

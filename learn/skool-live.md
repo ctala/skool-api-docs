@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/skool-live.md
 ---
 
-# Skool Live — Events and Calendar
 
 > **TL;DR.** Skool has a built-in **Calendar** for scheduling live events. Each event has a Zoom/Google Meet link, description, RSVP, and an embedded live video player when the meeting is running. **Skool does NOT have native streaming** — it relies on Zoom/Meet/Whereby for the actual video. For most community use cases (weekly Q&A, masterminds, office hours) this works fine.
 

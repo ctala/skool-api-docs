@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/for/ai-agents.md
 ---
 
-# Skool API for AI Agents
 
 > **TL;DR.** Every Skool operation (post, comment, member approval, course publishing, Auto DM update) is one HTTP POST with a structured JSON response. The actor is designed to plug directly into agent loops (Claude tool use, OpenAI function calling, MCP, LangChain) without custom glue code. Never-throw contract = no try/catch around tool calls.
 

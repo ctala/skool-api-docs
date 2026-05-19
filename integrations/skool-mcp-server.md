@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-mcp-server.md
 ---
 
-# Skool MCP Server — Production Setup
 
 > **Quick reference (TL;DR for agents)**
 > - **Use case:** Run a persistent MCP server that exposes the Skool API as tools for AI agents (Claude Desktop, Cursor, Cline, hosted agents).

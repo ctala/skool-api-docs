@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/automation/skool-ai-agent.md
 ---
 
-# Skool AI Agent
 
 > **TL;DR.** An AI agent that operates your Skool community connects an LLM (Claude, GPT, or another) to the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=skool-ai-agent) via tool use / function calling. The agent reasons over your Skool data (members, posts, comments) and takes actions (approve, post, reply) with structured params. Different from a "Skool bot": agents make judgment calls; bots execute predefined rules.
 

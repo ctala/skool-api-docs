@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/skool-affiliate-program.md
 ---
 
-# Skool Affiliate Program
 
 > **TL;DR.** Skool pays **40% recurring forever** to anyone who refers a new community owner. Every $99/mo your referred users pay → you get $39.60/mo, forever, paid via Stripe. This is the highest commission rate in community-platform SaaS — it's how Skool grew without VC marketing spend. [Get your ref link by signing up here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63).
 

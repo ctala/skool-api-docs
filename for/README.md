@@ -8,7 +8,6 @@ playbook: persona
 last_updated: 2026-05-19
 ---
 
-# Skool for X — Audience-Specific Guides
 
 Pages tailored to specific audiences using Skool.
 

@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/skool-cost.md
 ---
 
-# Skool Cost — Total Monthly Spend
 
 > **TL;DR.** Base Skool cost: **$99/mo flat**. Stripe takes ~3% on member payments separately. Optional automation via [Apify API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-cost) runs ~$1.50/mo. Total realistic cost of ownership for a typical paid community: **$100-$135/mo + 3% of member revenue**.
 

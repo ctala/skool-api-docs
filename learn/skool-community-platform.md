@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/skool-community-platform.md
 ---
 
-# Skool Community Platform
 
 > **TL;DR.** [Skool](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) is a community platform purpose-built for **paid communities** — coaching, masterminds, course-based memberships, knowledge products. One flat $99/mo regardless of member count. Includes a Reddit-style feed, courses (classroom), built-in gamification (levels + points), DMs, and a calendar for live events.
 

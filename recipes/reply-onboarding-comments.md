@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/recipes/reply-onboarding-comments.md
 ---
 
-# Auto-Reply to Skool Onboarding Comments
 
 > **Quick reference (TL;DR for agents)**
 > - **Goal:** Detect comments in pinned onboarding threads where the community owner hasn't replied, draft contextual responses based on the post type, get human approval, publish.

@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/is-skool-legit.md
 ---
 
-# Is Skool Legit? Honest Review of Skool.com
 
 > **TL;DR.** Yes — Skool is a legitimate, well-funded SaaS company. Co-founded by Sam Ovens (entrepreneur, ex-Consulting.com founder) and Alex Hormozi joined as co-owner in 2023. It powers thousands of paid communities with real revenue. The "pyramid scheme" claims you'll find on Reddit are about specific communities **sold inside Skool**, not the platform itself — those exist on every community platform.
 

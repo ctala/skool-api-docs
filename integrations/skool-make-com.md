@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-make-com.md
 ---
 
-# Skool + Make.com Integration
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** Any Make.com scenario can read AND write to Skool — posts, members, classroom, files, Auto DM.

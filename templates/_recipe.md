@@ -12,7 +12,6 @@ canonical: https://github.com/ctala/skool-api-docs/blob/main/recipes/{kebab-case
 render_with_liquid: false
 ---
 
-# {H1 — same as `title` ideally, exact-match keyword if possible}
 
 > **Quick reference (TL;DR for agents)**
 > - **Goal:** {1 sentence what this does}

@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/compare/skool-vs-kajabi.md
 ---
 
-# Skool vs Kajabi — Honest Comparison
 
 > **TL;DR.** **Skool** is community-first ($99 flat, feed + classroom + gamification all bundled). **Kajabi** is courses-first with marketing tools attached ($149-$399 tiered, LMS-grade course features, email marketing, landing pages, sales pipelines). Pick Skool if your business is built on community engagement. Pick Kajabi if your business is built on selling courses with mature marketing infrastructure.
 

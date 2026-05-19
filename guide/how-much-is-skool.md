@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/how-much-is-skool.md
 ---
 
-# How Much Is Skool?
 
 > **TL;DR.** [Skool](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) costs **$99 USD per month, flat**. One plan. No tiers, no per-member fees, no upsells. 14-day free trial, no credit card to start. Plus Stripe takes ~3% on member payments you receive separately.
 

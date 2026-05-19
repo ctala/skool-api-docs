@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/automation/skool-automation.md
 ---
 
-# Skool Automation — Complete Guide
 
 > **TL;DR.** Skool has no built-in automation engine and no official API. To automate a Skool community in 2026 you connect your existing automation stack (n8n, Make.com, Zapier, custom code, AI agents) to Skool through the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=skool-automation). One HTTP POST per action — read AND write to posts, members, classroom, files, group settings.
 

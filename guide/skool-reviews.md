@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/skool-reviews.md
 ---
 
-# Skool Reviews — Real Owners and Members
 
 > **TL;DR.** Skool's aggregate user sentiment is **positive (4.2-4.5 / 5 across review platforms)** with consistent themes: love the simplicity, gamification, and flat pricing; criticize the lack of customization, limited admin features, and absence of an official API. Best fit: solo founders / coaches / course creators launching their first paid community. Worst fit: B2B SaaS user communities needing multi-channel structure.
 

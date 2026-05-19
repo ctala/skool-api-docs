@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/skool-free-trial.md
 ---
 
-# Skool Free Trial
 
 > **TL;DR.** Skool offers a **14-day free trial with no credit card required**. All features unlocked — community feed, classroom, gamification, DMs, calendar, Stripe payment setup. After 14 days you either convert to paid ($99/mo) or your community goes inactive (data retained 90 days).
 

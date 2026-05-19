@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-claude.md
 ---
 
-# Skool + Claude
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** Claude (via Anthropic API, Claude Desktop with MCP, or Claude Code Skills) operates your Skool community — approve members, post updates, reply to comments, publish courses.

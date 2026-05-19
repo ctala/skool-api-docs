@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/is-skool-worth-it.md
 ---
 
-# Is Skool Worth It?
 
 > **TL;DR.** Skool is worth $99/mo IF you can monetize your community at $300/mo+ in member revenue. At that point, the gamification + classroom + Stripe-native payments + flat pricing pay for themselves and then some. Below $300/mo in member revenue, Skool is premature — start free on Discord or build the audience first.
 

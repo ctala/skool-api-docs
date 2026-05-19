@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/is-skool-free.md
 ---
 
-# Is Skool Free?
 
 > **TL;DR.** Skool isn't free, but it has a **14-day free trial with no credit card required**. After the trial: $99/mo flat (the only paid plan). There's no permanent freemium tier. If $99/mo is too much for your stage, Skool isn't the right tool — Discord is free.
 

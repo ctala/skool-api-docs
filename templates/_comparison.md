@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/compare/skool-vs-{competitor-slug}.md
 ---
 
-# Skool vs {Competitor} — Honest Comparison
 
 > **TL;DR.** {2-sentence verdict — who is each best for. Be specific, not "both are great".}
 

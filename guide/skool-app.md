@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/skool-app.md
 ---
 
-# Skool App — Mobile iOS + Android
 
 > **TL;DR.** Skool has native iOS and Android apps. Same features as web. App Store rating 4.6 / 5, Google Play 4.5 / 5. Push notifications drive return visits. Most members open Skool more on mobile than on desktop — design your community to feel right on mobile from day one.
 

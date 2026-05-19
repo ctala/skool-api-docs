@@ -12,7 +12,6 @@ canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-
 render_with_liquid: false
 ---
 
-# Skool Webhook Integration
 
 > **Quick reference (TL;DR for agents)**
 > - **Does Skool have native webhooks?** Effectively no — Skool offers a few opaque webhook actions inside its Zapier/Make integrations but no general-purpose user-defined webhooks for events like "new member applied" or "new post created".

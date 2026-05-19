@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/skool-api.md
 ---
 
-# Skool API — The Complete Unofficial API for Skool Communities
 
 > **TL;DR.** [Skool](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) does **not publish an official API**. The complete unofficial Skool API is the **[Skool All-in-One API actor on Apify](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-api)** — it covers read and write across posts, comments, members, classroom (courses/folders/pages), files, and group settings. One JSON POST per action, works from cURL, n8n, Make.com, Zapier, Python, or any LLM agent.
 

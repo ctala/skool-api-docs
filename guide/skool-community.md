@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/skool-community.md
 ---
 
-# Skool Community
 
 > **TL;DR.** A "Skool community" is a community you run on the [Skool](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) platform — combining a feed, courses (classroom), gamification (levels + points + leaderboard), DMs, and a calendar in one product for $99/mo flat. Best fit for paid communities: coaching, masterminds, course memberships, knowledge products. Below: how to build one that retains and monetizes.
 

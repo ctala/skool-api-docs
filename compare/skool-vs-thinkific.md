@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/compare/skool-vs-thinkific.md
 ---
 
-# Skool vs Thinkific — Honest Comparison
 
 > **TL;DR.** **Thinkific** is a learning management system (LMS) — courses with assignments, quizzes, completion tracking, certificates. Community features are basic. **Skool** is community-first — feed + gamification + simple classroom + Stripe-native — at $99 flat. Pick Thinkific if structured course delivery is your core product. Pick Skool if community engagement is your retention strategy.
 

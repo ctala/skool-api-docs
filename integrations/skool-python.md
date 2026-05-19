@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-python.md
 ---
 
-# Skool Python Client
 
 > **Quick reference (TL;DR for agents)**
 > - **No Python SDK exists** for Skool — there's no official Skool Python package.

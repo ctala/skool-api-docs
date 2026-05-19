@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/how-does-skool-work.md
 ---
 
-# How Does Skool Work?
 
 > **TL;DR.** [Skool](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) is a community + courses platform. You pay $99/mo flat (after 14-day trial). You get one **community** with a feed, a **classroom** for courses, **gamification** (levels + points unlock content), **DMs**, a **calendar** for events. You charge your members whatever you want — Skool's cut is the flat $99/mo from you, not a percentage.
 

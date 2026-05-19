@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/how-to-start-a-skool-community.md
 ---
 
-# How to Start a Skool Community
 
 > **TL;DR.** Starting a [Skool community](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) takes ~15 minutes for the setup, then 14 days of focused activation with your first 5-10 members. Below: the exact sequence I used to grow a community to 484 members, with automation patterns layered in from day one.
 

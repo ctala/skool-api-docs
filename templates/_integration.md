@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-{tool-slug}.md
 ---
 
-# Skool + {Tool} Integration
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** {1 sentence — what {Tool} can now do with Skool}

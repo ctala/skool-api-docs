@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-zapier.md
 ---
 
-# Skool + Zapier Integration
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** Any Zap can read AND write to Skool — beyond the "official" Skool integration which only offers triggers and a couple of webhook actions.

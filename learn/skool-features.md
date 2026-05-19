@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/skool-features.md
 ---
 
-# Skool Features — Complete List
 
 > **TL;DR.** [Skool](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63)'s $99/mo flat plan includes: community feed, classroom (unlimited courses), gamification (levels + points), DMs, calendar, Auto DM, mobile apps (iOS+Android), Stripe payments, basic analytics, and 40% affiliate program. No upsells, no add-ons.
 

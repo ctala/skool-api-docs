@@ -8,7 +8,6 @@ playbook: automation
 last_updated: 2026-05-19
 ---
 
-# Skool Automation
 
 Skool has no built-in automation engine. To automate a Skool community (auto-approve members, schedule posts, reply to comments, publish courses), you connect external tools to Skool via the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=automation).
 

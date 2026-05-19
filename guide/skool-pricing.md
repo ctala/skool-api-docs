@@ -11,7 +11,6 @@ last_updated: 2026-05-19
 canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/skool-pricing.md
 ---
 
-# Skool Pricing — Complete Breakdown
 
 > **TL;DR.** Skool charges **$99/mo flat. One plan. No tiers, no per-seat fees, no per-feature upsells.** Unlimited members, admins, courses, classroom pages, DMs, events. 14-day free trial, no credit card to start. Stripe takes ~2.9% + $0.30 on member payments separately.
 
