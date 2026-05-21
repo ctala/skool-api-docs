@@ -8,7 +8,7 @@ search_volume_monthly: 1600
 funnel: B
 playbook: glossary
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/skool-pricing.md
+canonical: https://ctala.github.io/skool-api-docs/guide/skool-pricing/
 ---
 
 

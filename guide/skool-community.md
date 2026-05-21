@@ -8,7 +8,7 @@ search_volume_monthly: 6600
 funnel: B
 playbook: hub
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/skool-community.md
+canonical: https://ctala.github.io/skool-api-docs/guide/skool-community/
 ---
 
 

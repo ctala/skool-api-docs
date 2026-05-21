@@ -8,7 +8,7 @@ search_volume_monthly: 210
 funnel: B
 playbook: objections
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/is-skool-worth-it.md
+canonical: https://ctala.github.io/skool-api-docs/guide/is-skool-worth-it/
 ---
 
 

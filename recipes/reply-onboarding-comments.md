@@ -8,7 +8,7 @@ search_volume_monthly: null
 funnel: A
 playbook: recipes
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/recipes/reply-onboarding-comments.md
+canonical: https://ctala.github.io/skool-api-docs/recipes/reply-onboarding-comments/
 ---
 
 

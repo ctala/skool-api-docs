@@ -8,7 +8,7 @@ search_volume_monthly: 40
 funnel: B
 playbook: howto
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/guide/how-to-start-a-skool-community.md
+canonical: https://ctala.github.io/skool-api-docs/guide/how-to-start-a-skool-community/
 ---
 
 

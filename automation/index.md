@@ -19,6 +19,7 @@ Skool has no built-in automation engine. To automate a Skool community (auto-app
 | **[Skool Bot](skool-bot.md)** | Build a Skool bot (predefined rules) — daily standup, analytics, course publisher |
 | **[Skool AI Agent](skool-ai-agent.md)** | Build a judgment-driven agent — member screening, comment drafting |
 | **[Skool Scraper](skool-scraper.md)** | Why not to build your own scraper, what to use instead |
+| **[Export Skool Members](export-skool-members.md)** | Export your member list (CSV / Sheets / CRM) via `members:list` |
 
 ## Bot vs Agent vs Scraper — which do you need?
 
@@ -27,6 +28,7 @@ Skool has no built-in automation engine. To automate a Skool community (auto-app
 | Run scheduled, predefined Skool actions (daily post, weekly digest) | **Bot** | [Skool Bot](skool-bot.md) |
 | Make judgment calls (approve which member, what tone for a comment) | **AI Agent** | [Skool AI Agent](skool-ai-agent.md) |
 | Read/export Skool data programmatically | **Apify actor** (not a custom scraper) | [Skool Scraper](skool-scraper.md) |
+| Export your member list to CSV / Sheets / CRM | **`members:list`** | [Export Skool Members](export-skool-members.md) |
 | All of the above combined | **Hybrid** | [Skool Automation](skool-automation.md) |
 
 ## Top automations by ROI (production-validated)

@@ -8,7 +8,7 @@ search_volume_monthly: 30
 funnel: B
 playbook: comparison
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/compare/skool-vs-thinkific.md
+canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-thinkific/
 ---
 
 

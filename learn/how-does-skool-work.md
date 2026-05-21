@@ -8,7 +8,7 @@ search_volume_monthly: 480
 funnel: B
 playbook: glossary
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/how-does-skool-work.md
+canonical: https://ctala.github.io/skool-api-docs/learn/how-does-skool-work/
 ---
 
 

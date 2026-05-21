@@ -8,7 +8,7 @@ search_volume_monthly: {N}
 funnel: {A or B}
 playbook: glossary
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/learn/{kebab-case-slug}.md
+canonical: https://ctala.github.io/skool-api-docs/learn/{kebab-case-slug}/
 ---
 
 

@@ -8,7 +8,7 @@ search_volume_monthly: 20
 funnel: A
 playbook: comparison
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/automation/skool-scraper.md
+canonical: https://ctala.github.io/skool-api-docs/automation/skool-scraper/
 ---
 
 
@@ -18,7 +18,7 @@ canonical: https://github.com/ctala/skool-api-docs/blob/main/automation/skool-sc
 
 There are three different things people search "skool scraper" for:
 
-1. **Export their own community's data** — own admin access, want a backup or to migrate
+1. **Export their own community's data** — own admin access, want a backup or to migrate. See [Export Skool members to CSV / Sheets / CRM](export-skool-members.md).
 2. **Automate their own community** — own admin access, want to post / approve programmatically
 3. **Scrape someone else's community** — no admin access, want public data or scraping past member lists
 
