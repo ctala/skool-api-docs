@@ -8,7 +8,7 @@ search_volume_monthly: 10
 funnel: A
 playbook: integrations
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-make-com.md
+canonical: https://ctala.github.io/skool-api-docs/integrations/skool-make-com/
 ---
 
 

@@ -11,7 +11,7 @@ last_updated: 2026-05-19
 
 Connect Skool to any automation stack via the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=integrations). One HTTP POST per action — read AND write to posts, comments, members, classroom, files, groups.
 
-## All integrations
+## By automation stack
 
 | Tool | Best for | Guide |
 |---|---|---|
@@ -20,10 +20,24 @@ Connect Skool to any automation stack via the [Apify-hosted Skool All-in-One API
 | **Zapier** | Largest trigger library, beginner-friendly | [Skool + Zapier](skool-zapier.md) |
 | **Webhooks** | Polling proxy for "new member / new post" events | [Skool Webhooks](skool-webhook.md) |
 | **Python** | Custom code, cheapest at scale, async-friendly | [Skool + Python](skool-python.md) |
-| **Claude (Anthropic)** | AI-driven judgment automation | [Skool + Claude](skool-claude.md) |
+
+## By AI agent / coding tool
+
+| Tool | Best for | Guide |
+|---|---|---|
+| **Claude (Anthropic)** | AI-driven judgment automation (API + Desktop MCP) | [Skool + Claude](skool-claude.md) |
+| **Claude Code (CLI)** | Operate Skool from the terminal via a drop-in Skill | [Skool + Claude Code](skool-claude-code.md) |
+| **Cursor** | MCP-native Skool tools inside the Cursor editor | [Skool + Cursor](skool-cursor.md) |
+| **Cline** | VS Code agent with per-tool auto-approve allowlist | [Skool + Cline](skool-cline.md) |
+| **Windsurf** | Cascade agent, MCP config with interpolation | [Skool + Windsurf](skool-windsurf.md) |
+| **OpenCode** | Open-source terminal agent, MCP servers | [Skool + OpenCode](skool-opencode.md) |
+| **Gemini CLI** | Google's terminal agent, MCP server | [Skool + Gemini CLI](skool-gemini-cli.md) |
+| **Goose** | Block's open-source agent, MCP extension | [Skool + Goose](skool-goose.md) |
 | **GPT (OpenAI)** | OpenAI function-calling agents | [Skool + GPT](skool-gpt.md) |
-| **LangChain** | Multi-LLM agent frameworks | [Skool + LangChain](skool-langchain.md) |
-| **MCP (Model Context Protocol)** | Claude Desktop, Cursor, Cline — natively-callable Skool tools | [Skool MCP](skool-mcp.md) |
+| **LangChain** | Multi-LLM agent framework (Python) | [Skool + LangChain](skool-langchain.md) |
+| **CrewAI** | Multi-agent Python framework, Skool as a custom tool | [Skool + CrewAI](skool-crewai.md) |
+| **LlamaIndex** | Python agent / RAG framework, Skool as a FunctionTool | [Skool + LlamaIndex](skool-llamaindex.md) |
+| **MCP (Model Context Protocol)** | The MCP pattern — natively-callable Skool tools in any MCP client | [Skool MCP](skool-mcp.md) |
 | **MCP Server (production)** | Self-hosted MCP server proxying the actor | [Skool MCP Server](skool-mcp-server.md) |
 
 ## Why integrate?

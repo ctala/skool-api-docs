@@ -8,7 +8,7 @@ search_volume_monthly: 10
 funnel: A
 playbook: integrations
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-n8n.md
+canonical: https://ctala.github.io/skool-api-docs/integrations/skool-n8n/
 render_with_liquid: false
 ---
 

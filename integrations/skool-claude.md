@@ -8,7 +8,7 @@ search_volume_monthly: 10
 funnel: A
 playbook: integrations
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-claude.md
+canonical: https://ctala.github.io/skool-api-docs/integrations/skool-claude/
 ---
 
 
@@ -118,7 +118,7 @@ Quick version of the config (`~/Library/Application Support/Claude/claude_deskto
       "args": [
         "-y", "@apify/actors-mcp-server",
         "--token=YOUR_APIFY_TOKEN",
-        "--actor=cristiantala/skool-all-in-one-api"
+        "--actors=cristiantala/skool-all-in-one-api"
       ]
     }
   }
@@ -159,6 +159,8 @@ Restart Claude Code. Now in any conversation:
 > "List my pending Skool members and approve the ones with verified LinkedIn."
 
 Claude Code reads the Skill, runs the right actor actions in sequence, and reports back.
+
+> **Full guide:** [Skool + Claude Code](skool-claude-code.md) — install steps, example session, helper scripts, and Claude Code-specific gotchas.
 
 ## Real production agent loop
 

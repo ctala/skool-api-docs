@@ -8,7 +8,7 @@ search_volume_monthly: 10
 funnel: A
 playbook: integrations
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-mcp.md
+canonical: https://ctala.github.io/skool-api-docs/integrations/skool-mcp/
 ---
 
 
@@ -44,7 +44,7 @@ Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) o
         "-y",
         "@apify/actors-mcp-server",
         "--token=YOUR_APIFY_TOKEN",
-        "--actor=cristiantala/skool-all-in-one-api"
+        "--actors=cristiantala/skool-all-in-one-api"
       ]
     }
   }
@@ -58,7 +58,7 @@ Restart Claude Desktop. The Skool actor's actions appear as tools in your chat.
 Cursor settings → MCP Servers → Add server:
 
 - **Name:** `skool`
-- **Command:** `npx -y @apify/actors-mcp-server --token=YOUR_APIFY_TOKEN --actor=cristiantala/skool-all-in-one-api`
+- **Command:** `npx -y @apify/actors-mcp-server --token=YOUR_APIFY_TOKEN --actors=cristiantala/skool-all-in-one-api`
 
 ## Option B — Run your own MCP server
 

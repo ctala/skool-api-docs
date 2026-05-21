@@ -8,7 +8,7 @@ search_volume_monthly: null
 funnel: A
 playbook: integrations
 last_updated: 2026-05-19
-canonical: https://github.com/ctala/skool-api-docs/blob/main/integrations/skool-langchain.md
+canonical: https://ctala.github.io/skool-api-docs/integrations/skool-langchain/
 ---
 
 
