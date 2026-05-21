@@ -5,6 +5,7 @@ Official n8n templates derived from our recipes, to publish on [n8n.io/workflows
 **Hard rules for published templates:**
 - **Everything in English** — node names, sticky notes, code comments, AND all placeholders (global dev audience). No `TU_`, no brand names like `Nyx`/`CAR`. Use `YOUR_…` / `__REPLACE_WITH_…__`.
 - **No secrets / no branding** — placeholders only, generic copy.
+- **Document to #13868 standard** — ship the template already documented like n8n's auto-doc workflow produces: (a) a **group sticky note wrapping each node group** (placed first in the JSON `nodes` array so it renders *behind* the nodes), (b) **node-level `notes`** (`notes` + `notesInFlow: true`) on every functional node, (c) an **Overview** sticky, and (d) a **Setup/configuration** sticky with step-by-step config (credentials + every Config field + where to get each value). The Setup sticky is mandatory. Running #13868 (step 4 below) then mainly renames nodes — our content is already there.
 
 **How to submit each one** (manual, from the n8n.io creator account — same as the existing [Auto-approve template #14392](https://n8n.io/workflows/14392-auto-approve-skool-community-members-with-gpt-4o-ai-screening/)):
 1. Import the `.json` into your n8n instance.

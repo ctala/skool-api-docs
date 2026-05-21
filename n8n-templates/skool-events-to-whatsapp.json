@@ -3,18 +3,98 @@
   "nodes": [
     {
       "parameters": {
-        "content": "## Weekly Skool events → WhatsApp\n\n**When:** every Monday 9:00 (edit the Cron).\n**What:** fresh-login to Skool (admin), read this week's events via the [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=n8n-template&utm_medium=template&utm_campaign=n8n-skool-events-whatsapp), and post them to a WhatsApp group via Evolution API.\n\n**Silent skip** if there are no events in range — no spam.\n\nFull guide: https://ctala.github.io/skool-api-docs/recipes/automate-skool-events/\n\nNo Skool community yet? https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63",
-        "height": 360,
-        "width": 520,
-        "color": 3
+        "content": "## 1️⃣ Trigger & config\nWeekly schedule (Mon 9am). Edit everything in the **Config** node — the only one you touch.",
+        "height": 320,
+        "width": 500,
+        "color": 5
       },
-      "id": "e991c68c-9150-4b17-bb3e-e32d0912de5b",
-      "name": "Sticky Overview",
+      "id": "38ec61f8b81e48868d7de96a892d5b4c",
+      "name": "Group 1 — Trigger & config",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -288,
-        -208
+        -60,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 2️⃣ Read Skool events\nFresh `auth:login` each run (no stored cookies, never expires, ~$0.02), then `events:list` via the Skool All-in-One API actor.",
+        "height": 320,
+        "width": 920,
+        "color": 4
+      },
+      "id": "39de6731433a4db69fc522b0388a95fb",
+      "name": "Group 2 — Read Skool events",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        400,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 3️⃣ Filter & format\nKeep events in the next 7 days, format as WhatsApp markdown. **Silent skip** if none.",
+        "height": 320,
+        "width": 480,
+        "color": 6
+      },
+      "id": "353a56355be244369e676b641adda44a",
+      "name": "Group 3 — Filter & format",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 4️⃣ Send to WhatsApp\nPOST to your group via Evolution `sendText`. Swap for Telegram/Slack/email if needed.",
+        "height": 320,
+        "width": 320,
+        "color": 2
+      },
+      "id": "4f323edfa8a84e74849f815c1cb7c39a",
+      "name": "Group 4 — Send to WhatsApp",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 📅 Weekly Skool events → WhatsApp\nEvery Monday, post your community's upcoming events to a WhatsApp group. Powered by the Skool All-in-One API actor.\n\n**Actor:** https://apify.com/cristiantala/skool-all-in-one-api\n**Guide:** https://ctala.github.io/skool-api-docs/recipes/automate-skool-events/",
+        "height": 210,
+        "width": 560,
+        "color": 3
+      },
+      "id": "30f308f4ae3f46e9966f859ec74642d3",
+      "name": "Overview",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -680,
+        -130
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## ⚙️ Setup & configuration (5 min)\n\n**1. Apify token** — free tier at apify.com → console.apify.com/account/integrations. Set it as the `apifyApi` credential on the 4 Apify nodes.\n\n**2. Edit the `Config` node:**\n- `email` / `password` — your Skool admin login\n- `groupSlug` — the part after skool.com/\n- `evoUrl` — your Evolution API base URL\n- `evoKey` — your Evolution API key\n- `evoInstance` — your Evolution instance name\n- `targetGroupJid` — your WhatsApp group JID (Evolution: GET /group/fetchAllGroups → id ending in `@g.us`)\n\n**3. Schedule** — Cron runs Mon 09:00. Edit time + the TZ/locale in the Code node.\n\n**4. Test** — click \"Test workflow\". Posts only if there are upcoming events.\n\n_No Skool community yet? https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63_",
+        "height": 470,
+        "width": 560,
+        "color": 7
+      },
+      "id": "a18ed7622c8c4da185ec88586d71d658",
+      "name": "Setup",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -680,
+        100
       ]
     },
     {
@@ -38,7 +118,9 @@
       "position": [
         0,
         240
-      ]
+      ],
+      "notes": "Runs weekly (Mon 9am) — edit for your timezone",
+      "notesInFlow": true
     },
     {
       "parameters": {
@@ -97,7 +179,9 @@
         224,
         240
       ],
-      "id": "e11435bf-de29-4250-b8ae-d6ad14406e05"
+      "id": "e11435bf-de29-4250-b8ae-d6ad14406e05",
+      "notes": "⚙️ Edit ALL your settings here — the only node you configure",
+      "notesInFlow": true
     },
     {
       "parameters": {
@@ -123,7 +207,9 @@
           "id": "__REPLACE_WITH_APIFYAPI_CRED_ID__",
           "name": "Apify account"
         }
-      }
+      },
+      "notes": "Fresh auth:login each run — no stored cookies to expire",
+      "notesInFlow": true
     },
     {
       "parameters": {
@@ -144,7 +230,9 @@
           "id": "__REPLACE_WITH_APIFYAPI_CRED_ID__",
           "name": "Apify account"
         }
-      }
+      },
+      "notes": "Reads the cookies returned by the login run",
+      "notesInFlow": true
     },
     {
       "parameters": {
@@ -170,7 +258,9 @@
           "id": "__REPLACE_WITH_APIFYAPI_CRED_ID__",
           "name": "Apify account"
         }
-      }
+      },
+      "notes": "events:list — fetches your community calendar via the actor",
+      "notesInFlow": true
     },
     {
       "parameters": {
@@ -191,7 +281,9 @@
           "id": "__REPLACE_WITH_APIFYAPI_CRED_ID__",
           "name": "Apify account"
         }
-      }
+      },
+      "notes": "Reads the events dataset from the previous run",
+      "notesInFlow": true
     },
     {
       "parameters": {
@@ -204,7 +296,9 @@
       "position": [
         1344,
         240
-      ]
+      ],
+      "notes": "Next 7 days → WhatsApp markdown. Silent skip if no events",
+      "notesInFlow": true
     },
     {
       "parameters": {
@@ -238,7 +332,9 @@
       "position": [
         1568,
         240
-      ]
+      ],
+      "notes": "Stops here if there are no upcoming events",
+      "notesInFlow": true
     },
     {
       "parameters": {
@@ -273,7 +369,9 @@
         1792,
         240
       ],
-      "retryOnFail": true
+      "retryOnFail": true,
+      "notes": "POST the message to your WhatsApp group via Evolution API",
+      "notesInFlow": true
     }
   ],
   "connections": {
