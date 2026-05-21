@@ -19,22 +19,6 @@
     },
     {
       "parameters": {
-        "content": "## Weekly Skool events → WhatsApp\n\n**When:** every Monday 9:00 (edit the Cron).\n**What:** fresh-login to Skool (admin), read this week's events via the [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=n8n-template&utm_medium=template&utm_campaign=n8n-skool-events-whatsapp), and post them to a WhatsApp group via Evolution API.\n\n**Silent skip** if there are no events in range — no spam.\n\nFull guide: https://ctala.github.io/skool-api-docs/recipes/automate-skool-events/\n\nNo Skool community yet? https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63",
-        "height": 200,
-        "width": 460,
-        "color": 5
-      },
-      "name": "Sticky Login",
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        432,
-        400
-      ],
-      "id": "68a29de2-69df-42b2-aa3a-f007862ce441"
-    },
-    {
-      "parameters": {
         "rule": {
           "interval": [
             {
@@ -63,13 +47,13 @@
             {
               "id": "33315e07-e640-4dd5-9038-6c674d720776",
               "name": "email",
-              "value": "__REPLACE_WITH_NYX_EMAIL__",
+              "value": "__REPLACE_WITH_SKOOL_EMAIL__",
               "type": "string"
             },
             {
               "id": "14117d29-cc3d-4779-a3af-ce6f6e342fcd",
               "name": "password",
-              "value": "__REPLACE_WITH_NYX_PASSWORD__",
+              "value": "__REPLACE_WITH_SKOOL_PASSWORD__",
               "type": "string"
             },
             {
@@ -81,25 +65,25 @@
             {
               "id": "de5bf661-cd16-4446-ae30-5d7220b6b18a",
               "name": "evoUrl",
-              "value": "https://TU-EVOLUTION-API.com",
+              "value": "https://YOUR-EVOLUTION-API.com",
               "type": "string"
             },
             {
               "id": "e466a392-53d8-4a86-beb7-cab1361abf62",
               "name": "evoKey",
-              "value": "__REPLACE_WITH_EVO_API_KEY__",
+              "value": "__REPLACE_WITH_EVOLUTION_API_KEY__",
               "type": "string"
             },
             {
               "id": "a6ec3e68-271c-4984-958c-17888540aed0",
               "name": "evoInstance",
-              "value": "TU_INSTANCIA_EVOLUTION",
+              "value": "YOUR_EVOLUTION_INSTANCE",
               "type": "string"
             },
             {
               "id": "9167f746-524c-4c97-bbae-c1dfc64866a7",
               "name": "targetGroupJid",
-              "value": "TU_GRUPO_JID@g.us",
+              "value": "YOUR_GROUP_JID@g.us",
               "type": "string"
             }
           ]
@@ -211,7 +195,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// Filter events: futuros, dentro de los próximos 7 días.\n// Format español neutro, voz Nyx, markdown WhatsApp, con link al evento.\n\nconst cfg = $('Config').first().json;\nconst raw = $input.all().map(i => i.json);\nconst events = Array.isArray(raw) ? raw : [];\n\nconst now = new Date();\nconst in7d = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);\n\nconst upcoming = events\n  .filter(e => e && e.startAt)\n  .map(e => ({ ...e, _start: new Date(e.startAt) }))\n  .filter(e => !isNaN(e._start) && e._start > now && e._start <= in7d)\n  .sort((a, b) => a._start - b._start);\n\nif (upcoming.length === 0) {\n  return [{ json: { skip: true, count: 0 } }];\n}\n\nconst TZ = 'America/Santiago';\nconst dayFmt = new Intl.DateTimeFormat('es-CL', {\n  timeZone: TZ, weekday: 'short', day: '2-digit', month: 'short'\n});\nconst timeFmt = new Intl.DateTimeFormat('es-CL', {\n  timeZone: TZ, hour: '2-digit', minute: '2-digit', hour12: false\n});\n\nconst cap = s => s.charAt(0).toUpperCase() + s.slice(1);\nconst cleanDay = s => cap(s.replace(/\\./g, '').replace(/,/g, ' ·'));\n\nconst eventUrl = (ev) =>\n  `https://www.skool.com/${cfg.groupSlug}/calendar?event=${ev.id}`;\n\nconst lines = ['*Esta semana en CAR*', ''];\nfor (const ev of upcoming) {\n  const day = cleanDay(dayFmt.format(ev._start));\n  const time = timeFmt.format(ev._start);\n  lines.push(`*${day} · ${time}*`);\n  lines.push(ev.title);\n  lines.push(eventUrl(ev));\n  lines.push('');\n}\n\nlines.push('— Nyx');\n\nconst text = lines.join('\\n');\n\nreturn [{\n  json: {\n    skip: false,\n    count: upcoming.length,\n    text,\n    targetGroupJid: cfg.targetGroupJid,\n    evoUrl: cfg.evoUrl,\n    evoKey: cfg.evoKey,\n    evoInstance: cfg.evoInstance\n  }\n}];\n"
+        "jsCode": "// Filter events to the next 7 days and format them for WhatsApp (markdown), one link per event.\nconst cfg = $('Config').first().json;\nconst raw = $input.all().map(i => i.json);\nconst events = Array.isArray(raw) ? raw : [];\n\nconst now = new Date();\nconst in7d = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);\n\nconst upcoming = events\n  .filter(e => e && e.startAt)\n  .map(e => ({ ...e, _start: new Date(e.startAt) }))\n  .filter(e => !isNaN(e._start) && e._start > now && e._start <= in7d)\n  .sort((a, b) => a._start - b._start);\n\nif (upcoming.length === 0) {\n  return [{ json: { skip: true, count: 0 } }];\n}\n\n// Edit TZ and locale to match your community.\nconst TZ = 'UTC';\nconst dayFmt = new Intl.DateTimeFormat('en-US', { timeZone: TZ, weekday: 'short', day: '2-digit', month: 'short' });\nconst timeFmt = new Intl.DateTimeFormat('en-US', { timeZone: TZ, hour: '2-digit', minute: '2-digit', hour12: false });\n\nconst eventUrl = (ev) => `https://www.skool.com/${cfg.groupSlug}/calendar?event=${ev.id}`;\n\nconst lines = [\"*This week's events*\", ''];\nfor (const ev of upcoming) {\n  lines.push(`*${dayFmt.format(ev._start)} · ${timeFmt.format(ev._start)}*`);\n  lines.push(ev.title);\n  lines.push(eventUrl(ev));\n  lines.push('');\n}\n\nconst text = lines.join('\\n');\nreturn [{ json: { skip: false, count: upcoming.length, text, targetGroupJid: cfg.targetGroupJid, evoUrl: cfg.evoUrl, evoKey: cfg.evoKey, evoInstance: cfg.evoInstance } }];\n"
       },
       "id": "b8aba0d3-f0a8-4bae-8526-0d4384980c76",
       "name": "Filter + Format Events",
@@ -259,7 +243,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://TU-EVOLUTION-API.com/message/sendText/{{ encodeURIComponent($json.evoInstance) }}",
+        "url": "={{ $json.evoUrl }}/message/sendText/{{ encodeURIComponent($json.evoInstance) }}",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -385,7 +369,7 @@
   },
   "settings": {
     "executionOrder": "v1",
-    "timezone": "America/Santiago",
+    "timezone": "UTC",
     "callerPolicy": "workflowsFromSameOwner",
     "errorWorkflow": ""
   },
