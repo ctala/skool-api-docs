@@ -1,0 +1,490 @@
+{
+  "name": "Reply to unanswered Skool posts with an LLM (human-approved)",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 1️⃣ Trigger & config\nRuns every 6h. Edit everything in the **Config** node — the only one you touch.",
+        "height": 320,
+        "width": 500,
+        "color": 5
+      },
+      "id": "2982615240b94bc0ab75eafe6c8a6fe6",
+      "name": "Group 1 — Trigger & config",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 2️⃣ Find unanswered posts\nFresh `auth:login` each run, then `posts:filter` (unanswered, last 24h) via the Skool All-in-One API actor.",
+        "height": 320,
+        "width": 920,
+        "color": 4
+      },
+      "id": "05f433f73ebe4d47a73a0cd87c2dd4ad",
+      "name": "Group 2 — Find unanswered posts",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        400,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 3️⃣ Filter & draft a reply\nSkip your own / short / brand-new posts, then draft an on-brand reply with an LLM (OpenRouter).",
+        "height": 320,
+        "width": 600,
+        "color": 6
+      },
+      "id": "20ea1132d6ce40c48cef844ea2a122c7",
+      "name": "Group 3 — Filter & draft",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1280,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 4️⃣ Notify for review\nSend the draft + post link to Telegram. A human reviews and posts it (extend with `posts:createComment` to auto-publish after approval).",
+        "height": 320,
+        "width": 360,
+        "color": 2
+      },
+      "id": "58734d3e532947cfbc42e185333acc15",
+      "name": "Group 4 — Notify for review",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 💬 Reply to unanswered Skool posts (LLM, human-approved)\nFind posts with 0 comments, draft an on-brand reply with an LLM, and send it to Telegram for review — so no member question goes unanswered.\n\n**Actor:** https://apify.com/cristiantala/skool-all-in-one-api\n**Guide:** https://ctala.github.io/skool-api-docs/recipes/reply-unanswered-posts/",
+        "height": 230,
+        "width": 560,
+        "color": 3
+      },
+      "id": "1e1a76e62e05496eb77a3360cee186e0",
+      "name": "Overview",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -680,
+        -150
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## ⚙️ Setup & configuration\n\n**1. Apify token** — free tier at apify.com → set as the `apifyApi` credential on the 4 Apify nodes.\n\n**2. Edit the `Config` node:**\n- `email` / `password` — your Skool admin login\n- `groupSlug` — the part after skool.com/\n- `selfUserId` — your own Skool user id (so it never replies to your own posts)\n- `communityName` / `brandVoice` — used in the LLM prompt\n- `llmModel` / `llmApiKey` — OpenRouter model + key (or swap the node for your LLM)\n- `telegramChatId` — where drafts are sent\n\n**3. Telegram** — set the `telegramApi` credential (your bot).\n\n**4. Schedule** — runs every 6h; tune to your community's pace.\n\n**5. Test** — click \"Test workflow\". It drafts replies only for posts older than 1h with no comments.",
+        "height": 470,
+        "width": 560,
+        "color": 7
+      },
+      "id": "71a5d44742e44eb3a8c04f7c4ab762b8",
+      "name": "Setup",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -680,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 6
+            }
+          ]
+        }
+      },
+      "id": "bf86cf45e93c433185afd58e5244f1a0",
+      "name": "Schedule (every 6h)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        260
+      ],
+      "notes": "Runs every 6h — tune to your community's pace",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c97897e3f12a41e7b8e3c7f470afdb3f",
+              "name": "email",
+              "value": "__REPLACE_WITH_SKOOL_EMAIL__",
+              "type": "string"
+            },
+            {
+              "id": "e2984f8c43e040cf84536cc9ab3e8850",
+              "name": "password",
+              "value": "__REPLACE_WITH_SKOOL_PASSWORD__",
+              "type": "string"
+            },
+            {
+              "id": "2cacbe013fc54be08cf24a213cc3da36",
+              "name": "groupSlug",
+              "value": "your-community-slug",
+              "type": "string"
+            },
+            {
+              "id": "bd5458ca2db34116960a506d90f5cd9f",
+              "name": "selfUserId",
+              "value": "__REPLACE_WITH_YOUR_SKOOL_USER_ID__",
+              "type": "string"
+            },
+            {
+              "id": "18a48c746b074287bf5bfecfe843895a",
+              "name": "communityName",
+              "value": "Your Community",
+              "type": "string"
+            },
+            {
+              "id": "070e02c0bfe343f9b3936d0b72cfe5e1",
+              "name": "brandVoice",
+              "value": "helpful, concise, founder-to-founder, no corporate fluff",
+              "type": "string"
+            },
+            {
+              "id": "30e64ff029684946b64d6df0fce5aca2",
+              "name": "llmModel",
+              "value": "anthropic/claude-sonnet-4",
+              "type": "string"
+            },
+            {
+              "id": "8ccb1792fc414bdfaa92b0ff700f6c02",
+              "name": "llmApiKey",
+              "value": "__REPLACE_WITH_OPENROUTER_API_KEY__",
+              "type": "string"
+            },
+            {
+              "id": "5e4433abdd89484b83ffc3cc57bfa2e2",
+              "name": "telegramChatId",
+              "value": "__REPLACE_WITH_TELEGRAM_CHAT_ID__",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "096981d77f5c4eb98beee0e0d17b6054",
+      "name": "Config",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        260
+      ],
+      "notes": "⚙️ Edit ALL your settings here",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "actorId": {
+          "__rl": true,
+          "value": "g2VGrINIS7pb8t2bs",
+          "mode": "list",
+          "cachedResultName": "Skool All-in-One API"
+        },
+        "customBody": "={{ JSON.stringify({ action: \"auth:login\", email: $(\"Config\").first().json.email, password: $(\"Config\").first().json.password, groupSlug: $(\"Config\").first().json.groupSlug }) }}"
+      },
+      "id": "88ce7670fd9243849ec25245da2980ca",
+      "name": "Skool: login (fresh)",
+      "type": "@apify/n8n-nodes-apify.apify",
+      "typeVersion": 1,
+      "position": [
+        440,
+        260
+      ],
+      "credentials": {
+        "apifyApi": {
+          "id": "__REPLACE_WITH_APIFYAPI_CRED_ID__",
+          "name": "Apify account"
+        }
+      },
+      "notes": "Fresh auth:login each run — no stored cookies",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "resource": "Datasets",
+        "datasetId": "={{ $json.defaultDatasetId }}",
+        "options": {}
+      },
+      "id": "61616dc1770a4780ba9c2a8ac425812c",
+      "name": "Get cookies",
+      "type": "@apify/n8n-nodes-apify.apify",
+      "typeVersion": 1,
+      "position": [
+        660,
+        260
+      ],
+      "credentials": {
+        "apifyApi": {
+          "id": "__REPLACE_WITH_APIFYAPI_CRED_ID__",
+          "name": "Apify account"
+        }
+      },
+      "notes": "Reads cookies from the login run",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "actorId": {
+          "__rl": true,
+          "value": "g2VGrINIS7pb8t2bs",
+          "mode": "list",
+          "cachedResultName": "Skool All-in-One API"
+        },
+        "customBody": "={{ JSON.stringify({ action: \"posts:filter\", cookies: $json.cookies, groupSlug: $(\"Config\").first().json.groupSlug, params: { unanswered: true, since: $now.minus({hours:24}).toISO(), limit: 50 } }) }}"
+      },
+      "id": "05f5e7b4616643bc8cb0bb21bb03c6cf",
+      "name": "Find unanswered posts",
+      "type": "@apify/n8n-nodes-apify.apify",
+      "typeVersion": 1,
+      "position": [
+        880,
+        260
+      ],
+      "credentials": {
+        "apifyApi": {
+          "id": "__REPLACE_WITH_APIFYAPI_CRED_ID__",
+          "name": "Apify account"
+        }
+      },
+      "notes": "posts:filter — 0-comment posts in the last 24h",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "resource": "Datasets",
+        "datasetId": "={{ $json.defaultDatasetId }}",
+        "options": {}
+      },
+      "id": "2816115189c245e1940dc5b84bbdd140",
+      "name": "Get posts result",
+      "type": "@apify/n8n-nodes-apify.apify",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        260
+      ],
+      "credentials": {
+        "apifyApi": {
+          "id": "__REPLACE_WITH_APIFYAPI_CRED_ID__",
+          "name": "Apify account"
+        }
+      },
+      "notes": "Reads the posts dataset",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Keep only posts worth an auto-draft. Returns one item per candidate (or none).\nconst cfg = $('Config').first().json;\nconst self = cfg.selfUserId;\nconst out = [];\nfor (const item of $input.all()) {\n  const p = item.json;\n  if (!p || !p.id) continue;\n  const author = (p.author && p.author.id) || p.user_id;\n  if (author === self) continue;                 // skip your own posts\n  const content = p.content || (p.metadata && p.metadata.content) || '';\n  if (content.length < 30) continue;             // skip one-liners / announcements\n  const created = new Date(p.createdAt || p.created_at);\n  if (!isNaN(created) && (Date.now() - created.getTime())/60000 < 60) continue; // give humans 1h first\n  out.push({ json: { id: p.id, title: p.title || (p.metadata && p.metadata.title) || '', content, authorFirst: (p.author && p.author.firstName) || '' } });\n}\nreturn out;"
+      },
+      "id": "0ce2a79c036845949b7d1496eb231384",
+      "name": "Filter candidates",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1320,
+        260
+      ],
+      "notes": "Skip own posts, one-liners, and posts <1h old",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $(\"Config\").first().json.llmApiKey }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({ model: $(\"Config\").first().json.llmModel, messages: [ { role: \"system\", content: \"You are a helpful community moderator for \" + $(\"Config\").first().json.communityName + \". Brand voice: \" + $(\"Config\").first().json.brandVoice + \". Draft a reply of at most 2 short paragraphs. Ask a clarifying follow-up if the post is vague. Do not promise things the community cannot deliver. Sound human, not corporate. Plain text only.\" }, { role: \"user\", content: \"Post title: \" + $json.title + \"\\nPost body: \" + $json.content + \"\\nAuthor: \" + $json.authorFirst } ] }) }}",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "e9fd3fe165dd42cbad721942087a49a3",
+      "name": "Draft reply (LLM)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1540,
+        260
+      ],
+      "notes": "OpenRouter chat completion — drafts the reply",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Build the approval message for Telegram.\nconst post = $('Filter candidates').item.json;\nconst draft = ($json.choices && $json.choices[0] && $json.choices[0].message && $json.choices[0].message.content) || '(no draft)';\nconst slug = $('Config').first().json.groupSlug;\nconst url = `https://www.skool.com/${slug}?p=${(post.id||'').slice(0,8)}`;\nconst text = `📝 Unanswered post: *${post.title || '(no title)'}* by ${post.authorFirst}\\n${url}\\n\\nDraft reply:\\n${draft}\\n\\nReview, then post it from Skool (or extend this workflow with posts:createComment after approval).`;\nreturn [{ json: { chatId: $('Config').first().json.telegramChatId, text } }];"
+      },
+      "id": "7bfba3c19ef346ddb68c2a012ca788ea",
+      "name": "Format for Telegram",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1760,
+        260
+      ],
+      "notes": "Builds the draft + post link message",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.chatId }}",
+        "text": "={{ $json.text }}",
+        "additionalFields": {}
+      },
+      "id": "68ee1e2666e643d3b77565862b0cc655",
+      "name": "Send draft to Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1980,
+        260
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "__REPLACE_WITH_TELEGRAM_CRED_ID__",
+          "name": "Telegram bot"
+        }
+      },
+      "notes": "Sends the draft for human review",
+      "notesInFlow": true
+    }
+  ],
+  "connections": {
+    "Schedule (every 6h)": {
+      "main": [
+        [
+          {
+            "node": "Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Config": {
+      "main": [
+        [
+          {
+            "node": "Skool: login (fresh)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Skool: login (fresh)": {
+      "main": [
+        [
+          {
+            "node": "Get cookies",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get cookies": {
+      "main": [
+        [
+          {
+            "node": "Find unanswered posts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find unanswered posts": {
+      "main": [
+        [
+          {
+            "node": "Get posts result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get posts result": {
+      "main": [
+        [
+          {
+            "node": "Filter candidates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter candidates": {
+      "main": [
+        [
+          {
+            "node": "Draft reply (LLM)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Draft reply (LLM)": {
+      "main": [
+        [
+          {
+            "node": "Format for Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format for Telegram": {
+      "main": [
+        [
+          {
+            "node": "Send draft to Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "UTC"
+  }
+}
