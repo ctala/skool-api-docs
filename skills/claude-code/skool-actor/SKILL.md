@@ -55,7 +55,8 @@ Helper scripts in `scripts/` wrap the most common actions (use them when relevan
 - `scripts/login.sh` — `auth:login` (Mode A bootstrap)
 - `scripts/post.sh` — `posts:create` shortcut
 - `scripts/comment.sh` — `posts:createComment` shortcut
-- `scripts/approve.sh` — `members:approve` shortcut
+- `scripts/approve.sh` — `members:approve` shortcut (single applicant)
+- `scripts/batch-approve.sh` — `members:batchApprove` shortcut (N applicants; takes ids as args or on stdin)
 
 ## Action reference
 
@@ -87,6 +88,8 @@ Decide the action, then assemble `params` from this table.
 | `members:reject` | `memberId` | |
 | `members:ban` | `memberId` | Permanent — confirm with user before invoking |
 | `members:batchApprove` | `memberIds: string[]` | Per-item results in response |
+
+**Waitlist review flow (human-in-the-loop)** — when the user asks to "review/clear the pending members": `members:pending` → screen each applicant against the user's criteria (LinkedIn reachable + specific screening answer + acquisition channel) → collect the `memberId`s that pass → `members:batchApprove` → re-run `members:pending` to verify the queue. Show the user the screened list and wait for confirmation before approving. Full walkthrough: [Recipe — Review and batch-approve your Skool waitlist](https://github.com/ctala/skool-api-docs/blob/main/recipes/review-and-batch-approve-waitlist.md). For fully automated AI screening instead, see the [auto-approve recipe](https://github.com/ctala/skool-api-docs/blob/main/recipes/auto-approve-members-n8n.md).
 
 ### Events (calendar)
 

@@ -15,6 +15,7 @@ Copy-paste-ready integrations using the [Apify-hosted Skool All-in-One API actor
 | Recipe | Stack | What it does |
 |---|---|---|
 | [**Auto-approve members with n8n + GPT-4o**](auto-approve-members-n8n.md) | n8n + LLM | LLM screens applicants → approve/reject. Published as [n8n template](https://n8n.io/workflows/14392-auto-approve-skool-community-members-with-gpt-4o-ai-screening/). |
+| [**Review & batch-approve your waitlist**](review-and-batch-approve-waitlist.md) | curl / Python + human | List pending → screen against criteria → `members:batchApprove` in bulk → verify. Human-in-the-loop alternative to AI auto-approval. |
 | [**Reply to unanswered posts**](reply-unanswered-posts.md) | n8n / Python + LLM | Find 0-comment posts → draft reply → Telegram approval → publish |
 | [**Reply to onboarding comments**](reply-onboarding-comments.md) | Python + LLM | Detect unanswered comments in pinned threads → draft contextual reply → publish |
 | [**Publish course from markdown**](publish-course-from-markdown.md) | Python / Node | Local markdown files → full Skool classroom with covers |
