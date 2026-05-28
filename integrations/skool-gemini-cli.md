@@ -8,7 +8,7 @@ search_volume_monthly: 0
 funnel: A
 playbook: integrations
 last_updated: 2026-05-21
-canonical: https://ctala.github.io/skool-api-docs/integrations/skool-gemini-cli/
+canonical: https://skool-api.cristiantala.com/integrations/skool-gemini-cli/
 render_with_liquid: false
 ---
 
@@ -218,7 +218,7 @@ Rules: members approve/reject use params.memberId (NOT id). Comment reply: paren
   queues — no retry loop). Every response is { success, data } or { success:false,
   errorCode, hint } — read `hint` to recover.
 
-Full action list + params: https://ctala.github.io/skool-api-docs/docs/actions/
+Full action list + params: https://skool-api.cristiantala.com/docs/actions/
 ```
 
 The full pattern library (function-calling specs, idempotency table, the LLM-readable `hint` contract) lives in [Skool for AI agents](../for/ai-agents.md).
@@ -263,6 +263,6 @@ The full pattern library (function-calling specs, idempotency table, the LLM-rea
     "name": "Cristian Tala",
     "url": "https://cristiantala.com"
   },
-  "mainEntityOfPage": "https://ctala.github.io/skool-api-docs/integrations/skool-gemini-cli/"
+  "mainEntityOfPage": "https://skool-api.cristiantala.com/integrations/skool-gemini-cli/"
 }
 </script>

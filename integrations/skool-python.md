@@ -8,7 +8,7 @@ search_volume_monthly: 10
 funnel: A
 playbook: integrations
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/integrations/skool-python/
+canonical: https://skool-api.cristiantala.com/integrations/skool-python/
 ---
 
 

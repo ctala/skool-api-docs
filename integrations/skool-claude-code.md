@@ -8,7 +8,7 @@ search_volume_monthly: 10
 funnel: A
 playbook: integrations
 last_updated: 2026-05-21
-canonical: https://ctala.github.io/skool-api-docs/integrations/skool-claude-code/
+canonical: https://skool-api.cristiantala.com/integrations/skool-claude-code/
 render_with_liquid: false
 ---
 
@@ -209,7 +209,7 @@ Actions: posts:* (list/filter/get/create/update/delete/createComment/pin/vote/ge
   · events:* (list/upcoming) · classroom:* (listCourses/getTree/createCourse/createFolder/
   createPage/setBody/updateCourse/updateResources/deleteUnit) · files:* (uploadImage/uploadFile)
   · groups:* (get/setAutoDM) · system:* (health/debug) · auth:login
-  Full params: https://ctala.github.io/skool-api-docs/docs/actions/
+  Full params: https://skool-api.cristiantala.com/docs/actions/
 
 Rules:
   - Members approve/reject use params.memberId (from members:pending), NOT id.
@@ -260,6 +260,6 @@ This is the same surface the bundled Skill encodes — use the Skill for the pol
     "name": "Cristian Tala",
     "url": "https://cristiantala.com"
   },
-  "mainEntityOfPage": "https://ctala.github.io/skool-api-docs/integrations/skool-claude-code/"
+  "mainEntityOfPage": "https://skool-api.cristiantala.com/integrations/skool-claude-code/"
 }
 </script>

@@ -130,7 +130,7 @@ search_volume_monthly: [estimado real — usar el dato honesto, p.ej. 0 o 10]
 funnel: A
 playbook: integrations
 last_updated: 2026-MM-DD
-canonical: https://ctala.github.io/skool-api-docs/integrations/skool-[tool]/
+canonical: https://skool-api.cristiantala.com/integrations/skool-[tool]/
 ---
 ```
 

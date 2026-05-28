@@ -8,7 +8,7 @@ search_volume_monthly: 20
 funnel: A
 playbook: integrations
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/integrations/skool-zapier/
+canonical: https://skool-api.cristiantala.com/integrations/skool-zapier/
 ---
 
 

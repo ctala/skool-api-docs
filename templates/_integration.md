@@ -19,7 +19,7 @@ search_volume_monthly: {N}           # número entero, 0 si desconocido
 funnel: A
 playbook: integrations
 last_updated: {YYYY-MM-DD}
-canonical: https://ctala.github.io/skool-api-docs/integrations/skool-{tool-slug}/
+canonical: https://skool-api.cristiantala.com/integrations/skool-{tool-slug}/
 render_with_liquid: false            # OBLIGATORIO si la página tiene {{ }} en code blocks
 ---
 
@@ -270,6 +270,6 @@ The returned `cookies` string is valid for ~3.5 days. After that, re-run `auth:l
     "name": "Cristian Tala",
     "url": "https://cristiantala.com"
   },
-  "mainEntityOfPage": "https://ctala.github.io/skool-api-docs/integrations/skool-{tool-slug}/"
+  "mainEntityOfPage": "https://skool-api.cristiantala.com/integrations/skool-{tool-slug}/"
 }
 </script>

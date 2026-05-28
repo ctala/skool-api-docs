@@ -8,7 +8,7 @@ search_volume_monthly: {N}
 funnel: B
 playbook: personas
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/for/{persona-slug}/
+canonical: https://skool-api.cristiantala.com/for/{persona-slug}/
 ---
 
 

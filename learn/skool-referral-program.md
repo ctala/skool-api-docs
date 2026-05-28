@@ -8,7 +8,7 @@ search_volume_monthly: 20
 funnel: B
 playbook: glossary
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/learn/skool-referral-program/
+canonical: https://skool-api.cristiantala.com/learn/skool-referral-program/
 ---
 
 

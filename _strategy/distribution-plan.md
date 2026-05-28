@@ -41,7 +41,7 @@ El actor en Apify Store rankea en Google (`skool apify`) + en la búsqueda inter
 Ya hay 3 posts EN (17-may). Syndicar las páginas nuevas de mayor valor con `canonical` apuntando a la doc (no duplicate content).
 - **Candidatos:** pillar `skool api`, `skool-claude-code`, `export-skool-members`, recipe batch-approve.
 - **Stack:** `reference_devto_api` (token + endpoint, header `api-key:`). ctala (ES) + cristiantalasanchez (EN).
-- **Regla:** `canonical_url` siempre a `ctala.github.io/skool-api-docs/...`.
+- **Regla:** `canonical_url` siempre a `skool-api.cristiantala.com/...`.
 
 ### 4. Product Hunt launch — alto impacto puntual (sesión dedicada)
 - **Qué:** el actor como "The unofficial Skool API — automate your community with any AI agent". Apela a la ola de agentes.

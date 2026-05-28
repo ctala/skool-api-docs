@@ -8,7 +8,7 @@ search_volume_monthly: null
 funnel: A
 playbook: personas
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/for/ai-agents/
+canonical: https://skool-api.cristiantala.com/for/ai-agents/
 ---
 
 

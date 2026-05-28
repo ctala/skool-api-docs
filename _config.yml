@@ -3,8 +3,8 @@
 
 title: "Skool API Docs"
 description: "The complete unofficial Skool API documentation — read AND write to Skool communities via the Apify-hosted Skool All-in-One API actor. Integrations, recipes, glossary, comparisons."
-url: "https://ctala.github.io"
-baseurl: "/skool-api-docs"
+url: "https://skool-api.cristiantala.com"
+baseurl: ""
 
 author:
   name: "Cristian Tala"

@@ -8,7 +8,7 @@ search_volume_monthly: 210
 funnel: B
 playbook: curation
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/compare/skool-alternatives/
+canonical: https://skool-api.cristiantala.com/compare/skool-alternatives/
 ---
 
 

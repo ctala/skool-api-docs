@@ -8,7 +8,7 @@ search_volume_monthly: {N or null}
 funnel: A
 playbook: templates
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/recipes/{kebab-case-slug}/
+canonical: https://skool-api.cristiantala.com/recipes/{kebab-case-slug}/
 render_with_liquid: false
 ---
 

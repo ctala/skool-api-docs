@@ -8,7 +8,7 @@ search_volume_monthly: 20
 funnel: A
 playbook: comparison
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/automation/skool-scraper/
+canonical: https://skool-api.cristiantala.com/automation/skool-scraper/
 ---
 
 

@@ -8,7 +8,7 @@ search_volume_monthly: 90
 funnel: B
 playbook: glossary
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/learn/skool-courses/
+canonical: https://skool-api.cristiantala.com/learn/skool-courses/
 ---
 
 

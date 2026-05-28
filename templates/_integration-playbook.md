@@ -56,7 +56,7 @@ Frontmatter:
 [ ] primary_keyword — "skool {tool-slug}" en lowercase
 [ ] search_volume_monthly — número entero (0 si no se sabe)
 [ ] last_updated   — fecha ISO de hoy (YYYY-MM-DD)
-[ ] canonical      — URL del sitio publicado (ctala.github.io/skool-api-docs/...)
+[ ] canonical      — URL del sitio publicado (skool-api.cristiantala.com/...)
 [ ] render_with_liquid — agregar `render_with_liquid: false` si la página tiene {{ }} en code blocks
 
 Secciones:
@@ -115,7 +115,7 @@ Toda página de AI agent incluye dos secciones nuevas (ver el piloto `integratio
 `for/ai-agents.md` es el **primer canónico** (Claude tool-use / OpenAI function-calling / MCP / LangChain snippets + agent loop). **NO duplicar el primer completo** en cada página — enlazarlo. Lo único por página (≥40% del contenido): Why, Setup/config, Example, gotchas específicos del tool. Así la familia de páginas refuerza topical authority hacia el pillar sin caer en duplicate content.
 
 **R8 — Links a la versión web indexable.**
-Internal links siempre como **paths relativos** (`skool-mcp.md`, `../docs/actions.md`) — Jekyll los resuelve a URLs `https://ctala.github.io/skool-api-docs/...` que los buscadores rastrean e indexan. NUNCA linkear referencias de contenido a `github.com/blob/...` (no es la URL canónica indexable). `raw.githubusercontent.com` SOLO para descargas (instalar SKILL/scripts). `canonical` y `mainEntityOfPage` siempre a `ctala.github.io`.
+Internal links siempre como **paths relativos** (`skool-mcp.md`, `../docs/actions.md`) — Jekyll los resuelve a URLs `https://skool-api.cristiantala.com/...` que los buscadores rastrean e indexan. NUNCA linkear referencias de contenido a `github.com/blob/...` (no es la URL canónica indexable). `raw.githubusercontent.com` SOLO para descargas (instalar SKILL/scripts). `canonical` y `mainEntityOfPage` siempre a `ctala.github.io`.
 
 ---
 
@@ -177,7 +177,7 @@ curl -X POST "https://api.indexnow.org/indexnow" \
     "key": "{KEY}",
     "keyLocation": "https://ctala.github.io/{KEY}.txt",
     "urlList": [
-      "https://ctala.github.io/skool-api-docs/integrations/skool-{tool-slug}/"
+      "https://skool-api.cristiantala.com/integrations/skool-{tool-slug}/"
     ]
   }'
 ```
@@ -194,12 +194,12 @@ python3 .claude/skills/elhda-new-episode/scripts/gsc_resubmit_sitemap.py \
 
 ## 5. Plan de distribución / syndication por página nueva
 
-Cada página nueva tiene canonical en `ctala.github.io/skool-api-docs/integrations/skool-{tool-slug}/`. La distribución amplifica sin crear duplicate content.
+Cada página nueva tiene canonical en `skool-api.cristiantala.com/integrations/skool-{tool-slug}/`. La distribución amplifica sin crear duplicate content.
 
 ### Canal 1 — dev.to ES (ctala) — Funnel A prioritario
 
 Publicar una versión en español del core de la página como post independiente en dev.to ES.
-- Canonical: apuntar a la URL de `ctala.github.io/skool-api-docs` (no a sí mismo en dev.to)
+- Canonical: apuntar a la URL de `skool-api.cristiantala.com` (no a sí mismo en dev.to)
 - Tags: `skool`, `automatizacion`, `ia`, `{tool en español o inglés}`
 - Título: "Cómo conectar Skool con {Tool} (sin API oficial)" o "Skool + {Tool}: automatiza tu comunidad"
 - El post incluye el código del ejemplo principal + CTA al actor con UTM `utm_medium=devto-es`

@@ -8,7 +8,7 @@ search_volume_monthly: 10
 funnel: A
 playbook: glossary
 last_updated: 2026-05-21
-canonical: https://ctala.github.io/skool-api-docs/automation/export-skool-members/
+canonical: https://skool-api.cristiantala.com/automation/export-skool-members/
 render_with_liquid: false
 ---
 
@@ -125,6 +125,6 @@ It is **not** a tool for scraping communities you don't own — that has legal, 
   "dateModified": "2026-05-21",
   "author": { "@type": "Person", "name": "Cristian Tala", "url": "https://cristiantala.com" },
   "publisher": { "@type": "Person", "name": "Cristian Tala", "url": "https://cristiantala.com" },
-  "mainEntityOfPage": "https://ctala.github.io/skool-api-docs/automation/export-skool-members/"
+  "mainEntityOfPage": "https://skool-api.cristiantala.com/automation/export-skool-members/"
 }
 </script>

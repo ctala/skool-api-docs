@@ -9,7 +9,7 @@ funnel: B
 playbook: comparison
 last_invalid_arg: 2026-05-19
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-discord/
+canonical: https://skool-api.cristiantala.com/compare/skool-vs-discord/
 ---
 
 

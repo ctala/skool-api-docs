@@ -8,7 +8,7 @@ search_volume_monthly: 70
 funnel: B
 playbook: comparison
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-mighty-networks/
+canonical: https://skool-api.cristiantala.com/compare/skool-vs-mighty-networks/
 ---
 
 

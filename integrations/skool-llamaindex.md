@@ -8,7 +8,7 @@ search_volume_monthly: 0
 funnel: A
 playbook: integrations
 last_updated: 2026-05-21
-canonical: https://ctala.github.io/skool-api-docs/integrations/skool-llamaindex/
+canonical: https://skool-api.cristiantala.com/integrations/skool-llamaindex/
 render_with_liquid: false
 ---
 
@@ -46,7 +46,7 @@ def skool_action(action: str, params: dict | None = None) -> dict:
     Skool All-in-One API actor.
 
     action: e.g. 'posts:create', 'members:pending', 'members:approve'.
-            See https://ctala.github.io/skool-api-docs/docs/actions/
+            See https://skool-api.cristiantala.com/docs/actions/
     params: action-specific dict. members approve/reject use memberId (NOT id).
             Comment reply: parentId = comment id, rootId = post id.
 
@@ -183,7 +183,7 @@ Every action is ONE POST. Actions: posts:* members:* events:* classroom:* files:
 Rules: members approve/reject use params.memberId (NOT id). Comment reply: parentId=comment id,
 rootId=post id. Posts are plain text. ~25 writes/min (actor queues — no retry loop). On
 errorCode "WAF_EXPIRED" re-run auth:login. Read `hint` to recover. Full params:
-https://ctala.github.io/skool-api-docs/docs/actions/
+https://skool-api.cristiantala.com/docs/actions/
 ```
 
 ## Other Python frameworks
@@ -232,6 +232,6 @@ Using a different framework? The wrapper is the same POST behind a different too
     "name": "Cristian Tala",
     "url": "https://cristiantala.com"
   },
-  "mainEntityOfPage": "https://ctala.github.io/skool-api-docs/integrations/skool-llamaindex/"
+  "mainEntityOfPage": "https://skool-api.cristiantala.com/integrations/skool-llamaindex/"
 }
 </script>

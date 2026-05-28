@@ -8,7 +8,7 @@ search_volume_monthly: 170
 funnel: B
 playbook: glossary
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/guide/skool-cost/
+canonical: https://skool-api.cristiantala.com/guide/skool-cost/
 ---
 
 

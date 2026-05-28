@@ -8,7 +8,7 @@ search_volume_monthly: 0
 funnel: A
 playbook: integrations
 last_updated: 2026-05-21
-canonical: https://ctala.github.io/skool-api-docs/integrations/skool-cline/
+canonical: https://skool-api.cristiantala.com/integrations/skool-cline/
 render_with_liquid: false
 ---
 
@@ -203,7 +203,7 @@ Keep all WRITE actions OFF autoApprove. Auth: call action "auth:login" with
 re-run on errorCode "WAF_EXPIRED". Approve/reject use params.memberId (from
 members:pending), NOT id. Comment reply: parentId = comment id, rootId = post id;
 top-level = both postId.
-Full action list + params: https://ctala.github.io/skool-api-docs/for/ai-agents/
+Full action list + params: https://skool-api.cristiantala.com/for/ai-agents/
 ```
 
 For the full agent primer (function-calling specs, idempotency table, error-recovery patterns), see **[Skool for AI agents](../for/ai-agents.md)**.
@@ -248,6 +248,6 @@ For the full agent primer (function-calling specs, idempotency table, error-reco
     "name": "Cristian Tala",
     "url": "https://cristiantala.com"
   },
-  "mainEntityOfPage": "https://ctala.github.io/skool-api-docs/integrations/skool-cline/"
+  "mainEntityOfPage": "https://skool-api.cristiantala.com/integrations/skool-cline/"
 }
 </script>

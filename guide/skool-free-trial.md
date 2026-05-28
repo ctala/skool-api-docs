@@ -8,7 +8,7 @@ search_volume_monthly: 140
 funnel: B
 playbook: glossary
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/guide/skool-free-trial/
+canonical: https://skool-api.cristiantala.com/guide/skool-free-trial/
 ---
 
 

@@ -8,7 +8,7 @@ search_volume_monthly: 260
 funnel: B
 playbook: objections
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/guide/is-skool-free/
+canonical: https://skool-api.cristiantala.com/guide/is-skool-free/
 ---
 
 

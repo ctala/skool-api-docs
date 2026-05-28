@@ -8,7 +8,7 @@ search_volume_monthly: 10
 funnel: A
 playbook: automation
 last_updated: 2026-05-19
-canonical: https://ctala.github.io/skool-api-docs/automation/skool-ai-agent/
+canonical: https://skool-api.cristiantala.com/automation/skool-ai-agent/
 ---
 
 
