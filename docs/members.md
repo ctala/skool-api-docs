@@ -130,6 +130,53 @@ Each approval is an independent write call internally; the actor handles rate li
 }
 ```
 
+### `members:export` — bulk CSV export (email, tier, LTV, survey answers)
+
+The only reliable way to get **member emails** from Skool. The `members:list` SSR returns `email: ""` for most members, and `GET /users/{id}` masks emails of third parties even for community owners. The admin UI's "Export" button is the workaround — and that's what this action wraps.
+
+```json
+{
+  "action": "members:export",
+  "cookies": "...",
+  "groupSlug": "your-community",
+  "params": {
+    "status": "active",
+    "tiers": ["standard", "premium", "vip"]
+  }
+}
+```
+
+| Param | Values | Default |
+|---|---|---|
+| `status` | `active` / `cancelling` / `churned` / `banned` | `active` |
+| `tiers` | array of your community's tier slugs | all tiers |
+| `sortType` | sort order (Skool default if empty) | `""` |
+
+Response:
+
+```json
+[
+  {
+    "success": true,
+    "csv": "FirstName,LastName,Email,Invited By,JoinedDate,Question1,Question2,Question3,Answer1,Answer2,Answer3,Price,Recurring Interval,Tier,LTV\n...",
+    "rowCount": 728
+  }
+]
+```
+
+CSV columns: `FirstName, LastName, Email, Invited By, JoinedDate, Question1-3, Answer1-3, Price, Recurring Interval, Tier, LTV`.
+
+Behind the scenes, this runs Skool's 3-step async export flow (request bulk action → poll wait endpoint → download signed URL → fetch CSV body) in one call.
+
+**Data quality reality (production community, 728 members):**
+- ~68% have populated `Email` — the rest came in via Skool Discovery and don't share email with the owner
+- ~88% have a LinkedIn URL in `Answer1` (if your apply form asks for it) — typically more complete than email
+- `Invited By` only populated for members who came through a tracked referral link
+
+The acquisition source (`Joined from {channel}`) is **NOT** in the CSV — that's in `member.metadata.attrSrcComp` from `members:list` SSR. Combine both for full attribution.
+
+See the full recipe: [Export Skool members to CSV](../recipes/export-skool-members-csv.md).
+
 ## Roles
 
 Skool tracks 3 roles: `member`, `admin`, `owner`. The actor's current write actions cover `member` lifecycle (approve/reject/ban). Promoting a member to admin is **not yet exposed** — for now, do it through the Skool UI.

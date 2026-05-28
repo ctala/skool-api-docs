@@ -136,7 +136,58 @@ await callActor({
 
 This is the exact pattern in the [batch update course covers recipe](../recipes/batch-update-course-covers.md).
 
+### `files:uploadFile` — non-image uploads (PDF, ZIP, sheets) for classroom resources
+
+Use this for any non-image file you want to attach as a **lesson resource** (PDF cheatsheets, workflow JSONs, ZIP bundles). Different bucket + ACL from `files:uploadImage` — and **not interchangeable**.
+
+```json
+{
+  "action": "files:uploadFile",
+  "cookies": "...",
+  "groupSlug": "your-community",
+  "params": {
+    "filePath": "/local/path/to/template.pdf",
+    "fileName": "template.pdf",
+    "contentType": "application/pdf"
+  }
+}
+```
+
+Response:
+
+```json
+{
+  "success": true,
+  "file": {
+    "id": "abc123...32hex",
+    "file_name": "template.pdf",
+    "content_type": "application/pdf"
+  }
+}
+```
+
+Use the `file.id` in [`classroom:updateResources`](classroom.md#classroomupdateresources) to attach the file to a lesson.
+
+#### Why this exists separately from `uploadImage`
+
+Skool's `POST /files` accepts a `privacy` flag that determines bucket + ACL:
+
+| `privacy` | Bucket | ACL | Use case |
+|---|---|---|---|
+| `0` (default) | `sk-groups-dev-files` | `public-read` | Cover images (URL public, `.jpg` suffix) |
+| `1` | `sk-groups-files` | `private` (signed URLs on-demand) | Classroom Resources |
+
+The actor's `files:uploadImage` always sends `privacy: 0`, and `files:uploadFile` always sends `privacy: 1`. **You can't change the flag after upload** — pick the right wrapper.
+
+If you try to use a `privacy: 0` file as a classroom resource, Skool rejects with `400 invalid file ... privacy: 0`. Re-upload with `files:uploadFile`.
+
+#### Direct GET returns 403 for `privacy: 1` files
+
+`assets.skool.com/...` URLs for private files return `403 Access Denied` because the bucket policy blocks public access. Skool generates signed URLs on-demand when a member clicks Download from a lesson page. This is correct behavior, not a bug.
+
+See the full recipe: [Attach files to lesson pages](../recipes/attach-files-to-lessons.md).
+
 ## See also
 
-- [Classroom](classroom.md) — courses use covers heavily
+- [Classroom](classroom.md) — courses use covers heavily (and lesson resources need `uploadFile`)
 - [Groups](groups.md) — group icon + cover are also `files:uploadImage` + `groups:*` writes

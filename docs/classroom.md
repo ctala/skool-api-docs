@@ -150,6 +150,40 @@ This is the action you use for **any** edit to a course (cover, title, descripti
 
 This costs +1 GET (~200ms) per update. **Worth it** — see "R-PUT-COURSE" below.
 
+### `classroom:updateResources` — attach files or links to a lesson page
+
+Add downloadable resources to a classroom page — PDFs, ZIPs, sheets (via `file_id` from [`files:uploadFile`](files.md#filesuploadfile)) or external links (e.g. Google Sheets "make a copy" URLs).
+
+```json
+{
+  "action": "classroom:updateResources",
+  "cookies": "...",
+  "groupSlug": "your-community",
+  "params": {
+    "courseId": "course_32hex",
+    "pageId": "page_32hex",
+    "resources": [
+      { "title": "PDF Cheatsheet", "file_id": "abc123..." },
+      { "title": "Sheet template (copy)", "link": "https://docs.google.com/spreadsheets/d/.../copy" }
+    ]
+  }
+}
+```
+
+Resources support 4 types (mirrors the admin UI "ADD" button): **file**, **link**, **transcript**, **pin community post**. The actor accepts `file_id` and `link` shapes today; `transcript` and `pin community post` shapes pending wrapping.
+
+#### Critical rules (each one is a real production gotcha)
+
+- **No patch semantics — each call REPLACES the full array.** To add 1 new resource to a page with 2 existing, send all 3 in the array. To clear all resources, send `resources: []`.
+- **`file_id` must come from `files:uploadFile` (`privacy: 1`)**, NOT `files:uploadImage` (`privacy: 0`). Cover-image files are rejected: `400 invalid file ... privacy: 0`.
+- **`update_resources: true` is mandatory** on the underlying PUT. The actor sends it by default — only relevant if you're calling Skool's REST API directly without the wrapper.
+- **Title gets truncated to ~34 chars in the UI.** Plan titles accordingly.
+- **`file_id` is scoped to its origin group.** A file uploaded to group A can't be used as a resource in group B's classroom. Re-upload per community.
+
+When reading from `metadata.resources` (returned by `classroom:getTree`), note that the field is stored as a **JSON-encoded string** — `JSON.parse` it before iterating. Skool auto-enriches file resources with `file_name` and `file_content_type` on read.
+
+See the full recipe: [Attach files to lesson pages](../recipes/attach-files-to-lessons.md).
+
 ### `classroom:deleteUnit`
 
 ```json
