@@ -34,6 +34,10 @@ Copy-paste-ready integrations using the [Apify-hosted Skool All-in-One API actor
 | [**Event reminders to feed (24h + 1h)**](event-reminders-to-feed.md) | n8n / Python + cron | Auto-post reminders before every Skool event. Doubles attendance vs email-only. Idempotent dedupe pattern |
 | [**Generate N lessons from JSON spec**](generate-lessons-from-json.md) | Any HTTP client | Drive lesson creation from a JSON spec instead of Markdown files. Best for 5-20 templated/AI-generated lessons |
 | [**Keyword-monitoring auto-replies**](keyword-monitoring-replies.md) | n8n + LLM + Telegram | Surface posts mentioning your keywords, LLM-draft reply, human-approve via Telegram, publish |
+| [**Spam cleanup (bulk delete posts)**](spam-cleanup-posts-delete.md) | Any HTTP client | Weekly housekeeping pass: filter spam candidates, review, bulk `posts:delete`. Mandatory human-review gate |
+| [**Amplify team posts (likes via API)**](amplify-team-posts-vote.md) | Any HTTP client | `posts:vote` for team-account validation. Honest framing on when it's legitimate vs. fake engagement |
+| [**Conditional member approval (no LLM)**](conditional-member-approval.md) | Any HTTP client | Deterministic rules (email domain, LinkedIn presence, apply keywords). Lighter cousin of the LLM screening recipe |
+| [**Discover Skool label IDs**](discover-skool-label-ids.md) | Any HTTP client | Pull your group's category labelIds via `groups:get`. The first call every category-aware automation needs |
 
 ## How recipes are structured
 

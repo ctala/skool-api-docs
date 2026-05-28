@@ -28,6 +28,12 @@ Skool **does not have an official API**. The community has reverse-engineered bi
 
 This actor is that integration. It powers a real production community ([Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite) — daily writes, automated onboarding, full classroom). If it breaks, it breaks for me first. Bugs get fixed fast.
 
+### Built by a solo community admin, for solo community admins
+
+I run my community alone — no team, no virtual assistants, no community managers on staff. Everything in this doc-site exists because **I needed it to keep up with the daily work** of running a Skool community as a one-person operation: approving members, replying to posts, publishing courses, sending event reminders, exporting member data for follow-up.
+
+If you're a solo founder or admin trying to grow a Skool community without burning out on repetitive admin clicks — this is built for you. Every recipe is something I run in my own production. If a flow doesn't work for me with my actual time budget, it doesn't ship.
+
 ## What you can do
 
 | Resource | Read | Write |
