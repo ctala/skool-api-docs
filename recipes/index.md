@@ -5,7 +5,7 @@ slug: /recipes
 type: hub
 funnel: A
 section: Recipes
-last_updated: 2026-05-19
+last_updated: 2026-05-28
 ---
 
 Copy-paste-ready integrations using the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=recipes&fpr=cristian). Each recipe is production-tested in a real Skool community.
@@ -26,6 +26,10 @@ Copy-paste-ready integrations using the [Apify-hosted Skool All-in-One API actor
 | [**Skool API as MCP tool**](use-skool-api-as-mcp-tool.md) | MCP server | Expose all 33 actions to your Claude / Cursor / Cline agent |
 | [**Community analytics to NocoDB**](community-analytics-to-nocodb.md) | Python | Track engagement, churn, conversion to paid via your own BI tool |
 | [**Automate event announcements**](automate-skool-events.md) | Python / n8n + cron | 24h + 1h reminders to feed + Telegram. Uses new `events:upcoming` (v0.3.24+) |
+| [**Export Skool members to CSV**](export-skool-members-csv.md) | curl / Python | Bulk export email + tier + LTV + survey answers — the only reliable source for member emails. CRM pipeline foundation |
+| [**Edit published posts**](update-published-posts.md) | Any HTTP client | Update title/content/labels of any published post. Includes the silent-fail wrapper gotcha and write+verify-fetch fix |
+| [**Attach files to lesson pages**](attach-files-to-lessons.md) | Any HTTP client | Add PDFs/ZIPs/sheets/links as classroom resources. Covers the `privacy: 1` trap and array-replacement semantics |
+| [**Batch launch courses from a spreadsheet**](batch-create-courses-spreadsheet.md) | Python / Node | End-to-end pipeline: covers → courses → folders → pages → bodies → resources. The 23-course classroom builder |
 
 ## How recipes are structured
 
