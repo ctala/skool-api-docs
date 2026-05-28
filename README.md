@@ -45,7 +45,7 @@ This actor is that integration. It powers a real production community ([Cágala,
 
 ### 1. Get an Apify account
 
-Sign up at [apify.com](https://apify.com?fpr=cristian) (free tier covers most personal use). Grab your API token from the [account dashboard](https://console.apify.com/account/integrations?fpr=cristian).
+Sign up at [apify.com](https://apify.com?fpr=cristian) (free tier covers most personal use). Grab your API token from the [account dashboard](https://console.apify.com/sign-up?fpr=cristian).
 
 ### 2. Run your first call
 

@@ -137,6 +137,7 @@ All other Skool-side complexity (WAF tokens, buildId rotation, rate limits, stru
 Pay-per-event pricing (~$1.50/mo for typical community automation). Read AND write. Works from any HTTP client.
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+*Need an n8n instance? [Get started free](https://n8n.partnerlinks.io/wpqwwllhiznx) — the workflow tool we use throughout these recipes.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Skool Automation — Complete Guide","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

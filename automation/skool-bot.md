@@ -189,6 +189,7 @@ For comment replies and DMs especially: **maintain a human approval step** until
 One HTTP POST per Skool action. Deploy anywhere that runs scripts. Pay-per-event (~$1.50/mo for typical bot usage).
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+*Need an n8n instance? [Get started free](https://n8n.partnerlinks.io/wpqwwllhiznx) — the workflow tool we use throughout these recipes.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"TechArticle","headline":"Skool Bot","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

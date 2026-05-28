@@ -45,7 +45,7 @@ In the actor: `files:uploadImage` always sends `privacy: 0` (for covers), `files
 
 ## Prerequisites
 
-- Apify token ([get one](https://console.apify.com/account/integrations?fpr=cristian))
+- Apify token ([get one](https://console.apify.com/sign-up?fpr=cristian))
 - Skool admin cookies for the community (see [Authentication](../docs/authentication.md))
 - The `courseId` and `pageId` of the lesson you're attaching to (use [`classroom:getTree`](../docs/classroom.md#classroomgettree) to discover them)
 - The file you want to attach (PDF, ZIP, JSON, spreadsheet — any non-executable type)

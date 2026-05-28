@@ -303,6 +303,7 @@ print(f"Processed {len(events)} upcoming events. State: {len(state['announced'])
 Pay-per-event (~$0.02 per announcement). Battle-tested in production.
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+*Need an n8n instance? [Get started free](https://n8n.partnerlinks.io/wpqwwllhiznx) — the workflow tool we use throughout these recipes.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HowTo","name":"Automate Skool Community Event Announcements","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

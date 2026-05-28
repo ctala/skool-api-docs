@@ -114,6 +114,7 @@ It is **not** a tool for scraping communities you don't own — that has legal, 
 - Read AND write — full API surface, not just export
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+*Need an n8n instance? [Get started free](https://n8n.partnerlinks.io/wpqwwllhiznx) — the workflow tool we use throughout these recipes.*
 
 <script type="application/ld+json">
 {

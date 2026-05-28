@@ -27,7 +27,7 @@ In production on [a production Skool community](https://www.skool.com/cagala-apr
 
 ## Prerequisites
 
-- Apify token ([get one](https://console.apify.com/account/integrations?fpr=cristian))
+- Apify token ([get one](https://console.apify.com/sign-up?fpr=cristian))
 - Skool admin credentials for the community
 - An LLM API key (Claude, OpenAI, or any model with structured output)
 - A way to receive approvals (Telegram bot, Slack DM, or a CLI prompt)
@@ -340,6 +340,7 @@ The Skool internal API, the cookies+WAF+buildId rotation, and the structured-err
 - Battle-tested in production on a production Skool community
 
 *New to Skool? [Launch your community here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+*Need an n8n instance? [Get started free](https://n8n.partnerlinks.io/wpqwwllhiznx) — the workflow tool we use throughout these recipes.*
 
 <script type="application/ld+json">
 {

@@ -36,7 +36,7 @@ Why Goose specifically fits well here:
 
 ### 1. Get your Apify API token
 
-Sign up at [apify.com](https://apify.com?fpr=cristian) — the free tier covers most communities. Grab a token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
+Sign up at [apify.com](https://apify.com?fpr=cristian) — the free tier covers most communities. Grab a token from [console.apify.com/account/integrations](https://console.apify.com/sign-up?fpr=cristian).
 
 ### 2. Get your Skool cookies (one-time, valid ~3.5 days)
 

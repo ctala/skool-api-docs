@@ -26,7 +26,7 @@ render_with_liquid: false
 
 ## Prerequisites
 
-- Apify token ([get one](https://console.apify.com/account/integrations?fpr=cristian))
+- Apify token ([get one](https://console.apify.com/sign-up?fpr=cristian))
 - Skool admin credentials for the community you're automating
 - {tool-specific: n8n instance, Make.com account, Python 3.10+, etc.}
 
@@ -99,6 +99,7 @@ The hardest part of building Skool automation isn't the API logic — it's the a
 [**→ Start using it on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign={kebab-case-slug}&fpr=cristian)
 
 *New to Skool? [Launch your community here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+*Need an n8n instance? [Get started free](https://n8n.partnerlinks.io/wpqwwllhiznx) — the workflow tool we use throughout these recipes.*
 
 <!-- JSON-LD schema for search engines and AI agents -->
 <script type="application/ld+json">

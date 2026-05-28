@@ -38,7 +38,7 @@ What makes Claude Code a better fit than the raw API or Claude Desktop:
 
 ### 1. Get your Apify API token
 
-Sign up at [apify.com](https://apify.com?fpr=cristian) — the free tier covers most communities. Grab a token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
+Sign up at [apify.com](https://apify.com?fpr=cristian) — the free tier covers most communities. Grab a token from [console.apify.com/account/integrations](https://console.apify.com/sign-up?fpr=cristian).
 
 ### 2. Install the drop-in Skill
 

@@ -29,7 +29,7 @@ The catch: the `posts:update` action has one silent-fail gotcha that wasted half
 
 ## Prerequisites
 
-- Apify token ([get one](https://console.apify.com/account/integrations?fpr=cristian))
+- Apify token ([get one](https://console.apify.com/sign-up?fpr=cristian))
 - Skool admin cookies for the community (see [Authentication](../docs/authentication.md))
 - The `postId` of each post you want to edit (32-char hex; visible in the URL as `?p={shortId}` — use `posts:filter` to map shortIds to full postIds)
 

@@ -66,7 +66,7 @@ Every Skool operation = one HTTP POST. No SDK needed. No custom auth logic. Idem
 
 ## Quick start (any tool)
 
-1. Get an Apify API token at [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian)
+1. Get an Apify API token at [console.apify.com/account/integrations](https://console.apify.com/sign-up?fpr=cristian)
 2. Call `auth:login` once with your Skool email + password to get cookies (~3.5 day TTL)
 3. Store cookies in your tool's credential store
 4. Call any other action — pass action name, cookies, group slug, and params
@@ -90,3 +90,4 @@ See [Skool Scraper — why not to build one](../automation/skool-scraper.md). Sh
 [**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=integrations&fpr=cristian) — pay-per-event (~$1.50/mo typical).
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+*Need an n8n instance? [Get started free](https://n8n.partnerlinks.io/wpqwwllhiznx) — the workflow tool we use throughout these recipes.*

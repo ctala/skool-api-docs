@@ -147,7 +147,7 @@ Every Skool operation = one HTTP POST. No SDK needed. The actor handles Playwrig
 
 ### 1. Get your Apify API token
 
-Sign up at [apify.com](https://apify.com?fpr=cristian) — free tier covers most communities. Token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
+Sign up at [apify.com](https://apify.com?fpr=cristian) — free tier covers most communities. Token from [console.apify.com/account/integrations](https://console.apify.com/sign-up?fpr=cristian).
 
 ### 2. {Tool}-specific setup
 
@@ -251,6 +251,7 @@ The returned `cookies` string is valid for ~3.5 days. After that, re-run `auth:l
 - Battle-tested in production
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+*Need an n8n instance? [Get started free](https://n8n.partnerlinks.io/wpqwwllhiznx) — the workflow tool we use throughout these recipes.*
 
 <script type="application/ld+json">
 {

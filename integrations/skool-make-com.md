@@ -38,7 +38,7 @@ The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/sko
 
 ### 1. Get your Apify API token
 
-[apify.com](https://apify.com?fpr=cristian) → free tier → token at [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
+[apify.com](https://apify.com?fpr=cristian) → free tier → token at [console.apify.com/account/integrations](https://console.apify.com/sign-up?fpr=cristian).
 
 ### 2. Add token + cookies to a Make Data Store
 
@@ -112,6 +112,7 @@ This pattern keeps the scenario running indefinitely without manual cookie refre
 Pay-per-event (~$1.50/mo). Read AND write. One HTTP module per action. Battle-tested in production.
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+*Need an n8n instance? [Get started free](https://n8n.partnerlinks.io/wpqwwllhiznx) — the workflow tool we use throughout these recipes.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"TechArticle","headline":"Skool + Make.com Integration","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

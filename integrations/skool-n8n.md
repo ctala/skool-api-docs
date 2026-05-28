@@ -58,7 +58,7 @@ Every Skool operation = one HTTP POST. No SDK to install in n8n. No node to deve
 
 ### 1. Get your Apify API token
 
-Sign up at [apify.com](https://apify.com?fpr=cristian) (free tier covers most personal use). Token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
+Sign up at [apify.com](https://apify.com?fpr=cristian) (free tier covers most personal use). Token from [console.apify.com/account/integrations](https://console.apify.com/sign-up?fpr=cristian).
 
 ### 2. Store the token in n8n Credentials
 
@@ -199,6 +199,7 @@ Cost: ~$0.02 per applicant in LLM + ~$0.01 per Skool call. For 30 applicants/wee
 - Battle-tested in production
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+*Need an n8n instance? [Get started free](https://n8n.partnerlinks.io/wpqwwllhiznx) — the workflow tool we use throughout these recipes.*
 
 <script type="application/ld+json">
 {

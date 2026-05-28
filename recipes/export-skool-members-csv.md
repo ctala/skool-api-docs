@@ -31,7 +31,7 @@ It's the exact flow that backs [Cágala, Aprende, Repite](https://www.skool.com/
 
 ## Prerequisites
 
-- Apify token ([get one](https://console.apify.com/account/integrations?fpr=cristian))
+- Apify token ([get one](https://console.apify.com/sign-up?fpr=cristian))
 - Skool admin/owner cookies for the community you're exporting (see [Authentication](../docs/authentication.md))
 - You're an **admin or owner** — export is an admin-only action
 
@@ -161,6 +161,7 @@ The hardest part of building Skool automation isn't the API logic — it's the a
 [**→ Open the actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign=export-skool-members-csv&fpr=cristian)
 
 *New to Skool? [Launch your community here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+*Need an n8n instance? [Get started free](https://n8n.partnerlinks.io/wpqwwllhiznx) — the workflow tool we use throughout these recipes.*
 
 <script type="application/ld+json">
 {

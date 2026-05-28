@@ -38,7 +38,7 @@ Why Cascade is a good fit specifically:
 
 ### 1. Get your Apify API token
 
-Sign up at [apify.com](https://apify.com?fpr=cristian) — the free tier covers most communities. Token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
+Sign up at [apify.com](https://apify.com?fpr=cristian) — the free tier covers most communities. Token from [console.apify.com/account/integrations](https://console.apify.com/sign-up?fpr=cristian).
 
 ### 2. Edit `mcp_config.json`
 
