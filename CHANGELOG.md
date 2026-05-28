@@ -2,7 +2,7 @@
 
 All notable changes to the Skool All-in-One API actor.
 
-The actor follows [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`. Each release is tagged on the [Apify Store listing](https://apify.com/cristiantala/skool-all-in-one-api).
+The actor follows [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`. Each release is tagged on the [Apify Store listing](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian).
 
 To get notified of new releases:
 

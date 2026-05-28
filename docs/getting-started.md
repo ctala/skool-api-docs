@@ -4,7 +4,7 @@ Get from "I have a Skool community" to "I'm automating it" in 10 minutes.
 
 ## Prerequisites
 
-- An [Apify account](https://apify.com) (free tier is enough to test). Grab your API token from [account → integrations](https://console.apify.com/account/integrations).
+- An [Apify account](https://apify.com?fpr=cristian) (free tier is enough to test). Grab your API token from [account → integrations](https://console.apify.com/account/integrations?fpr=cristian).
 - A Skool account that has admin (or at least relevant role) on the community you want to automate. *(Don't have a Skool community yet? [Launch one here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial, no credit card.)*
 
 ## Two auth modes

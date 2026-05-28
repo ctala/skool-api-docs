@@ -81,7 +81,7 @@ You can independently verify these — Skool shows each community's member count
 ## Limitations to know before committing
 
 - **Single community per platform login.** Multiple communities = multiple Skool subscriptions ($99/mo each).
-- **No native API.** Use the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-community-platform) for automation. ~$1.50/mo.
+- **No native API.** Use the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-community-platform&fpr=cristian) for automation. ~$1.50/mo.
 - **English UI only.** Members can post in any language but UI elements ("Like", "Comment") are English.
 - **No custom domain.** Your community URL is `skool.com/your-slug`. Can't host at `community.yoursite.com`.
 
@@ -112,7 +112,7 @@ Most owners hit 30-100 members in the first 60 days if they have any existing au
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — set up in under 15 minutes, no credit card.
 
-*Want to automate your community? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-community-platform) — auto-approve, post on schedule, ~$1.50/mo.*
+*Want to automate your community? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-community-platform&fpr=cristian) — auto-approve, post on schedule, ~$1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"Skool community platform","description":"Skool is a community platform purpose-built for paid communities — coaching, masterminds, course memberships. One flat $99/mo. Includes community feed, classroom, gamification.","offers":{"@type":"Offer","price":"99","priceCurrency":"USD"}}

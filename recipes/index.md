@@ -8,7 +8,7 @@ section: Recipes
 last_updated: 2026-05-19
 ---
 
-Copy-paste-ready integrations using the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=recipes). Each recipe is production-tested in a real Skool community.
+Copy-paste-ready integrations using the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=recipes&fpr=cristian). Each recipe is production-tested in a real Skool community.
 
 ## All recipes
 
@@ -46,6 +46,6 @@ Each recipe includes:
 
 ---
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=recipes) — pay-per-event (~$1.50/mo typical).
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=recipes&fpr=cristian) — pay-per-event (~$1.50/mo typical).
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*

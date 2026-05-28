@@ -27,7 +27,7 @@ canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-circle/
 | **DMs** | Native private + group DMs | Native chat |
 | **Live events** | Calendar + Zoom embed | Calendar + Zoom + Live Streams (Pro+) |
 | **Mobile app** | iOS + Android | iOS + Android |
-| **API & automation** | Unofficial only — [Apify-hosted actor](https://apify.com/cristiantala/skool-all-in-one-api) covers read+write | Official API, native Zapier, webhooks |
+| **API & automation** | Unofficial only — [Apify-hosted actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) covers read+write | Official API, native Zapier, webhooks |
 | **Affiliate program** | 40% recurring forever | 30% recurring 12 months (Pro+) |
 | **Customization** | Logo + cover image only — no white-label | Custom domain, theme, white-label on Business |
 | **Hosting** | SaaS (skool.com) | SaaS (yoursite.circle.so or custom domain) |
@@ -63,7 +63,7 @@ canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-circle/
 
 ### Courses & classroom
 
-**Skool:** Built-in. Course = folder tree with pages. Each page has a body (rich text, video embed, attachments), drip schedule optional, gated by member tier. Markdown can be auto-converted to Skool's internal format via the [API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-circle).
+**Skool:** Built-in. Course = folder tree with pages. Each page has a body (rich text, video embed, attachments), drip schedule optional, gated by member tier. Markdown can be auto-converted to Skool's internal format via the [API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-circle&fpr=cristian).
 
 **Circle:** Courses are an add-on (included in Pro+ plans). More sophisticated drip and assignment features. Better for cohort-based courses with structured progress tracking.
 
@@ -87,7 +87,7 @@ canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-circle/
 
 ### API & automation
 
-**Skool:** **No official API.** The [unofficial Skool All-in-One API actor on Apify](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-circle) covers everything: posts, comments, members (approve/reject/ban), classroom (create courses/folders/pages with markdown auto-converted to TipTap), files (upload cover images), groups (Auto DM, settings). One JSON POST per action, ~$1.50/mo at typical volume.
+**Skool:** **No official API.** The [unofficial Skool All-in-One API actor on Apify](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-circle&fpr=cristian) covers everything: posts, comments, members (approve/reject/ban), classroom (create courses/folders/pages with markdown auto-converted to TipTap), files (upload cover images), groups (Auto DM, settings). One JSON POST per action, ~$1.50/mo at typical volume.
 
 **Circle:** Official REST API on Business plan. Native Zapier integration with both triggers and write actions. Webhooks. This is significantly more mature on the Circle side — but only available at $399/mo+.
 
@@ -119,17 +119,17 @@ canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-circle/
 
 ## Migration: Circle → Skool
 
-Manual today. Export Circle members via API, post your courses to Skool classroom (markdown via the [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api) speeds this up significantly), send a migration email asking members to re-join Skool. Expect 60-80% transfer if the move is positioned well. No automated transfer exists.
+Manual today. Export Circle members via API, post your courses to Skool classroom (markdown via the [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) speeds this up significantly), send a migration email asking members to re-join Skool. Expect 60-80% transfer if the move is positioned well. No automated transfer exists.
 
 ## Migration: Skool → Circle
 
-Same shape — manual member transfer with onboarding messaging. Skool has no official export, but [the Apify actor's `members:list`](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-circle) gives you the full roster as JSON in one call.
+Same shape — manual member transfer with onboarding messaging. Skool has no official export, but [the Apify actor's `members:list`](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-circle&fpr=cristian) gives you the full roster as JSON in one call.
 
 ## Common questions
 
 ### Does Skool have an API like Circle does?
 
-No official API, but the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-circle) is the production-grade equivalent for ~$1.50/mo. Covers everything Circle's Business-plan API does (members, posts, classroom, files), plus actions Circle's API doesn't (Auto DM management, course covers, classroom tree manipulation).
+No official API, but the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-circle&fpr=cristian) is the production-grade equivalent for ~$1.50/mo. Covers everything Circle's Business-plan API does (members, posts, classroom, files), plus actions Circle's API doesn't (Auto DM management, course covers, classroom tree manipulation).
 
 ### Can I run a free tier on Skool like I can on Circle?
 
@@ -157,7 +157,7 @@ Migrate to Circle (or build custom). Most communities don't actually outgrow Sko
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card, set up in under 10 minutes, $99/mo flat after trial.
 
-*Plan to automate from day one? [Use the Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-circle) — auto-approve members, schedule posts, sync to your CRM, ~$1.50/mo.*
+*Plan to automate from day one? [Use the Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-circle&fpr=cristian) — auto-approve members, schedule posts, sync to your CRM, ~$1.50/mo.*
 
 <script type="application/ld+json">
 {

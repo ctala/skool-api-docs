@@ -27,7 +27,7 @@ canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-{competitor-s
 | **DMs** | Native group + private | {yes/no} |
 | **Live events** | Calendar + Zoom embed | {yes/no} |
 | **Mobile app** | iOS + Android | {yes/no} |
-| **API** | Unofficial only — [Apify actor wraps it](https://apify.com/cristiantala/skool-all-in-one-api) | {yes/no — official?} |
+| **API** | Unofficial only — [Apify actor wraps it](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) | {yes/no — official?} |
 | **Affiliate program** | 40% recurring forever | {commission %} |
 | **Customization** | Logo + cover only | {level of customization} |
 | **Hosting** | SaaS (skool.com) | {SaaS / self-host} |
@@ -81,7 +81,7 @@ canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-{competitor-s
 
 ### API & automation
 
-**Skool:** No official API, but a complete [unofficial API actor on Apify](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-{competitor-slug}) covers reads + writes — members, posts, classroom, files.
+**Skool:** No official API, but a complete [unofficial API actor on Apify](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-{competitor-slug&fpr=cristian}) covers reads + writes — members, posts, classroom, files.
 
 **{Competitor}:** {Has API / Webhooks only / nothing}.
 
@@ -115,7 +115,7 @@ canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-{competitor-s
 
 ### Does Skool have an API like {Competitor}?
 
-No official API, but the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-{competitor-slug}) covers everything: posts, comments, members, classroom, files, Auto DM. One JSON POST per action.
+No official API, but the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-{competitor-slug&fpr=cristian}) covers everything: posts, comments, members, classroom, files, Auto DM. One JSON POST per action.
 
 ### {Question 3}?
 
@@ -134,7 +134,7 @@ No official API, but the [Apify-hosted Skool All-in-One API actor](https://apify
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card required, set up in <10 minutes.
 
-*Building solo and need to automate Skool? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-{competitor-slug}) — auto-approve members, auto-DM, schedule posts, no code required.*
+*Building solo and need to automate Skool? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-{competitor-slug&fpr=cristian}) — auto-approve members, auto-DM, schedule posts, no code required.*
 
 <script type="application/ld+json">
 {

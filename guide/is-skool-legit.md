@@ -95,7 +95,7 @@ Skool is GDPR-compliant, has a documented privacy policy, and uses Stripe for pa
 
 ### What happens if Skool shuts down?
 
-Skool is profitable and bootstrapped — there's no acquisition exit pressure or runway concern that typical startups have. If it ever did shut down, you'd lose your community feed and classroom (unless you exported via API first — see the [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=is-skool-legit) which lets you export members + posts + classroom programmatically as an insurance policy).
+Skool is profitable and bootstrapped — there's no acquisition exit pressure or runway concern that typical startups have. If it ever did shut down, you'd lose your community feed and classroom (unless you exported via API first — see the [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=is-skool-legit&fpr=cristian) which lets you export members + posts + classroom programmatically as an insurance policy).
 
 ### Is Skool legit for selling courses?
 
@@ -127,7 +127,7 @@ Yes — Skool has built-in classroom hosting and Stripe payment integration. Fou
 
 [**→ Start your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card, see if it fits your audience in 2 weeks.
 
-*Want to automate community admin from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=is-skool-legit) — auto-approve members, auto-DM, schedule posts, ~$1.50/mo.*
+*Want to automate community admin from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=is-skool-legit&fpr=cristian) — auto-approve members, auto-DM, schedule posts, ~$1.50/mo.*
 
 <script type="application/ld+json">
 {

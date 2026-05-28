@@ -15,7 +15,7 @@ render_with_liquid: false
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** operate a Skool community straight from the Claude Code terminal — "approve the pending members with a real LinkedIn", "publish this markdown as a course" — in plain English, no API code to write.
-> - **Method:** a drop-in Claude Code **Skill** (`~/.claude/skills/skool-actor/`) that wraps the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude-code). Claude Code reads the SKILL.md, picks the right action, runs it.
+> - **Method:** a drop-in Claude Code **Skill** (`~/.claude/skills/skool-actor/`) that wraps the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude-code&fpr=cristian). Claude Code reads the SKILL.md, picks the right action, runs it.
 > - **Auth flow:** `auth:login` once → `cookies` string cached in env → reuse for ~3.5 days.
 > - **Latency:** ~2s per action (cookies cached) / ~10s (`auth:login` cold start).
 > - **Cost:** Apify pay-per-event (~$0.005–$0.01 per Skool action). Claude Code on your existing Anthropic plan.
@@ -24,7 +24,7 @@ render_with_liquid: false
 
 Skool has **no official API**. If you live in the terminal — building, scripting, shipping — you don't want to leave your editor, open the Skool web UI, and click through member approvals or course uploads by hand.
 
-Claude Code is an **agentic CLI**: it reads your repo, runs commands, and chains steps toward a goal. The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude-code) is the missing piece — it turns every Skool admin action into one HTTP call. Together they let you run your community as naturally as you run `git`.
+Claude Code is an **agentic CLI**: it reads your repo, runs commands, and chains steps toward a goal. The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude-code&fpr=cristian) is the missing piece — it turns every Skool admin action into one HTTP call. Together they let you run your community as naturally as you run `git`.
 
 What makes Claude Code a better fit than the raw API or Claude Desktop:
 
@@ -38,7 +38,7 @@ What makes Claude Code a better fit than the raw API or Claude Desktop:
 
 ### 1. Get your Apify API token
 
-Sign up at [apify.com](https://apify.com) — the free tier covers most communities. Grab a token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations).
+Sign up at [apify.com](https://apify.com?fpr=cristian) — the free tier covers most communities. Grab a token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
 
 ### 2. Install the drop-in Skill
 
@@ -181,7 +181,7 @@ The Skill exposes the entire Skool admin surface. You ask in plain English; Clau
 
 ## Production gotchas
 
-- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
+- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
 - **Cookies expiring silently:** when a call returns `errorCode: "WAF_EXPIRED"`, re-run `auth:login` (or `login.sh`) and update `SKOOL_COOKIES`. The Skill tells Claude Code to do this automatically when it reads the `hint`.
 - **`parentId` for comment replies:** top-level comment → `rootId == parentId == postId`. Reply to a comment → `rootId == postId`, `parentId == commentId`. Mixing these is the most common silent bug — the SKILL.md spells it out so Claude Code gets it right.
 - **`memberId` vs `id`:** for approve/reject, pass `memberId` from `members:pending`, not the `id` (request id). The wrong one gives a silent 404.
@@ -234,7 +234,7 @@ This is the same surface the bundled Skill encodes — use the Skill for the pol
 
 ## Plug Skool into Claude Code today
 
-[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude-code)
+[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude-code&fpr=cristian)
 
 - Pay-per-event (~$0.005–$0.01 per Skool action, ~$1.50/mo typical)
 - Read AND write — full API surface (posts, comments, members, classroom, files, Auto DM)

@@ -15,7 +15,7 @@ render_with_liquid: false
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** Goose reads AND writes to Skool — approve members, post, reply, publish courses — as a native MCP **extension**, driven by chat or autonomous task.
-> - **Method:** add the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-goose) as a stdio extension via `goose configure` or `~/.config/goose/config.yaml`. Apify's MCP gateway exposes every action as a tool.
+> - **Method:** add the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-goose&fpr=cristian) as a stdio extension via `goose configure` or `~/.config/goose/config.yaml`. Apify's MCP gateway exposes every action as a tool.
 > - **Auth flow:** `auth:login` once → `cookies` string in the extension `env` → reuse for ~3.5 days.
 > - **Latency:** ~2s per tool call (cookies cached) / ~10s on `auth:login` cold start.
 > - **Cost:** Apify pay-per-event (~$0.005–$0.01 per Skool action). Goose on your existing LLM provider.
@@ -24,7 +24,7 @@ render_with_liquid: false
 
 Skool has **no official API**. If Goose already runs your dev tasks, you don't want to drop out of it to open the Skool web UI and click through member approvals or course uploads by hand.
 
-Goose helped shape MCP, and its **extension** system is MCP all the way down — every extension you add is an MCP server, every server's tools become callable by the agent. The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-goose) is hosted on Apify's MCP gateway, so adding it is the same one-step flow as any other Goose extension. No SDK, no Playwright in your runtime — Goose can drive your whole Skool admin surface.
+Goose helped shape MCP, and its **extension** system is MCP all the way down — every extension you add is an MCP server, every server's tools become callable by the agent. The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-goose&fpr=cristian) is hosted on Apify's MCP gateway, so adding it is the same one-step flow as any other Goose extension. No SDK, no Playwright in your runtime — Goose can drive your whole Skool admin surface.
 
 Why Goose specifically fits well here:
 
@@ -36,7 +36,7 @@ Why Goose specifically fits well here:
 
 ### 1. Get your Apify API token
 
-Sign up at [apify.com](https://apify.com) — the free tier covers most communities. Grab a token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations).
+Sign up at [apify.com](https://apify.com?fpr=cristian) — the free tier covers most communities. Grab a token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
 
 ### 2. Get your Skool cookies (one-time, valid ~3.5 days)
 
@@ -194,7 +194,7 @@ The actor exposes the entire Skool admin surface as MCP tools. You ask in plain 
 
 ## Production gotchas
 
-- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
+- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
 - **Cookies expiring silently:** When a call returns `errorCode: "WAF_EXPIRED"`, re-run `auth:login` and update `SKOOL_COOKIES` in `config.yaml`, then restart the session. The `hint` field tells Goose exactly this.
 - **`parentId` for comment replies:** top-level comment → `rootId == parentId == postId`. Reply to a comment → `rootId == postId`, `parentId == commentId`. Mixing these is the most common silent bug.
 - **`memberId` vs `id`:** for approve/reject, pass `memberId` from `members:pending`, not the `id`. The wrong one gives a silent 404.
@@ -240,7 +240,7 @@ The full pattern library (function-calling specs, idempotency table, the LLM-rea
 
 ## Plug Skool into Goose today
 
-[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-goose)
+[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-goose&fpr=cristian)
 
 - Pay-per-event (~$0.005–$0.01 per Skool action, ~$1.50/mo typical)
 - Read AND write — full API surface (posts, comments, members, classroom, files, Auto DM)

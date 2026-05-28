@@ -137,7 +137,7 @@ Most affiliate programs require approval before paid ads. Skool's policy isn't e
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial, then $99/mo. Once you're a paid customer, the affiliate dashboard unlocks and you can start earning 40% recurring forever from your own referrals.
 
-*Want to automate your community while you build the affiliate income? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-affiliate-program) — ~$1.50/mo, no code required.*
+*Want to automate your community while you build the affiliate income? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-affiliate-program&fpr=cristian) — ~$1.50/mo, no code required.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Skool Affiliate Program — 40% Recurring Forever","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

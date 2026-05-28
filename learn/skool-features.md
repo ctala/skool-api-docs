@@ -102,7 +102,7 @@ canonical: https://ctala.github.io/skool-api-docs/learn/skool-features/
 - ❌ Multi-language UI
 - ❌ Advanced analytics (use Apify actor to export data, analyze externally)
 
-The **no API** gap is filled by the [unofficial Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-features) — pay-per-event ~$1.50/mo.
+The **no API** gap is filled by the [unofficial Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-features&fpr=cristian) — pay-per-event ~$1.50/mo.
 
 ## Feature comparison vs Circle / Mighty Networks
 
@@ -121,7 +121,7 @@ See [Skool vs Circle](../compare/skool-vs-circle.md) and [Skool vs Mighty Networ
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card, see every feature in action.
 
-*Plan to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-features) — ~$1.50/mo for typical use.*
+*Plan to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-features&fpr=cristian) — ~$1.50/mo for typical use.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"Skool","description":"Community + courses platform with feed, classroom, gamification, DMs, calendar, Auto DM, mobile apps. Flat $99/mo.","offers":{"@type":"Offer","price":"99","priceCurrency":"USD"}}

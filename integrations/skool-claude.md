@@ -19,7 +19,7 @@ canonical: https://ctala.github.io/skool-api-docs/integrations/skool-claude/
 
 ## Why Claude specifically?
 
-The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude) is **AI-agent-native**: never-throw contract, structured `hint` field for recovery, idempotency where it matters. Claude in particular benefits from this because:
+The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude&fpr=cristian) is **AI-agent-native**: never-throw contract, structured `hint` field for recovery, idempotency where it matters. Claude in particular benefits from this because:
 
 1. Claude's tool-use API can return any tool result back to the model — Claude reads `hint` and self-corrects.
 2. Claude Desktop ships native MCP support — connect once, Claude sees every Skool action as a tool.
@@ -218,7 +218,7 @@ This is why the actor's error schema is designed to be LLM-readable rather than 
 
 ## Plug Skool into Claude today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude&fpr=cristian)
 
 Three integration paths: Claude tool-use API, Claude Desktop + MCP, Claude Code Skill. Pay-per-event (~$0.005-$0.01 per call).
 

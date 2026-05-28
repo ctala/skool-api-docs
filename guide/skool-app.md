@@ -128,7 +128,7 @@ Settings → Notifications in the app. Per-community toggle, per-event-type togg
 
 ### Does the app expose the Skool API?
 
-No — neither does the web. There's no official Skool API. For automation, use the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-app).
+No — neither does the web. There's no official Skool API. For automation, use the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-app&fpr=cristian).
 
 ## Related
 
@@ -143,7 +143,7 @@ No — neither does the web. There's no official Skool API. For automation, use 
 
 [**→ Start your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card. Test the mobile + web experience yourself.
 
-*Want to automate community admin? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-app) — works from any device, no app dependency.*
+*Want to automate community admin? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-app&fpr=cristian) — works from any device, no app dependency.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MobileApplication","name":"Skool","operatingSystem":"iOS, Android","applicationCategory":"SocialNetworkingApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.55","reviewCount":"8472"}}

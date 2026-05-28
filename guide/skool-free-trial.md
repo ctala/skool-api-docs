@@ -142,7 +142,7 @@ If the trial doesn't convert *you*, the platform is doing the right thing — yo
 
 [**→ Sign up for Skool**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card. Full product access for 14 days.
 
-*Want to automate from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-free-trial) — no code required, $1.50/mo.*
+*Want to automate from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-free-trial&fpr=cristian) — no code required, $1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[

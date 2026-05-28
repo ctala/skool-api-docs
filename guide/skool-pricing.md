@@ -28,7 +28,7 @@ canonical: https://ctala.github.io/skool-api-docs/guide/skool-pricing/
 | **Bandwidth limit** | None published |
 | **Stripe fee** | ~2.9% + $0.30 per member transaction (standard Stripe rates) |
 | **Affiliate commission paid out** | 40% recurring forever to referrers |
-| **API access cost** | No official API. Unofficial via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-pricing): ~$1.50/mo typical pay-per-event |
+| **API access cost** | No official API. Unofficial via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-pricing&fpr=cristian): ~$1.50/mo typical pay-per-event |
 
 ## What "$99/mo flat" actually means
 
@@ -143,7 +143,7 @@ Standard $99/mo. No published non-profit / education discount.
 
 [**→ Start your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card, $99/mo after the trial.
 
-*Want to automate community admin? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-pricing) — pay-per-event, ~$1.50/mo typical.*
+*Want to automate community admin? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-pricing&fpr=cristian) — pay-per-event, ~$1.50/mo typical.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"Skool","description":"Community platform with built-in classroom, gamification, DMs, and calendar.","offers":{"@type":"Offer","price":"99","priceCurrency":"USD","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.3","reviewCount":"1247"}}

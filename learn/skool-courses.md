@@ -55,7 +55,7 @@ Time to MVP: ~30-60 minutes for a 5-page course with text + 1 video per page.
 
 ## Creating a course — API (programmatic)
 
-If you have course content in markdown files (Git-tracked notes, Notion exports, etc.), the [Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-courses) publishes it all at once:
+If you have course content in markdown files (Git-tracked notes, Notion exports, etc.), the [Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-courses&fpr=cristian) publishes it all at once:
 
 ```bash
 # 1. Create the course
@@ -120,7 +120,7 @@ No limit. You can have a course with 1 page or 200 pages. Most successful Skool 
 
 ### Can I import courses from Kajabi / Thinkific / Teachable?
 
-No native importer. The [Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-courses) lets you push markdown-formatted course content. If you export your existing course to markdown (or Notion-to-markdown), you can republish to Skool programmatically.
+No native importer. The [Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-courses&fpr=cristian) lets you push markdown-formatted course content. If you export your existing course to markdown (or Notion-to-markdown), you can republish to Skool programmatically.
 
 ### Can I require students to complete a quiz before moving on?
 
@@ -148,7 +148,7 @@ Set a drip schedule per page: "available N days after the member joined". So you
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial. Build your first course in <60 minutes.
 
-*Want to publish courses from markdown? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-courses) — programmatic course publishing for ~$1.50/mo.*
+*Want to publish courses from markdown? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-courses&fpr=cristian) — programmatic course publishing for ~$1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Course","name":"Skool Courses","description":"Skool's classroom hosts unlimited courses with folders, pages, drip schedules, and tier/level gating. $99/mo flat — no per-course fees."}

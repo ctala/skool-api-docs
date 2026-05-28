@@ -22,7 +22,7 @@ canonical: https://ctala.github.io/skool-api-docs/integrations/skool-make-com/
 
 Skool publishes no official API. The Skool integration listed in Make's app catalog is severely limited — a few triggers, no write actions. You cannot approve members, post content, publish courses, or update Auto DM from it.
 
-The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-make-com) wraps the entire Skool admin surface (posts, comments, members, classroom, files, groups) in a single HTTP endpoint that Make calls with one `HTTP` module.
+The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-make-com&fpr=cristian) wraps the entire Skool admin surface (posts, comments, members, classroom, files, groups) in a single HTTP endpoint that Make calls with one `HTTP` module.
 
 ## What you can automate from Make
 
@@ -38,7 +38,7 @@ The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/sko
 
 ### 1. Get your Apify API token
 
-[apify.com](https://apify.com) → free tier → token at [console.apify.com/account/integrations](https://console.apify.com/account/integrations).
+[apify.com](https://apify.com?fpr=cristian) → free tier → token at [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
 
 ### 2. Add token + cookies to a Make Data Store
 
@@ -107,7 +107,7 @@ This pattern keeps the scenario running indefinitely without manual cookie refre
 
 ## Start automating Skool from Make today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-make-com)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-make-com&fpr=cristian)
 
 Pay-per-event (~$1.50/mo). Read AND write. One HTTP module per action. Battle-tested in production.
 

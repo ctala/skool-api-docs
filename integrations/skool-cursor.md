@@ -15,7 +15,7 @@ render_with_liquid: false
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** operate a Skool community from inside Cursor — "approve the pending members with a real LinkedIn", "post this changelog to the community feed" — in plain English while you stay in your editor.
-> - **Method:** add the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-cursor) as an **MCP server** in `~/.cursor/mcp.json` (or `.cursor/mcp.json` per project) via Apify's MCP gateway. Cursor lists every Skool action as a tool.
+> - **Method:** add the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-cursor&fpr=cristian) as an **MCP server** in `~/.cursor/mcp.json` (or `.cursor/mcp.json` per project) via Apify's MCP gateway. Cursor lists every Skool action as a tool.
 > - **Config:** one `mcpServers` entry running `npx @apify/actors-mcp-server --actors=cristiantala/skool-all-in-one-api`.
 > - **Auth flow:** `auth:login` once → `cookies` string cached → reuse for ~3.5 days.
 > - **Cost:** Apify pay-per-event (~$0.005–$0.01 per Skool action). Cursor on your existing plan.
@@ -24,7 +24,7 @@ render_with_liquid: false
 
 Skool has **no official API**. If Cursor is where you write code, the last thing you want is to alt-tab to the Skool web UI to approve a member or pin a post — context-switching out of your editor breaks flow.
 
-Cursor speaks **MCP natively**: it reads `mcp.json`, discovers every tool an MCP server exposes, and lets the Agent call them with approval. The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-cursor) plugs in as one MCP server, so all 30+ Skool admin actions become tools in your chat alongside your codebase tools.
+Cursor speaks **MCP natively**: it reads `mcp.json`, discovers every tool an MCP server exposes, and lets the Agent call them with approval. The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-cursor&fpr=cristian) plugs in as one MCP server, so all 30+ Skool admin actions become tools in your chat alongside your codebase tools.
 
 Why this is a clean fit for Cursor specifically:
 
@@ -38,7 +38,7 @@ Why this is a clean fit for Cursor specifically:
 
 ### 1. Get your Apify API token
 
-Sign up at [apify.com](https://apify.com) — the free tier covers most communities. Grab a token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations).
+Sign up at [apify.com](https://apify.com?fpr=cristian) — the free tier covers most communities. Grab a token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
 
 ### 2. Add the Skool actor to `mcp.json`
 
@@ -180,7 +180,7 @@ The MCP server exposes the entire Skool admin surface as tools. You ask in plain
 - **Cookies live in params, not env.** Unlike a custom MCP server, the Apify gateway is generic — pass `cookies` and `groupSlug` as tool-call params. Have the Agent call `auth:login` once, then reuse the returned `cookies` for ~3.5 days. Re-run on `WAF_EXPIRED`.
 - **Restart after editing `mcp.json`.** Cursor loads MCP servers at startup. After changing the file, toggle the server off/on in Settings → Features → Model Context Protocol, or reload the window.
 - **Debug via MCP Logs.** If the `skool` server shows no tools, open the Output panel (`Cmd+Shift+U`) and select **"MCP Logs"** — npx download failures and token errors show there.
-- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
+- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
 - **`parentId` for comment replies:** top-level comment → `rootId == parentId == postId`. Reply to a comment → `rootId == postId`, `parentId == commentId`. Mixing these is the most common silent bug.
 - **`memberId` vs `id`:** for approve/reject, pass `memberId` from `members:pending`, not the request `id`. The wrong one gives a silent 404.
 
@@ -228,7 +228,7 @@ For the full agent primer (function-calling specs, idempotency table, error-reco
 
 ## Plug Skool into Cursor today
 
-[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-cursor)
+[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-cursor&fpr=cristian)
 
 - Pay-per-event (~$0.005–$0.01 per Skool action, ~$1.50/mo typical)
 - Read AND write — full API surface (posts, comments, members, classroom, files, Auto DM)

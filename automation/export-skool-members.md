@@ -16,7 +16,7 @@ render_with_liquid: false
 > **Quick reference (TL;DR for agents)**
 > - **Goal:** get your Skool community's member list out — to CSV, Google Sheets, or a CRM.
 > - **Why it's not obvious:** Skool has **no native "export members" button** and **no official API**. The data is there; getting it out programmatically requires the internal API.
-> - **Method:** `members:list` via the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=export-skool-members) → paginate → write to CSV/Sheets/CRM.
+> - **Method:** `members:list` via the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=export-skool-members&fpr=cristian) → paginate → write to CSV/Sheets/CRM.
 > - **Per member you get:** name, level, points, join date, bio, social links, and (usually) email.
 > - **Scope:** this is for **your own** community (admin access). Not for scraping communities you don't own.
 
@@ -24,7 +24,7 @@ render_with_liquid: false
 
 Skool gives you a members table in the admin UI, but **no one-click export** and **no official API**. So if you want a backup, a migration, or to push members into a CRM/email tool, you have to read the data through Skool's internal API — which is protected by cookies + AWS WAF + a rotating `buildId`.
 
-The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=export-skool-members) handles all of that. One action — `members:list` — returns your full member roster as structured JSON, ready to write anywhere.
+The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=export-skool-members&fpr=cristian) handles all of that. One action — `members:list` — returns your full member roster as structured JSON, ready to write anywhere.
 
 ## What you get per member
 
@@ -91,7 +91,7 @@ It is **not** a tool for scraping communities you don't own — that has legal, 
 
 - **Pagination:** `members:list` is paged. Loop until a page returns empty (as above) — don't assume one call returns everyone.
 - **Email not always present:** privacy-conscious communities may omit `email` from `members:list`. Pending applicants (`members:pending`) usually include it.
-- **`x402-payment-required`:** not a billing error — a stale `UNDER_MAINTENANCE` flag. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api) once to reset. See [error handling](../docs/error-handling.md).
+- **`x402-payment-required`:** not a billing error — a stale `UNDER_MAINTENANCE` flag. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) once to reset. See [error handling](../docs/error-handling.md).
 - **Cookies expire (~3.5 days):** on `errorCode: "WAF_EXPIRED"`, re-run `auth:login` and store new cookies.
 - **Rate limit ~25 reads/min:** the actor queues internally; don't add a retry loop.
 
@@ -107,7 +107,7 @@ It is **not** a tool for scraping communities you don't own — that has legal, 
 
 ## Export your Skool members today
 
-[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=export-skool-members)
+[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=export-skool-members&fpr=cristian)
 
 - Pay-per-event (~$0.005–$0.01 per call, ~$1.50/mo typical)
 - `members:list` returns your full roster as structured JSON

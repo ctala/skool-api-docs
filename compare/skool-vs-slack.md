@@ -118,7 +118,7 @@ The most common migration path for growing paid communities. Pattern:
 4. Run Slack as "archived read-only" for 30-60 days, then close
 5. Most members migrate; some lose-touch (typical 70-85% successful retention)
 
-Use the [Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-slack) to bulk-import course content from your old Notion/external tools simultaneously.
+Use the [Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-slack&fpr=cristian) to bulk-import course content from your old Notion/external tools simultaneously.
 
 ## Migration: Skool → Slack
 
@@ -159,7 +159,7 @@ Yes. Slack (founded 2013, acquired by Salesforce 2021) has millions of users. Sk
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card, $99/mo flat regardless of member count.
 
-*Plan to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-slack) — Skool API for ~$1.50/mo.*
+*Plan to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-slack&fpr=cristian) — Skool API for ~$1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Skool vs Slack","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

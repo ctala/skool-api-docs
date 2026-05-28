@@ -27,7 +27,7 @@ canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-teachable/
 | **Email marketing** | Basic in-platform | Built-in on Pro+ plans |
 | **Landing pages** | No | Yes — course sales pages |
 | **Sales pipelines** | No | Yes — upsells, order bumps |
-| **API** | Unofficial — [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api) | Official API on Pro+ |
+| **API** | Unofficial — [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) | Official API on Pro+ |
 
 ## Pricing breakdown
 
@@ -106,7 +106,7 @@ Hero course at $497 × 30 sales/mo = $14,910/mo. Costs: $79 Teachable Pro + ~$45
 
 ### API & automation
 
-**Skool:** [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-teachable) — covers everything for ~$1.50/mo. Unofficial but production-grade.
+**Skool:** [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-teachable&fpr=cristian) — covers everything for ~$1.50/mo. Unofficial but production-grade.
 
 **Teachable:** Official API on Pro+ plans. Zapier integration. Webhooks.
 
@@ -114,7 +114,7 @@ Hero course at $497 × 30 sales/mo = $14,910/mo. Costs: $79 Teachable Pro + ~$45
 
 ## Migration: Teachable → Skool
 
-Course content can be exported from Teachable to markdown (manually or via their API). Push to Skool classroom via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-teachable). Members migrated via email-based outreach.
+Course content can be exported from Teachable to markdown (manually or via their API). Push to Skool classroom via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-teachable&fpr=cristian). Members migrated via email-based outreach.
 
 Expected: 50-70% successful transfer. Why migrate? Usually because the operator decided the community is more valuable than the structured-course product.
 
@@ -122,7 +122,7 @@ Expected: 50-70% successful transfer. Why migrate? Usually because the operator 
 
 Less common. Reason: deciding to focus on course product with LMS-style features.
 
-Export via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api), rebuild course in Teachable (more time-intensive because Teachable's course structure is more complex), migrate members.
+Export via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian), rebuild course in Teachable (more time-intensive because Teachable's course structure is more complex), migrate members.
 
 ## Common questions
 
@@ -163,7 +163,7 @@ Yes. Teachable (founded 2014, acquired by Hotmart 2020) has 100K+ creators. Skoo
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card, $99/mo flat after trial.
 
-*Plan to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-teachable) — Skool API for ~$1.50/mo.*
+*Plan to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-teachable&fpr=cristian) — Skool API for ~$1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Skool vs Teachable","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

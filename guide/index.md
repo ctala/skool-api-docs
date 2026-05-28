@@ -51,4 +51,4 @@ For automating Skool once you've started, see **[Recipes](../recipes/)** and **[
 
 [**→ Start your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card. Form your own opinion in 14 days.
 
-*Want to automate community admin from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=guide) — ~$1.50/mo, no code required.*
+*Want to automate community admin from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=guide&fpr=cristian) — ~$1.50/mo, no code required.*

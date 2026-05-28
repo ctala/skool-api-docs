@@ -12,7 +12,7 @@ canonical: https://ctala.github.io/skool-api-docs/automation/skool-ai-agent/
 ---
 
 
-> **TL;DR.** An AI agent that operates your Skool community connects an LLM (Claude, GPT, or another) to the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=skool-ai-agent) via tool use / function calling. The agent reasons over your Skool data (members, posts, comments) and takes actions (approve, post, reply) with structured params. Different from a "Skool bot": agents make judgment calls; bots execute predefined rules.
+> **TL;DR.** An AI agent that operates your Skool community connects an LLM (Claude, GPT, or another) to the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=skool-ai-agent&fpr=cristian) via tool use / function calling. The agent reasons over your Skool data (members, posts, comments) and takes actions (approve, post, reply) with structured params. Different from a "Skool bot": agents make judgment calls; bots execute predefined rules.
 
 ## Bot vs Agent — when to use which
 
@@ -134,7 +134,7 @@ The bot handles "every day at 9am, review pending". The agent handles "is this p
 
 ## Build your Skool AI agent today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=skool-ai-agent)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=skool-ai-agent&fpr=cristian)
 
 Native tool-use / function-calling support. Never-throw contract. Idempotency table. Pay-per-event (~$0.005-$0.01 per Skool call) + your LLM costs.
 

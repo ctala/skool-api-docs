@@ -27,7 +27,7 @@ canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-kajabi/
 | **Email marketing** | Basic sends inside platform | Full email marketing suite included |
 | **Landing pages** | No | Yes — drag-and-drop builder |
 | **Sales pipelines** | No | Yes — full funnel automation |
-| **API** | Unofficial — [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api) | Official API on higher tiers |
+| **API** | Unofficial — [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) | Official API on higher tiers |
 | **Affiliate program** | 40% recurring forever | 30% recurring 12 months |
 | **Custom domain** | No | Yes |
 
@@ -115,7 +115,7 @@ Heavy reliance on Kajabi's landing pages + email sequences + cart abandonment + 
 
 ### API & automation
 
-**Skool:** No official API, but the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-kajabi) covers everything for ~$1.50/mo.
+**Skool:** No official API, but the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-kajabi&fpr=cristian) covers everything for ~$1.50/mo.
 
 **Kajabi:** Official API on Growth+ plans. Native Zapier integration. Webhooks.
 
@@ -127,7 +127,7 @@ Pattern for course creators moving to community-first: keep Kajabi for marketing
 
 Full migration (Kajabi → Skool only) requires:
 1. Export Kajabi course content to markdown
-2. Re-publish to Skool classroom via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api) (faster than manual)
+2. Re-publish to Skool classroom via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) (faster than manual)
 3. Migrate members (email-based, no native transfer)
 4. Set up Stripe in Skool, point your existing customers to Skool checkout
 
@@ -137,7 +137,7 @@ Expected: 50-70% successful transfer if positioned well.
 
 Less common. Reasons: needing in-platform email marketing, landing pages, sales funnels.
 
-Export Skool data via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api), rebuild courses in Kajabi (more time-intensive than Skool because Kajabi's course structure is more elaborate), migrate members.
+Export Skool data via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian), rebuild courses in Kajabi (more time-intensive than Skool because Kajabi's course structure is more elaborate), migrate members.
 
 ## Hybrid: Skool + Kajabi
 
@@ -183,7 +183,7 @@ Yes. Kajabi has been operating since 2010 (15+ years), publicly traded. Skool si
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card, $99/mo after trial.
 
-*Want to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-kajabi) — Skool API for ~$1.50/mo.*
+*Want to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-kajabi&fpr=cristian) — Skool API for ~$1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Skool vs Kajabi","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

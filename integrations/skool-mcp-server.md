@@ -14,7 +14,7 @@ canonical: https://ctala.github.io/skool-api-docs/integrations/skool-mcp-server/
 
 > **Quick reference (TL;DR for agents)**
 > - **Use case:** Run a persistent MCP server that exposes the Skool API as tools for AI agents (Claude Desktop, Cursor, Cline, hosted agents).
-> - **Backend:** [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-mcp-server).
+> - **Backend:** [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-mcp-server&fpr=cristian).
 > - **Two deployment modes:** local stdio (per-user) or remote HTTP/SSE (shared).
 > - **Cost:** ~$0.005-$0.01 per tool call (Apify pay-per-event).
 
@@ -336,7 +336,7 @@ For HTTP/SSE deployment instead of stdio, swap `stdio_server` for an HTTP transp
 
 ## Deploy your Skool MCP server today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-mcp-server)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-mcp-server&fpr=cristian)
 
 Wrap it with the ~150-line MCP server above. Your AI agents get Skool as a native toolset. Pay-per-event (~$0.005-$0.01 per call).
 

@@ -14,7 +14,7 @@ canonical: https://ctala.github.io/skool-api-docs/integrations/skool-gpt/
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** Any OpenAI model (GPT-4o, GPT-5, o1, o3, o3-mini) can read and write to Skool — approve members, post content, publish courses, reply to comments.
-> - **Method:** OpenAI function calling → HTTP POST to [Apify-hosted Skool actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-gpt).
+> - **Method:** OpenAI function calling → HTTP POST to [Apify-hosted Skool actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-gpt&fpr=cristian).
 > - **Cost:** OpenAI API + Apify pay-per-event (~$0.005-$0.01 per Skool action).
 
 ## OpenAI function calling schema
@@ -208,7 +208,7 @@ For typical "approve 10 members per day with judgment": ~$0.15/day total ($4.50/
 
 ## Plug Skool into GPT today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-gpt)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-gpt&fpr=cristian)
 
 Native function calling schema. Custom GPT compatible. Pay-per-event (~$0.005-$0.01 per call).
 

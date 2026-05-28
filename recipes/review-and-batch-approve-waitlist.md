@@ -144,4 +144,4 @@ Many communities run both: AI auto-approves the obvious yeses, and a periodic hu
 
 ---
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign=batch-approve) — pay-per-event (~$1.50/mo typical).
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign=batch-approve&fpr=cristian) — pay-per-event (~$1.50/mo typical).

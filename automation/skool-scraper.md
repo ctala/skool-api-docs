@@ -12,7 +12,7 @@ canonical: https://ctala.github.io/skool-api-docs/automation/skool-scraper/
 ---
 
 
-> **TL;DR.** Skool has no public API, so reading/writing data programmatically requires going through Skool's internal endpoints — which are protected by cookies + AWS WAF + a `buildId` that rotates weekly. Building a maintainable Skool scraper is a ~50-hour engineering project that breaks weekly. The legitimate alternative is the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-scraper) — same data, structured response, ~$1.50/mo, maintained.
+> **TL;DR.** Skool has no public API, so reading/writing data programmatically requires going through Skool's internal endpoints — which are protected by cookies + AWS WAF + a `buildId` that rotates weekly. Building a maintainable Skool scraper is a ~50-hour engineering project that breaks weekly. The legitimate alternative is the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-scraper&fpr=cristian) — same data, structured response, ~$1.50/mo, maintained.
 
 ## What people mean by "Skool scraper"
 
@@ -83,7 +83,7 @@ Skool's internal error responses are inconsistent across endpoints. Some return 
 
 ## The cost of "I'll just build my own"
 
-I built one. Then I rebuilt it as the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api). Approximate development time:
+I built one. Then I rebuilt it as the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian). Approximate development time:
 
 - Initial reverse engineering: 30 hours
 - Authentication + WAF token handling: 8 hours
@@ -145,7 +145,7 @@ If you find one that works for your specific use case, great. For the full surfa
 
 ## Skip the build, use the actor
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-scraper)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-scraper&fpr=cristian)
 
 Read AND write across the full Skool admin surface. One POST per action. Pay-per-event (~$1.50/mo typical). 80+ hours of maintenance done for you.
 

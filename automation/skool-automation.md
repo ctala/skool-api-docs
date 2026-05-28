@@ -12,7 +12,7 @@ canonical: https://ctala.github.io/skool-api-docs/automation/skool-automation/
 ---
 
 
-> **TL;DR.** Skool has no built-in automation engine and no official API. To automate a Skool community in 2026 you connect your existing automation stack (n8n, Make.com, Zapier, custom code, AI agents) to Skool through the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=skool-automation). One HTTP POST per action — read AND write to posts, members, classroom, files, group settings.
+> **TL;DR.** Skool has no built-in automation engine and no official API. To automate a Skool community in 2026 you connect your existing automation stack (n8n, Make.com, Zapier, custom code, AI agents) to Skool through the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=skool-automation&fpr=cristian). One HTTP POST per action — read AND write to posts, members, classroom, files, group settings.
 
 ## What you can automate
 
@@ -132,7 +132,7 @@ All other Skool-side complexity (WAF tokens, buildId rotation, rate limits, stru
 
 ## Start automating your Skool community today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=skool-automation)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=skool-automation&fpr=cristian)
 
 Pay-per-event pricing (~$1.50/mo for typical community automation). Read AND write. Works from any HTTP client.
 

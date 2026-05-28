@@ -15,7 +15,7 @@ render_with_liquid: false
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** any LlamaIndex agent can read AND write to Skool — approve members, post, reply, publish courses — as a `FunctionTool`, with no official Skool API.
-> - **Method:** wrap the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-llamaindex) with `FunctionTool.from_defaults(...)` and pass it to a `FunctionAgent(tools=[...])`.
+> - **Method:** wrap the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-llamaindex&fpr=cristian) with `FunctionTool.from_defaults(...)` and pass it to a `FunctionAgent(tools=[...])`.
 > - **Auth flow:** `auth:login` once → `cookies` string in env → reuse for ~3.5 days.
 > - **Latency:** ~2s per action (cookies cached) / ~10s on `auth:login` cold start.
 > - **Cost:** Apify pay-per-event (~$0.005–$0.01 per Skool action). LlamaIndex on your existing LLM provider.
@@ -24,7 +24,7 @@ render_with_liquid: false
 
 Skool has **no official API**. LlamaIndex is great at retrieval and at calling tools, but there's no built-in connector to act on a Skool community — your agent can reason about Skool data only if something fetches and writes it for real.
 
-The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-llamaindex) turns every Skool admin action into one HTTP POST with a structured `{ success, data }` / `{ success, errorCode, hint }` response. That's exactly the shape `FunctionTool` expects: define one Python function, hand it to `FunctionTool.from_defaults`, and your `FunctionAgent` can read and write Skool. One tool, the whole surface — no SDK, no Playwright in your runtime.
+The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-llamaindex&fpr=cristian) turns every Skool admin action into one HTTP POST with a structured `{ success, data }` / `{ success, errorCode, hint }` response. That's exactly the shape `FunctionTool` expects: define one Python function, hand it to `FunctionTool.from_defaults`, and your `FunctionAgent` can read and write Skool. One tool, the whole surface — no SDK, no Playwright in your runtime.
 
 Why LlamaIndex specifically fits well here:
 
@@ -152,7 +152,7 @@ Register `skool_action_safe` instead of `skool_action` and re-logins happen tran
 
 ## Production gotchas
 
-- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
+- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
 - **Cookies expiring silently:** When a call returns `errorCode: "WAF_EXPIRED"`, re-run `auth:login` and refresh `SKOOL_COOKIES`. Use the auto-rotate wrapper above for unattended agents.
 - **`parentId` for comment replies:** top-level comment → `rootId == parentId == postId`. Reply to a comment → `rootId == postId`, `parentId == commentId`. Mixing these is the most common silent bug.
 - **`memberId` vs `id`:** for approve/reject, pass `memberId` from `members:pending`, not the `id`. The wrong one gives a silent 404. Keep this in the tool description so the agent picks the right field.
@@ -206,7 +206,7 @@ Using a different framework? The wrapper is the same POST behind a different too
 
 ## Plug Skool into your LlamaIndex agent today
 
-[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-llamaindex)
+[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-llamaindex&fpr=cristian)
 
 - Pay-per-event (~$0.005–$0.01 per Skool action, ~$1.50/mo typical)
 - Read AND write — full API surface (posts, comments, members, classroom, files, Auto DM)

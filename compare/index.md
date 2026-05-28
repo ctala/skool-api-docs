@@ -57,4 +57,4 @@ Side-by-side comparisons to help you pick the right platform for your community 
 
 [**→ Try Skool — 14-day free trial**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card. The 14 days are the empirical test.
 
-*Plan to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=compare) — Skool API for ~$1.50/mo.*
+*Plan to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=compare&fpr=cristian) — Skool API for ~$1.50/mo.*

@@ -12,7 +12,7 @@ canonical: https://ctala.github.io/skool-api-docs/guide/skool-cost/
 ---
 
 
-> **TL;DR.** Base Skool cost: **$99/mo flat**. Stripe takes ~3% on member payments separately. Optional automation via [Apify API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-cost) runs ~$1.50/mo. Total realistic cost of ownership for a typical paid community: **$100-$135/mo + 3% of member revenue**.
+> **TL;DR.** Base Skool cost: **$99/mo flat**. Stripe takes ~3% on member payments separately. Optional automation via [Apify API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-cost&fpr=cristian) runs ~$1.50/mo. Total realistic cost of ownership for a typical paid community: **$100-$135/mo + 3% of member revenue**.
 
 ## What you pay Skool
 
@@ -44,7 +44,7 @@ Skool has no built-in automation engine. To auto-approve members, schedule posts
 
 | Tool | Cost |
 |---|---|
-| **[Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-cost)** | Pay-per-event: ~$0.005 per read, ~$0.01 per write. Typical community: **$1.50-$5/mo** |
+| **[Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-cost&fpr=cristian)** | Pay-per-event: ~$0.005 per read, ~$0.01 per write. Typical community: **$1.50-$5/mo** |
 | **n8n self-host** | $0 (your existing infra) |
 | **n8n cloud** | $20/mo starter plan |
 | **Make.com** | $10-30/mo typical |
@@ -140,7 +140,7 @@ Skool's pricing is competitive at this scale and better than most for a feature-
 
 You can't reduce the $99 platform fee. But you can reduce the *other* costs:
 
-1. **Cut Stripe friction** — use [Apify actor `members:batchApprove`](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-cost) which doesn't go through Stripe (it's just member admin). Stripe only applies when members pay you.
+1. **Cut Stripe friction** — use [Apify actor `members:batchApprove`](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-cost&fpr=cristian) which doesn't go through Stripe (it's just member admin). Stripe only applies when members pay you.
 2. **Self-host automation** — n8n self-hosted runs free on your existing VPS. Saves $20-50/mo vs Zapier.
 3. **Use the Apify actor instead of multiple Zaps** — one $1.50/mo actor replaces $30+/mo of Zapier tasks.
 4. **Bundle annual member payments where you can** — Stripe takes the fee once instead of 12 times, saving $0.30 × 11 = $3.30/member/year.
@@ -159,7 +159,7 @@ You can't reduce the $99 platform fee. But you can reduce the *other* costs:
 
 [**→ Start your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card. Validate cost vs revenue in 14 days.
 
-*Want to automate to keep total cost low? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-cost) — ~$1.50/mo typical.*
+*Want to automate to keep total cost low? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-cost&fpr=cristian) — ~$1.50/mo typical.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"Skool","offers":{"@type":"Offer","price":"99","priceCurrency":"USD"}}

@@ -44,7 +44,7 @@ Top complaint among growing communities. "Members see `skool.com` instead of our
 
 ### No official API
 
-For developer-leaning owners: "I want to automate member onboarding, but Skool has no API." Most who hit this find the [unofficial Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-reviews) and switch from complaint to praise.
+For developer-leaning owners: "I want to automate member onboarding, but Skool has no API." Most who hit this find the [unofficial Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-reviews&fpr=cristian) and switch from complaint to praise.
 
 ### Limited admin features
 
@@ -143,7 +143,7 @@ The most reliable signal: try the [14-day free trial](https://www.skool.com/sign
 
 [**→ Start your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card. Form your own opinion in 14 days.
 
-*Want to automate community admin? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-reviews) — ~$1.50/mo, no code.*
+*Want to automate community admin? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-reviews&fpr=cristian) — ~$1.50/mo, no code.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"AggregateRating","itemReviewed":{"@type":"Product","name":"Skool"},"ratingValue":"4.3","bestRating":"5","reviewCount":"1247"}

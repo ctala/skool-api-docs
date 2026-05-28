@@ -15,7 +15,7 @@ render_with_liquid: false
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** run a Skool community from OpenCode, the open-source terminal agent — "approve the verified applicants", "post the weekly digest" — in plain English, no editor required.
-> - **Method:** add the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-opencode) as an **MCP server** under the `mcp` key in `opencode.json` via Apify's MCP gateway.
+> - **Method:** add the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-opencode&fpr=cristian) as an **MCP server** under the `mcp` key in `opencode.json` via Apify's MCP gateway.
 > - **Config:** one `mcp` entry with `"type": "local"` running `npx @apify/actors-mcp-server --actors=cristiantala/skool-all-in-one-api`. Note: OpenCode uses a `command` **array** and `environment` (not `env`).
 > - **Auth flow:** `auth:login` once → `cookies` string cached → reuse for ~3.5 days.
 > - **Cost:** Apify pay-per-event (~$0.005–$0.01 per Skool action). OpenCode is free/OSS + your model key.
@@ -24,7 +24,7 @@ render_with_liquid: false
 
 Skool has **no official API**. OpenCode is the fast-growing open-source terminal agent — provider-agnostic, runs anywhere you have a shell, and has clean MCP support baked into a single config file. If you live in the terminal and OpenCode is your agent, you want to manage your community without spawning a browser.
 
-The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-opencode) wraps the entire Skool admin surface in one HTTP endpoint. Declared as one MCP server in `opencode.json`, every Skool action becomes a tool OpenCode can call from the prompt.
+The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-opencode&fpr=cristian) wraps the entire Skool admin surface in one HTTP endpoint. Declared as one MCP server in `opencode.json`, every Skool action becomes a tool OpenCode can call from the prompt.
 
 Why OpenCode is a good fit specifically:
 
@@ -38,7 +38,7 @@ Why OpenCode is a good fit specifically:
 
 ### 1. Get your Apify API token
 
-Sign up at [apify.com](https://apify.com) — the free tier covers most communities. Token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations).
+Sign up at [apify.com](https://apify.com?fpr=cristian) — the free tier covers most communities. Token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
 
 ### 2. Declare the Skool server in `opencode.json`
 
@@ -168,7 +168,7 @@ The MCP server exposes the entire Skool admin surface as tools. You ask in plain
 - **It's `command` array + `environment`, not `command` string + `env`.** OpenCode's schema differs from Cursor/Cline/Windsurf: `command` is an **array** of strings and the env block is named `environment`. Copying a Cursor snippet verbatim will silently fail to start.
 - **Watch your context budget.** OpenCode's docs explicitly warn that MCP tools add to the context window. The Skool actor surfaces ~25 actions — fine alone, but if you stack several token-heavy MCP servers, disable unused Skool tools with a glob (`"tools": { "skool*": false }`) and re-enable per agent.
 - **Cookies are tool-call params.** The Apify gateway is a generic actor wrapper — pass `cookies` and `groupSlug` as params on each call. Run `auth:login` once, reuse the `cookies` (~3.5 days), re-run on `WAF_EXPIRED`.
-- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
+- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
 - **`parentId` for comment replies:** top-level comment → `rootId == parentId == postId`. Reply to a comment → `rootId == postId`, `parentId == commentId`. Mixing these is the most common silent bug.
 - **`memberId` vs `id`:** for approve/reject, pass `memberId` from `members:pending`, not the request `id`. The wrong one gives a silent 404.
 
@@ -219,7 +219,7 @@ For the full agent primer (function-calling specs, idempotency table, error-reco
 
 ## Plug Skool into OpenCode today
 
-[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-opencode)
+[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-opencode&fpr=cristian)
 
 - Pay-per-event (~$0.005–$0.01 per Skool action, ~$1.50/mo typical)
 - Read AND write — full API surface (posts, comments, members, classroom, files, Auto DM)

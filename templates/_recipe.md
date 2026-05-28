@@ -26,7 +26,7 @@ render_with_liquid: false
 
 ## Prerequisites
 
-- Apify token ([get one](https://console.apify.com/account/integrations))
+- Apify token ([get one](https://console.apify.com/account/integrations?fpr=cristian))
 - Skool admin credentials for the community you're automating
 - {tool-specific: n8n instance, Make.com account, Python 3.10+, etc.}
 
@@ -90,13 +90,13 @@ render_with_liquid: false
 
 ## Use this in production — no setup
 
-The hardest part of building Skool automation isn't the API logic — it's the auth (cookies expire every ~3.5 days, WAF token rotation, weekly Skool buildId changes). The **[Skool All-in-One API actor on Apify](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign={kebab-case-slug})** handles all of that.
+The hardest part of building Skool automation isn't the API logic — it's the auth (cookies expire every ~3.5 days, WAF token rotation, weekly Skool buildId changes). The **[Skool All-in-One API actor on Apify](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign={kebab-case-slug&fpr=cristian})** handles all of that.
 
 - Pay-per-event pricing (~$1.50/mo for typical communities)
 - One JSON POST per action — works from any HTTP client
 - Built and battle-tested in production
 
-[**→ Start using it on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign={kebab-case-slug})
+[**→ Start using it on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign={kebab-case-slug&fpr=cristian})
 
 *New to Skool? [Launch your community here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
 

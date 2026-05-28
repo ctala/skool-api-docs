@@ -15,7 +15,7 @@ render_with_liquid: false
 
 > **Quick reference (TL;DR for agents)**
 > - **Does Skool have native webhooks?** Effectively no — Skool offers a few opaque webhook actions inside its Zapier/Make integrations but no general-purpose user-defined webhooks for events like "new member applied" or "new post created".
-> - **The workaround:** poll the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-webhook) on a schedule (n8n / Make / cron / GitHub Action), diff against last state, fire your own webhook on new items.
+> - **The workaround:** poll the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-webhook&fpr=cristian) on a schedule (n8n / Make / cron / GitHub Action), diff against last state, fire your own webhook on new items.
 > - **Latency:** poll interval defines the lag — typical setups poll every 1-5 minutes.
 > - **Cost:** ~$0.005 per poll × N polls per day.
 
@@ -150,7 +150,7 @@ This is critical for any production webhook setup. See [authentication docs](../
 
 ## Get production-grade Skool webhooks today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-webhook)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-webhook&fpr=cristian)
 
 Polling-based webhooks via one POST per check. Pay-per-event (~$1.50-$15/mo depending on polling frequency). Battle-tested in production.
 

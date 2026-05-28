@@ -15,7 +15,7 @@ render_with_liquid: false
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** operate a Skool community from Windsurf's Cascade agent — "publish this markdown as a course lesson", "approve the verified applicants" — in plain English, inside the IDE.
-> - **Method:** add the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-windsurf) as an **MCP server** in `~/.codeium/windsurf/mcp_config.json` via Apify's MCP gateway. Cascade lists every Skool action as a tool.
+> - **Method:** add the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-windsurf&fpr=cristian) as an **MCP server** in `~/.codeium/windsurf/mcp_config.json` via Apify's MCP gateway. Cascade lists every Skool action as a tool.
 > - **Config:** one `mcpServers` entry running `npx @apify/actors-mcp-server --actors=cristiantala/skool-all-in-one-api`.
 > - **Auth flow:** `auth:login` once → `cookies` string cached → reuse for ~3.5 days.
 > - **Cost:** Apify pay-per-event (~$0.005–$0.01 per Skool action). Windsurf on your existing plan.
@@ -24,7 +24,7 @@ render_with_liquid: false
 
 Skool has **no official API**. Windsurf's Cascade is an agentic IDE built around a plugin store and native MCP support, with config interpolation (`${env:VAR}`, `${file:...}`) so secrets never get hardcoded. If you build inside Windsurf, managing your Skool community shouldn't mean opening a second browser tab.
 
-The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-windsurf) wraps the whole Skool admin surface in a single HTTP endpoint. Added as one MCP server, every Skool action becomes a Cascade tool alongside your code tools.
+The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-windsurf&fpr=cristian) wraps the whole Skool admin surface in a single HTTP endpoint. Added as one MCP server, every Skool action becomes a Cascade tool alongside your code tools.
 
 Why Cascade is a good fit specifically:
 
@@ -38,7 +38,7 @@ Why Cascade is a good fit specifically:
 
 ### 1. Get your Apify API token
 
-Sign up at [apify.com](https://apify.com) — the free tier covers most communities. Token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations).
+Sign up at [apify.com](https://apify.com?fpr=cristian) — the free tier covers most communities. Token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
 
 ### 2. Edit `mcp_config.json`
 
@@ -173,7 +173,7 @@ The MCP server exposes the entire Skool admin surface as tools. You ask in plain
 - **100-tool ceiling in Cascade.** Cascade caps the total number of enabled tools across all MCP servers at 100. The Skool actor surfaces ~25 actions — fine on its own, but if you also run GitHub, Postgres, and browser MCP servers you can hit the cap. Toggle off Skool actions you don't use (keep `posts:*`, `members:*`, `classroom:*`; drop `system:debug`).
 - **Store cookies with `${file:...}`.** Cascade's file interpolation is the cleanest way to handle the ~3.5-day cookie TTL: keep `cookies` in `~/.secrets/skool_cookies.txt`, reference it, and rotation is a single file write. Note the actor takes `cookies` as a tool-call param, so you pass the interpolated value through your prompt or a wrapper, not as a server `env` var.
 - **Enterprise must enable MCP.** On Teams/Enterprise plans, MCP is off until an admin turns it on and may be restricted to a whitelist. If `skool` won't load on a managed machine, ask your admin to whitelist the server ID `skool`.
-- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
+- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
 - **Cookies expiring silently:** when a call returns `errorCode: "WAF_EXPIRED"`, re-run `auth:login` and update the stored cookies.
 - **`parentId` for comment replies:** top-level comment → `rootId == parentId == postId`. Reply to a comment → `rootId == postId`, `parentId == commentId`. Mixing these is the most common silent bug.
 - **`memberId` vs `id`:** for approve/reject, pass `memberId` from `members:pending`, not the request `id`. The wrong one gives a silent 404.
@@ -222,7 +222,7 @@ For the full agent primer (function-calling specs, idempotency table, error-reco
 
 ## Plug Skool into Windsurf today
 
-[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-windsurf)
+[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-windsurf&fpr=cristian)
 
 - Pay-per-event (~$0.005–$0.01 per Skool action, ~$1.50/mo typical)
 - Read AND write — full API surface (posts, comments, members, classroom, files, Auto DM)

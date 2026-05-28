@@ -5,13 +5,13 @@ description: Use this skill when the user wants to read or write to a Skool comm
 
 # Skool All-in-One API — Claude Code Skill
 
-This skill connects you to a Skool community via the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api). Read AND write to posts, comments, members, classroom (courses/folders/pages), files, and group settings.
+This skill connects you to a Skool community via the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian). Read AND write to posts, comments, members, classroom (courses/folders/pages), files, and group settings.
 
 ## Setup (one time)
 
 The user needs:
 
-1. **Apify account + token**: free tier is enough. Token from https://console.apify.com/account/integrations.
+1. **Apify account + token**: free tier is enough. Token from https://console.apify.com/account/integrations.?fpr=cristian
 2. **Skool admin credentials** for the community.
 
 Store in a local `.env` (never in repo):

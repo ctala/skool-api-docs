@@ -135,7 +135,7 @@ Depends entirely on your audience. Founders / creators with 10K+ followers in th
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial. After your first $99 payment, the affiliate dashboard unlocks and your ref link is active.
 
-*Building solo and want to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-referral-program) — no code required, ~$1.50/mo.*
+*Building solo and want to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-referral-program&fpr=cristian) — no code required, ~$1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Skool Referral Program","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

@@ -27,7 +27,7 @@ In production on [a production Skool community](https://www.skool.com/cagala-apr
 
 ## Prerequisites
 
-- Apify token ([get one](https://console.apify.com/account/integrations))
+- Apify token ([get one](https://console.apify.com/account/integrations?fpr=cristian))
 - Skool admin credentials for the community
 - An LLM API key (Claude, OpenAI, or any model with structured output)
 - A way to receive approvals (Telegram bot, Slack DM, or a CLI prompt)
@@ -333,7 +333,7 @@ for thread_id, label in PINNED_THREADS.items():
 
 The Skool internal API, the cookies+WAF+buildId rotation, and the structured-error layer are all handled by the actor — your script just makes JSON POSTs and gets structured responses back.
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign=reply-onboarding-comments)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign=reply-onboarding-comments&fpr=cristian)
 
 - Pay-per-event (~$0.005 per fetch, ~$0.01 per reply)
 - One HTTP POST per action — works from Python, n8n, Make.com, anywhere

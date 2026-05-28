@@ -14,7 +14,7 @@ canonical: https://ctala.github.io/skool-api-docs/integrations/skool-langchain/
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** Any LangChain agent (LLM-agnostic — works with Claude, GPT, Gemini, local models) can read and write to Skool as a Tool.
-> - **Method:** `StructuredTool` wraps a single function that POSTs to the [Apify-hosted Skool actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-langchain).
+> - **Method:** `StructuredTool` wraps a single function that POSTs to the [Apify-hosted Skool actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-langchain&fpr=cristian).
 > - **Async-ready:** use `StructuredTool` with `coroutine=` for high-throughput agents.
 
 ## The Tool — minimal
@@ -215,7 +215,7 @@ graph = workflow.compile()
 
 ## Add Skool to your LangChain agent today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-langchain)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-langchain&fpr=cristian)
 
 One `StructuredTool` wraps the entire Skool admin surface. Works with Claude, GPT, Gemini, local models. Pay-per-event (~$0.005-$0.01 per call).
 

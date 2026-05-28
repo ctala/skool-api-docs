@@ -298,7 +298,7 @@ print(f"Processed {len(events)} upcoming events. State: {len(state['announced'])
 
 ## Use it in production today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign=automate-skool-events)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign=automate-skool-events&fpr=cristian)
 
 Pay-per-event (~$0.02 per announcement). Battle-tested in production.
 

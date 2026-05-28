@@ -52,7 +52,7 @@ render_with_liquid: false            # OBLIGATORIO si la página tiene {{ }} en 
 
 Skool has **no official API**. {1–2 oraciones explicando el problema concreto que tiene el lector de {Tool} hoy sin el actor}.
 
-The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-{tool-slug}) wraps the entire Skool admin surface in a single HTTP endpoint. {1 oración específica sobre por qué {Tool} se beneficia especialmente — ej. tool-use nativo, HTTP node nativo, etc.}.
+The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-{tool-slug&fpr=cristian}) wraps the entire Skool admin surface in a single HTTP endpoint. {1 oración específica sobre por qué {Tool} se beneficia especialmente — ej. tool-use nativo, HTTP node nativo, etc.}.
 
 <!-- Para AI agents: añadir 2-3 bullets con razones específicas del modelo/framework -->
 <!-- Para automation tools: omitir bullets, ir directo a la tabla de "What you can automate" -->
@@ -147,7 +147,7 @@ Every Skool operation = one HTTP POST. No SDK needed. The actor handles Playwrig
 
 ### 1. Get your Apify API token
 
-Sign up at [apify.com](https://apify.com) — free tier covers most communities. Token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations).
+Sign up at [apify.com](https://apify.com?fpr=cristian) — free tier covers most communities. Token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
 
 ### 2. {Tool}-specific setup
 
@@ -202,7 +202,7 @@ The returned `cookies` string is valid for ~3.5 days. After that, re-run `auth:l
 
 ## Production gotchas
 
-- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
+- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
 - **Cookies expiring silently:** When `errorCode: "WAF_EXPIRED"` appears, re-run `auth:login` and store new cookies. Design your {Tool} flow to branch on this error code.
 - **`parentId` for comment replies:** Top-level comment → `rootId == parentId == postId`. Reply to a comment → `rootId == postId`, `parentId == commentId`. Mixing these is the most common silent bug.
 - **Rate limit ~25 writes/min:** Skool's hard limit. The actor queues internally — don't add your own retry loop on top.
@@ -244,7 +244,7 @@ The returned `cookies` string is valid for ~3.5 days. After that, re-run `auth:l
 
 ## {Start automating Skool today / Plug Skool into {Tool} today}
 
-[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-{tool-slug})
+[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-{tool-slug&fpr=cristian})
 
 - Pay-per-event (~$0.005–$0.01 per Skool action, ~$1.50/mo typical)
 - Read AND write — full API surface (posts, comments, members, classroom, files, Auto DM)

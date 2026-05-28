@@ -22,7 +22,7 @@ canonical: https://ctala.github.io/skool-api-docs/for/{persona-slug}/
 
 1. **Create your community** — name, cover image, single-paragraph description. [Sign up here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63).
 2. **Set the price tier** — Skool is $99/mo total, but you charge what you want. {Persona} typically charge ${range}/mo.
-3. **Add your first course** — drop your existing {persona-asset-type} into the classroom. Markdown → TipTap conversion is automatic if you use [the Apify actor](https://apify.com/cristiantala/skool-all-in-one-api).
+3. **Add your first course** — drop your existing {persona-asset-type} into the classroom. Markdown → TipTap conversion is automatic if you use [the Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian).
 4. **Set the Auto DM** — first message every new member sees. Tokens: `#NAME#`, `#GROUPNAME#`. Keep ≤300 chars.
 5. **Pin the welcome post** — 1 post that says "start here". Link to your first course module.
 
@@ -66,7 +66,7 @@ Auto DM is the highest-leverage 300 characters in your community. {Persona}-spec
 
 ### Can I migrate my existing {persona-asset-type} to Skool?
 
-Yes — drop markdown files in, the [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=persona&utm_campaign={persona-slug}) handles the import end-to-end (creates course → folders → pages → cover image upload → set body from markdown with auto TipTap conversion).
+Yes — drop markdown files in, the [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=persona&utm_campaign={persona-slug&fpr=cristian}) handles the import end-to-end (creates course → folders → pages → cover image upload → set body from markdown with auto TipTap conversion).
 
 ### {Question 2}?
 
@@ -88,7 +88,7 @@ Yes — drop markdown files in, the [Apify actor](https://apify.com/cristiantala
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial. {Persona}-specific setup in under 10 minutes.
 
-*Want the automations from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=persona&utm_campaign={persona-slug}) — no code required.*
+*Want the automations from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=persona&utm_campaign={persona-slug&fpr=cristian}) — no code required.*
 
 <script type="application/ld+json">
 {

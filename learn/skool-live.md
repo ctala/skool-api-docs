@@ -83,7 +83,7 @@ This works because live events are **synchronous social proof** — members post
 
 ## Automating live event announcements
 
-Use the [Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-live) to:
+Use the [Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-live&fpr=cristian) to:
 
 - Auto-post the event reminder in the community feed 2 hours before
 - DM members who RSVP'd "attending" with the Zoom link
@@ -104,7 +104,7 @@ See [Newsletter to Skool post](../recipes/newsletter-to-skool-post.md) for the p
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — set up your first weekly community call in <30 minutes.
 
-*Want to auto-announce events? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-live) — schedule reminders + announcements automatically.*
+*Want to auto-announce events? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-live&fpr=cristian) — schedule reminders + announcements automatically.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"DefinedTerm","name":"Skool Live","description":"Skool's live event features: calendar with Zoom/Meet integration, RSVP, embedded video player. No native streaming — uses external video tools.","inDefinedTermSet":"https://github.com/ctala/skool-api-docs"}

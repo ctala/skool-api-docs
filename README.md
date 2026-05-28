@@ -2,8 +2,8 @@
 
 > **The most complete unofficial Skool API.** Read posts, comments, members, and courses. Create posts, reply to comments, approve members, build entire courses programmatically. Drop-in for n8n, Make.com, Zapier, AI agents.
 
-[![Apify Actor](https://img.shields.io/badge/Apify-Actor-FF9900?logo=apify&logoColor=white)](https://apify.com/cristiantala/skool-all-in-one-api)
-[![Latest version](https://img.shields.io/badge/version-0.3.25-brightgreen)](https://apify.com/cristiantala/skool-all-in-one-api)
+[![Apify Actor](https://img.shields.io/badge/Apify-Actor-FF9900?logo=apify&logoColor=white)](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian)
+[![Latest version](https://img.shields.io/badge/version-0.3.25-brightgreen)](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian)
 [![n8n template](https://img.shields.io/badge/n8n-template-EA4B71?logo=n8n&logoColor=white)](https://n8n.io/workflows/14392-auto-approve-skool-community-members-with-gpt-4o-ai-screening/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -45,7 +45,7 @@ This actor is that integration. It powers a real production community ([Cágala,
 
 ### 1. Get an Apify account
 
-Sign up at [apify.com](https://apify.com) (free tier covers most personal use). Grab your API token from the [account dashboard](https://console.apify.com/account/integrations).
+Sign up at [apify.com](https://apify.com?fpr=cristian) (free tier covers most personal use). Grab your API token from the [account dashboard](https://console.apify.com/account/integrations?fpr=cristian).
 
 ### 2. Run your first call
 
@@ -132,7 +132,7 @@ The actor uses **Apify Pay-Per-Event** (PPE) — you pay only for what you use:
 | Write action (create post, approve member, etc.) | ~$0.01 + ~$0.005 platform |
 | `files:uploadImage` | ~$0.005 |
 
-A community handling ~50 writes + ~200 reads per day costs roughly **$1.50/month**. [See full pricing →](https://apify.com/cristiantala/skool-all-in-one-api)
+A community handling ~50 writes + ~200 reads per day costs roughly **$1.50/month**. [See full pricing →](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian)
 
 ## Reliability
 

@@ -46,7 +46,7 @@ Instead of writing a function-calling schema for each API you want your AI to us
 }
 ```
 
-Get your Apify token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations).
+Get your Apify token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
 
 ### 3. Restart Claude Desktop
 

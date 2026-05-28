@@ -59,9 +59,9 @@ canonical: https://ctala.github.io/skool-api-docs/learn/{kebab-case-slug}/
 <!-- Funnel A CTA: -->
 ## Put this into practice
 
-The fastest way to use {term} in production is the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign={kebab-case-slug}) — one HTTP POST per action, pay-per-event pricing, no scraping infrastructure to maintain.
+The fastest way to use {term} in production is the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign={kebab-case-slug&fpr=cristian}) — one HTTP POST per action, pay-per-event pricing, no scraping infrastructure to maintain.
 
-[**→ Open the actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign={kebab-case-slug})
+[**→ Open the actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign={kebab-case-slug&fpr=cristian})
 
 *New to Skool? [Launch your community here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day trial.*
 
@@ -70,7 +70,7 @@ The fastest way to use {term} in production is the [Apify-hosted Skool All-in-On
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial, setup in under 10 minutes.
 
-*Need to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign={kebab-case-slug}) — no code required.*
+*Need to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign={kebab-case-slug&fpr=cristian}) — no code required.*
 
 <script type="application/ld+json">
 {

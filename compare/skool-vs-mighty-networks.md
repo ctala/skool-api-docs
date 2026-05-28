@@ -27,7 +27,7 @@ canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-mighty-networ
 | **DMs** | Native private + group | Native private + group |
 | **Live events** | Calendar + Zoom embed | Calendar + native streaming on Path plan |
 | **Mobile app** | iOS + Android (white-label on Path) | iOS + Android |
-| **API** | Unofficial only — [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api) | Limited official API on Business+ |
+| **API** | Unofficial only — [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) | Limited official API on Business+ |
 | **Affiliate program** | 40% recurring forever | 30% recurring 12 months (Business+) |
 | **Customization** | Logo + cover only | Custom branding, white-label app on Path |
 | **Custom domain** | No | Yes (Business+) |
@@ -92,7 +92,7 @@ At the comparable "Business" tier ($99/mo), Mighty is the same monthly price as 
 
 ### API & automation
 
-**Skool:** **No official API.** The [unofficial Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-mighty-networks) covers everything — posts, comments, members, classroom, files, groups. One JSON POST per action.
+**Skool:** **No official API.** The [unofficial Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-mighty-networks&fpr=cristian) covers everything — posts, comments, members, classroom, files, groups. One JSON POST per action.
 
 **Mighty Networks:** Official API on Business+ plan. Documented, supported, but with limited write surface.
 
@@ -130,7 +130,7 @@ Manual today. Export Mighty members via their API, recreate community in Skool, 
 
 ## Migration: Skool → Mighty Networks
 
-Similar manual process. Skool has no official export but the [Apify Skool API actor's `members:list`](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-mighty-networks) gives you the full roster as JSON. Most migrations are driven by needing custom domain or white-label mobile app.
+Similar manual process. Skool has no official export but the [Apify Skool API actor's `members:list`](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-mighty-networks&fpr=cristian) gives you the full roster as JSON. Most migrations are driven by needing custom domain or white-label mobile app.
 
 ## Common questions
 
@@ -140,7 +140,7 @@ For simple courses (text + video + downloads), comparable. For structured cohort
 
 ### Can I import courses from Mighty to Skool?
 
-No native importer. The [Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api) lets you push markdown course content programmatically. If you export Mighty courses to markdown, you can re-publish to Skool via API.
+No native importer. The [Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) lets you push markdown course content programmatically. If you export Mighty courses to markdown, you can re-publish to Skool via API.
 
 ### Which has the better mobile app?
 
@@ -167,7 +167,7 @@ Yes. Mighty Networks is VC-backed, profitable. Skool is bootstrapped, profitable
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card, $99/mo flat after trial.
 
-*Plan to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-mighty-networks) — Skool API automation for ~$1.50/mo.*
+*Plan to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-mighty-networks&fpr=cristian) — Skool API automation for ~$1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Skool vs Mighty Networks — Honest Comparison","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

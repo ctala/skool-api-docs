@@ -165,7 +165,7 @@ Once you've validated the community works:
 3. **Auto-DM new members with context-specific welcome** — [recipe](../recipes/auto-dm-new-members.md)
 4. **Auto-mirror your newsletter** to the feed — [recipe](../recipes/newsletter-to-skool-post.md)
 
-The [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=how-to-start-a-skool-community) handles the API plumbing — you write the workflow logic in n8n / Make / Python. ~$1.50/mo for typical use.
+The [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=how-to-start-a-skool-community&fpr=cristian) handles the API plumbing — you write the workflow logic in n8n / Make / Python. ~$1.50/mo for typical use.
 
 ## Pitfalls in the first 60 days
 
@@ -201,7 +201,7 @@ These are typical ranges for solo founders with existing audiences. From zero (n
 
 [**→ Sign up for Skool**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial, no credit card. Follow the 10 steps above and you're live in <2 hours of work spread over a week.
 
-*Plan to automate from week 4? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=how-to-start-a-skool-community) — no code required, $1.50/mo.*
+*Plan to automate from week 4? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=how-to-start-a-skool-community&fpr=cristian) — no code required, $1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HowTo","name":"How to Start a Skool Community","description":"Step-by-step guide to launching a Skool community: signup, basics, classroom, Auto DM, first members, first event, automation.","totalTime":"PT2H","step":[

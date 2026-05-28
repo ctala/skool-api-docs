@@ -26,7 +26,7 @@ canonical: https://ctala.github.io/skool-api-docs/compare/skool-vs-thinkific/
 | **Gamification** | Levels + leaderboard | None |
 | **Email marketing** | Basic in-platform | Built-in (basic) |
 | **Landing pages** | No | Yes — course sales pages |
-| **API** | Unofficial — [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api) | Official API on Pro+ |
+| **API** | Unofficial — [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) | Official API on Pro+ |
 | **Affiliate program** | 40% recurring forever | Yes (per course, custom rates) |
 
 ## Pricing
@@ -108,7 +108,7 @@ Course creator with $497 hero course × 25 sales/mo = $12,425/mo. Cost: $74 Thin
 
 ### API
 
-**Skool:** [Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-thinkific) — full read+write surface for ~$1.50/mo.
+**Skool:** [Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-thinkific&fpr=cristian) — full read+write surface for ~$1.50/mo.
 
 **Thinkific:** Official API on Pro+ ($74/mo). Documented, supported.
 
@@ -116,7 +116,7 @@ Course creator with $497 hero course × 25 sales/mo = $12,425/mo. Cost: $74 Thin
 
 ## Migration: Thinkific → Skool
 
-Export course content from Thinkific (markdown via their API or manual). Push to Skool classroom via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-thinkific). Members migrated via email.
+Export course content from Thinkific (markdown via their API or manual). Push to Skool classroom via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-thinkific&fpr=cristian). Members migrated via email.
 
 Common reason: pivoting from course business to community business as your audience matures.
 
@@ -170,7 +170,7 @@ Yes. Thinkific (Canadian company, 2012, publicly traded) has 50K+ creators. Skoo
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card, $99/mo flat after trial.
 
-*Plan to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-thinkific) — Skool API for ~$1.50/mo.*
+*Plan to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-thinkific&fpr=cristian) — Skool API for ~$1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Skool vs Thinkific","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

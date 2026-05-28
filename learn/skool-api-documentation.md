@@ -12,7 +12,7 @@ canonical: https://ctala.github.io/skool-api-docs/learn/skool-api-documentation/
 ---
 
 
-> **TL;DR.** Skool has no official API documentation because it has no official API. The complete unofficial documentation is this repo + the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-api-documentation). Below: structure, where each topic lives, how to read the actor's structured responses.
+> **TL;DR.** Skool has no official API documentation because it has no official API. The complete unofficial documentation is this repo + the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-api-documentation&fpr=cristian). Below: structure, where each topic lives, how to read the actor's structured responses.
 
 ## Quick navigation
 
@@ -158,7 +158,7 @@ If your script can retry on transient errors, lock around the non-idempotent one
 
 ## Use it in production today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-api-documentation)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-api-documentation&fpr=cristian)
 
 Pay-per-event pricing (~$1.50/mo typical). Read AND write. Structured response contract designed for AI agents.
 

@@ -81,7 +81,7 @@ You configure these in your community settings. Members upgrade in-platform via 
 
 | Limitation | Workaround |
 |---|---|
-| No native API | [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=how-does-skool-work) |
+| No native API | [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=how-does-skool-work&fpr=cristian) |
 | No native webhooks | [Polling proxy pattern](../integrations/skool-webhook.md) |
 | No custom domain | Wait or migrate to Circle ($89-$399/mo) for that feature |
 | No white-label | Same — migrate to Circle Business plan |
@@ -146,7 +146,7 @@ This is why Skool is the dominant "first paid community" platform in 2026 — th
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial, setup in under 10 minutes.
 
-*Plan to automate from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=how-does-skool-work) — auto-approve members, schedule posts, ~$1.50/mo.*
+*Plan to automate from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=how-does-skool-work&fpr=cristian) — auto-approve members, schedule posts, ~$1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"DefinedTerm","name":"How Skool works","description":"Skool is a community + courses platform combining feed, classroom, gamification, DMs, and calendar for a flat $99/mo. Members pay you whatever you charge — Skool only takes the flat fee from you.","inDefinedTermSet":"https://github.com/ctala/skool-api-docs"}

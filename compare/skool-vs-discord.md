@@ -107,7 +107,7 @@ Expected: 50-70% of paid Discord members migrate if pitch is clear.
 
 Less common (typically going the other direction). Reasons might be: free community, audience strongly prefers chat, you've decided to stop monetizing.
 
-Export Skool members via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-discord), invite them to Discord, run both for a transition period.
+Export Skool members via [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-discord&fpr=cristian), invite them to Discord, run both for a transition period.
 
 ## Hybrid: Skool + Discord
 
@@ -153,7 +153,7 @@ Discord. Real-time chat is what tech audiences want, and Discord is the cultural
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card, $99/mo flat after trial.
 
-*Want to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-discord) — Skool API for ~$1.50/mo.*
+*Want to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-vs-discord&fpr=cristian) — Skool API for ~$1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Skool vs Discord","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

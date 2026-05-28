@@ -14,7 +14,7 @@ canonical: https://ctala.github.io/skool-api-docs/integrations/skool-mcp/
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** Any MCP-compatible AI client (Claude Desktop, Cursor, Cline, Continue) can read AND write to Skool natively as tools.
-> - **Implementation:** The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-mcp) is exposed as MCP tools via Apify's MCP gateway at `mcp.apify.com`.
+> - **Implementation:** The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-mcp&fpr=cristian) is exposed as MCP tools via Apify's MCP gateway at `mcp.apify.com`.
 > - **Alternative:** Run a local MCP server that proxies the actor — full code below.
 > - **Latency:** ~2s per tool call.
 > - **Cost:** Apify pay-per-event (~$0.005-$0.01 per call).
@@ -207,7 +207,7 @@ For unattended use, this auto-rotation is essential.
 
 ## Connect Skool to your AI agent today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-mcp)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-mcp&fpr=cristian)
 
 Native MCP via `mcp.apify.com` or run your own server with the code above. Pay-per-event (~$0.005-$0.01 per tool call).
 

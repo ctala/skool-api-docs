@@ -29,7 +29,7 @@ You pay $99 to Skool. That's it from Skool's side.
 You also pay:
 
 - **Stripe**, ~2.9% + $0.30 per member transaction (when members pay you)
-- **Optional automation** — if you connect Skool to n8n/Make/Zapier/Python via the [Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=how-much-is-skool), expect $1.50-$5/mo
+- **Optional automation** — if you connect Skool to n8n/Make/Zapier/Python via the [Apify Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=how-much-is-skool&fpr=cristian), expect $1.50-$5/mo
 - **Optional LLM API** — if you use Claude/GPT for member screening or comment drafting, $5-30/mo
 
 For a typical paid community: **$100-$135/mo total + 3% of member revenue to Stripe**.
@@ -141,7 +141,7 @@ No price increase announced as of May 2026. Skool has held $99 since launch in 2
 
 [**→ Start your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card, $99/mo after the trial.
 
-*Want to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=how-much-is-skool) — ~$1.50/mo, no code required.*
+*Want to automate? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=how-much-is-skool&fpr=cristian) — ~$1.50/mo, no code required.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"Skool","offers":{"@type":"Offer","price":"99","priceCurrency":"USD","priceValidUntil":"2026-12-31"}}

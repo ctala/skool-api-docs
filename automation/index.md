@@ -9,7 +9,7 @@ last_updated: 2026-05-19
 ---
 
 
-Skool has no built-in automation engine. To automate a Skool community (auto-approve members, schedule posts, reply to comments, publish courses), you connect external tools to Skool via the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=automation).
+Skool has no built-in automation engine. To automate a Skool community (auto-approve members, schedule posts, reply to comments, publish courses), you connect external tools to Skool via the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=automation&fpr=cristian).
 
 ## All automation guides
 
@@ -70,6 +70,6 @@ See [Recipes](../recipes/) for copy-paste-ready implementations.
 
 ---
 
-[**→ Start automating Skool today**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=automation) — Apify Skool API actor, pay-per-event (~$1.50/mo typical).
+[**→ Start automating Skool today**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=automation&fpr=cristian) — Apify Skool API actor, pay-per-event (~$1.50/mo typical).
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*

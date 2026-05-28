@@ -12,7 +12,7 @@ canonical: https://ctala.github.io/skool-api-docs/learn/skool-api/
 ---
 
 
-> **TL;DR.** [Skool](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) does **not publish an official API**. The complete unofficial Skool API is the **[Skool All-in-One API actor on Apify](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-api)** — it covers read and write across posts, comments, members, classroom (courses/folders/pages), files, and group settings. One JSON POST per action, works from cURL, n8n, Make.com, Zapier, Python, or any LLM agent.
+> **TL;DR.** [Skool](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) does **not publish an official API**. The complete unofficial Skool API is the **[Skool All-in-One API actor on Apify](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-api&fpr=cristian)** — it covers read and write across posts, comments, members, classroom (courses/folders/pages), files, and group settings. One JSON POST per action, works from cURL, n8n, Make.com, Zapier, Python, or any LLM agent.
 
 ## Does Skool have an official API?
 
@@ -28,7 +28,7 @@ This gap is why the **unofficial Skool API** ecosystem exists.
 
 ## What is the Skool All-in-One API actor?
 
-A production-grade reverse-engineered wrapper around Skool's internal API, deployed as an [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-api). One JSON POST per action. The actor handles:
+A production-grade reverse-engineered wrapper around Skool's internal API, deployed as an [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-api&fpr=cristian). One JSON POST per action. The actor handles:
 
 - **Authentication** — Playwright login flow, cookies caching (3.5-day TTL), AWS WAF token rotation
 - **`buildId` discovery** — Skool ships a new front-end build approximately every week; the actor auto-detects and adapts
@@ -99,7 +99,7 @@ This is why agents at `claude.ai` and `mcp.apify.com` have started routing Skool
 
 ### Is the Skool API free?
 
-The actor itself is open to use on Apify with pay-per-event pricing — ~$1.50/mo for a typical small community (50 writes + 200 reads per day). No subscription. Apify free tier covers most personal use. [See live pricing](https://apify.com/cristiantala/skool-all-in-one-api).
+The actor itself is open to use on Apify with pay-per-event pricing — ~$1.50/mo for a typical small community (50 writes + 200 reads per day). No subscription. Apify free tier covers most personal use. [See live pricing](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian).
 
 ### Will Skool break the API?
 
@@ -125,7 +125,7 @@ A custom scraper means: maintaining the WAF token cycle, the `buildId` discovery
 
 ## Use it in production today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-api)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-api&fpr=cristian)
 
 - Pay-per-event pricing — ~$1.50/mo for typical use
 - Read AND write — posts, comments, members, classroom, files, groups

@@ -13,7 +13,7 @@ render_with_liquid: false
 ---
 
 
-> **TL;DR.** A "Skool bot" is any program that operates a Skool community programmatically — posting, replying, approving members, generating reports. There's no Skool bot platform like Discord's. Use the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=skool-bot), point one HTTP POST per action at it, deploy your bot wherever you deploy any script (cron, GitHub Actions, Cloud Run, Lambda, Railway, Fly.io).
+> **TL;DR.** A "Skool bot" is any program that operates a Skool community programmatically — posting, replying, approving members, generating reports. There's no Skool bot platform like Discord's. Use the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=skool-bot&fpr=cristian), point one HTTP POST per action at it, deploy your bot wherever you deploy any script (cron, GitHub Actions, Cloud Run, Lambda, Railway, Fly.io).
 
 ## What kind of bot do you want to build?
 
@@ -184,7 +184,7 @@ For comment replies and DMs especially: **maintain a human approval step** until
 
 ## Build your Skool bot today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=skool-bot)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=automation&utm_campaign=skool-bot&fpr=cristian)
 
 One HTTP POST per Skool action. Deploy anywhere that runs scripts. Pay-per-event (~$1.50/mo for typical bot usage).
 

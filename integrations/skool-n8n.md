@@ -25,7 +25,7 @@ render_with_liquid: false
 
 Skool has **no official API** and the existing "Skool by Skool" Zapier/n8n connector only triggers on a few events (new member, new post) — it doesn't write. You can't approve members, post content, publish courses, or update Auto DM from it.
 
-The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-n8n) wraps the entire Skool admin surface (posts, comments, members, classroom, files, groups) in a single HTTP endpoint. From n8n you call it with one `HTTP Request` node.
+The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-n8n&fpr=cristian) wraps the entire Skool admin surface (posts, comments, members, classroom, files, groups) in a single HTTP endpoint. From n8n you call it with one `HTTP Request` node.
 
 ## What you can automate from n8n
 
@@ -58,7 +58,7 @@ Every Skool operation = one HTTP POST. No SDK to install in n8n. No node to deve
 
 ### 1. Get your Apify API token
 
-Sign up at [apify.com](https://apify.com) (free tier covers most personal use). Token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations).
+Sign up at [apify.com](https://apify.com?fpr=cristian) (free tier covers most personal use). Token from [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
 
 ### 2. Store the token in n8n Credentials
 
@@ -191,7 +191,7 @@ Cost: ~$0.02 per applicant in LLM + ~$0.01 per Skool call. For 30 applicants/wee
 
 ## Start automating Skool from n8n today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-n8n)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-n8n&fpr=cristian)
 
 - Pay-per-event (~$1.50/mo for typical community automation)
 - Read AND write — full API surface

@@ -113,7 +113,7 @@ A community at 500 members pays $0 on Discord. The same community on Skool costs
 
 [**→ Start your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card required, full feature access for 14 days.
 
-*Plan to automate from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=is-skool-free) — auto-approve members, schedule posts, ~$1.50/mo.*
+*Plan to automate from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=is-skool-free&fpr=cristian) — auto-approve members, schedule posts, ~$1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[

@@ -22,7 +22,7 @@ canonical: https://ctala.github.io/skool-api-docs/integrations/skool-zapier/
 
 Skool has an "official" Zapier integration listed in the Zapier App Directory. It provides triggers like "new member joined" and a handful of webhook actions — useful for notifications, but **it cannot write to Skool**. You can't approve members, post to the feed, publish courses, or update Auto DM.
 
-For automation beyond notifications, you need the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-zapier) — accessed via `Webhooks by Zapier — POST`.
+For automation beyond notifications, you need the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-zapier&fpr=cristian) — accessed via `Webhooks by Zapier — POST`.
 
 ## What you can automate from Zapier
 
@@ -38,7 +38,7 @@ For automation beyond notifications, you need the [Apify-hosted Skool All-in-One
 
 ### 1. Get your Apify API token
 
-[apify.com](https://apify.com) → token at [console.apify.com/account/integrations](https://console.apify.com/account/integrations).
+[apify.com](https://apify.com?fpr=cristian) → token at [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian).
 
 ### 2. Bootstrap cookies (one-time)
 
@@ -111,7 +111,7 @@ Use Option B if you run more than 2-3 Zaps against Skool.
 
 ## Start automating Skool from Zapier today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-zapier)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-zapier&fpr=cristian)
 
 Pay-per-event (~$1.50/mo typical). Read AND write — full API surface. One `Webhooks by Zapier — POST` step per action.
 

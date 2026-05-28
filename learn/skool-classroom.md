@@ -96,7 +96,7 @@ Classroom → Create Course → fill in title/desc/cover → add folders → add
 
 Time per course: ~30-90 min depending on content length.
 
-### API (the [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-classroom))
+### API (the [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-classroom&fpr=cristian))
 
 Programmatic publishing for when content lives in markdown files:
 
@@ -157,7 +157,7 @@ For most knowledge products, these limitations are acceptable trade-offs for the
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day trial. Build your first course in <60 min.
 
-*Publishing from markdown? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-classroom) — programmatic publishing for ~$1.50/mo.*
+*Publishing from markdown? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=glossary&utm_campaign=skool-classroom&fpr=cristian) — programmatic publishing for ~$1.50/mo.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"DefinedTerm","name":"Skool Classroom","description":"The Classroom is the courses section of Skool — unlimited courses, each a tree of folders + pages. Tier and gamification-level gating, drip scheduling.","inDefinedTermSet":"https://github.com/ctala/skool-api-docs"}

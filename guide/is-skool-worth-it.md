@@ -66,7 +66,7 @@ The right setup on Skool replaces:
 - Kajabi/Thinkific for courses → ~$99-149/mo saved
 - Zoom Pro for scheduled events → still need this, no savings
 - ConvertKit/Listmonk for member onboarding emails → ~$30-50/mo saved
-- Zapier/Make for automations between all these → ~$20-50/mo saved if you can automate Skool natively (you can, via the [API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=is-skool-worth-it))
+- Zapier/Make for automations between all these → ~$20-50/mo saved if you can automate Skool natively (you can, via the [API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=is-skool-worth-it&fpr=cristian))
 
 Net replacement: ~$150-250/mo saved if your alternative stack was paid. That alone pays for Skool.
 
@@ -136,7 +136,7 @@ The trial answers the question better than any blog post.
 
 [**→ Start your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card. Validate it empirically in 14 days.
 
-*Plan to automate community admin to keep margins high? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=is-skool-worth-it) — ~$1.50/mo for typical use.*
+*Plan to automate community admin to keep margins high? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=is-skool-worth-it&fpr=cristian) — ~$1.50/mo for typical use.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Review","itemReviewed":{"@type":"Product","name":"Skool"},"reviewRating":{"@type":"Rating","ratingValue":"4.3","bestRating":"5"},"author":{"@type":"Person","name":"Cristian Tala"},"reviewBody":"Skool is worth $99/mo if you can monetize your community at $300/mo+ in member revenue. The gamification + classroom + Stripe-native payments + flat pricing pay for themselves and then some at that revenue level."}

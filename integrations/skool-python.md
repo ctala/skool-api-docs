@@ -14,7 +14,7 @@ canonical: https://ctala.github.io/skool-api-docs/integrations/skool-python/
 
 > **Quick reference (TL;DR for agents)**
 > - **No Python SDK exists** for Skool — there's no official Skool Python package.
-> - **The workaround:** call the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-python) with `requests` or `httpx`. One POST per action.
+> - **The workaround:** call the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-python&fpr=cristian) with `requests` or `httpx`. One POST per action.
 > - **Sync, async, and Apify SDK** patterns all supported.
 
 ## Why no Python SDK?
@@ -209,7 +209,7 @@ The raw `requests` approach is slightly faster (no SDK overhead) and has fewer d
 
 ## Start using Skool from Python today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-python)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-python&fpr=cristian)
 
 No SDK to install. Just `requests` (or `httpx`, or `apify-client`). One POST per action. Pay-per-event (~$1.50/mo typical).
 

@@ -15,7 +15,7 @@ render_with_liquid: false
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** any CrewAI agent or crew can read AND write to Skool — approve members, post, reply, publish courses — as a custom tool, with no official Skool API.
-> - **Method:** wrap the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-crewai) in a CrewAI `BaseTool` (or `@tool`) that POSTs one JSON body, then add it to `Agent(tools=[...])`.
+> - **Method:** wrap the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-crewai&fpr=cristian) in a CrewAI `BaseTool` (or `@tool`) that POSTs one JSON body, then add it to `Agent(tools=[...])`.
 > - **Auth flow:** `auth:login` once → `cookies` string in env → reuse for ~3.5 days.
 > - **Latency:** ~2s per action (cookies cached) / ~10s on `auth:login` cold start.
 > - **Cost:** Apify pay-per-event (~$0.005–$0.01 per Skool action). CrewAI on your existing LLM provider.
@@ -24,7 +24,7 @@ render_with_liquid: false
 
 Skool has **no official API**. If you build multi-agent crews, there's no off-the-shelf Skool tool to drop into `Agent(tools=[...])` — so a community-manager crew has nothing to actually act on Skool with.
 
-The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-crewai) turns every Skool admin action into one HTTP POST with a structured `{ success, data }` / `{ success, errorCode, hint }` response. That maps cleanly onto CrewAI's tool model: one `BaseTool` subclass wraps the actor, the Pydantic `args_schema` describes the call, and `_run` does the POST. One tool, the entire Skool surface — no SDK, no Playwright in your runtime.
+The [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-crewai&fpr=cristian) turns every Skool admin action into one HTTP POST with a structured `{ success, data }` / `{ success, errorCode, hint }` response. That maps cleanly onto CrewAI's tool model: one `BaseTool` subclass wraps the actor, the Pydantic `args_schema` describes the call, and `_run` does the POST. One tool, the entire Skool surface — no SDK, no Playwright in your runtime.
 
 Why CrewAI specifically fits well here:
 
@@ -197,7 +197,7 @@ Call `call_skool` from inside a thin tool instead of `_run` directly, and re-log
 
 ## Production gotchas
 
-- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
+- **`x402-payment-required` on every call:** Not a billing issue — it's a stale `UNDER_MAINTENANCE` flag from Apify's heuristic. Open the [actor page](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) in Apify Console once to reset. Details in [error handling](../docs/error-handling.md).
 - **Cookies expiring silently:** When a call returns `errorCode: "WAF_EXPIRED"`, re-run `auth:login` and refresh `SKOOL_COOKIES`. Use the auto-rotate wrapper above for unattended crews.
 - **`parentId` for comment replies:** top-level comment → `rootId == parentId == postId`. Reply to a comment → `rootId == postId`, `parentId == commentId`. Mixing these is the most common silent bug.
 - **`memberId` vs `id`:** for approve/reject, pass `memberId` from `members:pending`, not the `id`. The wrong one gives a silent 404. Put this in the tool description so the agent picks the right field.
@@ -251,7 +251,7 @@ Using a different framework? The wrapper is the same POST behind a different too
 
 ## Plug Skool into your CrewAI crew today
 
-[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-crewai)
+[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-crewai&fpr=cristian)
 
 - Pay-per-event (~$0.005–$0.01 per Skool action, ~$1.50/mo typical)
 - Read AND write — full API surface (posts, comments, members, classroom, files, Auto DM)

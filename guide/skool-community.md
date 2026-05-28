@@ -122,7 +122,7 @@ Once you have 50+ members, automating these saves 10+ hours per week:
 | Publish a course from markdown files | [Publish course from markdown](../recipes/publish-course-from-markdown.md) |
 | Batch update course covers | [Batch update covers](../recipes/batch-update-course-covers.md) |
 
-All of these use the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-community) — Skool has no official API, but the actor provides the complete read+write surface. Typical cost: ~$1.50/mo.
+All of these use the [Apify-hosted Skool API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-community&fpr=cristian) — Skool has no official API, but the actor provides the complete read+write surface. Typical cost: ~$1.50/mo.
 
 ## How to grow a Skool community to 100+ members
 
@@ -189,7 +189,7 @@ Skool doesn't host video natively. Use Zoom / Google Meet / Whereby — link in 
 
 [**→ Sign up for Skool**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial, no credit card. Build your community using the playbook above.
 
-*Plan to automate from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-community) — no code, $1.50/mo typical.*
+*Plan to automate from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=guide&utm_campaign=skool-community&fpr=cristian) — no code, $1.50/mo typical.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Skool Community — How to Build One That Actually Retains","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

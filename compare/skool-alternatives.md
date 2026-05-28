@@ -198,7 +198,7 @@ For most knowledge entrepreneurs / coaches / course creators launching their fir
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — no credit card. The 14 days are the empirical test — does Skool fit YOUR community or not.
 
-*Want to automate Skool? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-alternatives) — ~$1.50/mo, no code.*
+*Want to automate Skool? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=comparison&utm_campaign=skool-alternatives&fpr=cristian) — ~$1.50/mo, no code.*
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Skool Alternatives — 12 Platforms Compared","datePublished":"2026-05-19","author":{"@type":"Person","name":"Cristian Tala"}}

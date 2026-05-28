@@ -9,7 +9,7 @@ last_updated: 2026-05-19
 ---
 
 
-Connect Skool to any automation stack via the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=integrations). One HTTP POST per action — read AND write to posts, comments, members, classroom, files, groups.
+Connect Skool to any automation stack via the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=integrations&fpr=cristian). One HTTP POST per action — read AND write to posts, comments, members, classroom, files, groups.
 
 ## By automation stack
 
@@ -44,7 +44,7 @@ Connect Skool to any automation stack via the [Apify-hosted Skool All-in-One API
 
 Skool has **no official API**. The integration listed in your tool's app catalog (n8n, Zapier, Make) is typically a few triggers + 1-2 webhook actions — no write surface. You can't approve members, post content, publish courses, or update Auto DM through them.
 
-The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=integrations) wraps the entire Skool admin surface in a single HTTP endpoint. From any tool with HTTP capabilities, you can:
+The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=integrations&fpr=cristian) wraps the entire Skool admin surface in a single HTTP endpoint. From any tool with HTTP capabilities, you can:
 
 - Approve / reject / batch-approve members
 - Create / update / delete posts and comments
@@ -66,7 +66,7 @@ Every Skool operation = one HTTP POST. No SDK needed. No custom auth logic. Idem
 
 ## Quick start (any tool)
 
-1. Get an Apify API token at [console.apify.com/account/integrations](https://console.apify.com/account/integrations)
+1. Get an Apify API token at [console.apify.com/account/integrations](https://console.apify.com/account/integrations?fpr=cristian)
 2. Call `auth:login` once with your Skool email + password to get cookies (~3.5 day TTL)
 3. Store cookies in your tool's credential store
 4. Call any other action — pass action name, cookies, group slug, and params
@@ -87,6 +87,6 @@ See [Skool Scraper — why not to build one](../automation/skool-scraper.md). Sh
 
 ---
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=integrations) — pay-per-event (~$1.50/mo typical).
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=hub&utm_campaign=integrations&fpr=cristian) — pay-per-event (~$1.50/mo typical).
 
 *No Skool community yet? [Launch one in 10 minutes](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*

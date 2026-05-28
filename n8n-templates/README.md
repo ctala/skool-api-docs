@@ -24,7 +24,7 @@ UTM on the actor links inside the sticky notes: `utm_campaign=n8n-skool-{slug}`.
 **File:** `skool-events-to-whatsapp.json` (generalized from a production workflow — validated, runs live).
 
 - **Title:** Send weekly Skool community events to WhatsApp (Evolution API)
-- **Description:** Every Monday, fetch your Skool community's upcoming events via the [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api) and post a formatted summary to a WhatsApp group via Evolution API. Fresh login each run (no cookie management), silent skip when there are no events. Swap the final node for Telegram/Slack/email if you don't use Evolution.
+- **Description:** Every Monday, fetch your Skool community's upcoming events via the [Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?fpr=cristian) and post a formatted summary to a WhatsApp group via Evolution API. Fresh login each run (no cookie management), silent skip when there are no events. Swap the final node for Telegram/Slack/email if you don't use Evolution.
 - **Categories:** Marketing, Communication
 - **Nodes:** Schedule Trigger · Apify (auth:login, events:list) · Code (filter + format) · IF · HTTP Request (Evolution sendText)
 - **Recipe:** [Automate Skool events](../recipes/automate-skool-events.md)

@@ -261,7 +261,7 @@ Skool caps writes at ~25/min globally. The actor queues internally — don't add
 
 ## Plug this into your agent today
 
-[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=persona&utm_campaign=ai-agents)
+[**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=persona&utm_campaign=ai-agents&fpr=cristian)
 
 - One HTTP POST per action
 - Never-throw contract → no try/catch needed
