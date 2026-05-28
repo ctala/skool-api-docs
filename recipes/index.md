@@ -30,6 +30,10 @@ Copy-paste-ready integrations using the [Apify-hosted Skool All-in-One API actor
 | [**Edit published posts**](update-published-posts.md) | Any HTTP client | Update title/content/labels of any published post. Includes the silent-fail wrapper gotcha and write+verify-fetch fix |
 | [**Attach files to lesson pages**](attach-files-to-lessons.md) | Any HTTP client | Add PDFs/ZIPs/sheets/links as classroom resources. Covers the `privacy: 1` trap and array-replacement semantics |
 | [**Batch launch courses from a spreadsheet**](batch-create-courses-spreadsheet.md) | Python / Node | End-to-end pipeline: covers → courses → folders → pages → bodies → resources. The 23-course classroom builder |
+| [**Bulk-reject waitlist applicants**](bulk-reject-waitlist.md) | Any HTTP client | The missing complement to batch-approve. Loop `members:reject` to clear low-signal applications. `memberId` vs `id` trap covered |
+| [**Event reminders to feed (24h + 1h)**](event-reminders-to-feed.md) | n8n / Python + cron | Auto-post reminders before every Skool event. Doubles attendance vs email-only. Idempotent dedupe pattern |
+| [**Generate N lessons from JSON spec**](generate-lessons-from-json.md) | Any HTTP client | Drive lesson creation from a JSON spec instead of Markdown files. Best for 5-20 templated/AI-generated lessons |
+| [**Keyword-monitoring auto-replies**](keyword-monitoring-replies.md) | n8n + LLM + Telegram | Surface posts mentioning your keywords, LLM-draft reply, human-approve via Telegram, publish |
 
 ## How recipes are structured
 
