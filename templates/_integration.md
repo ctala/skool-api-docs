@@ -52,7 +52,7 @@ render_with_liquid: false            # OBLIGATORIO si la página tiene {{ }} en 
 
 Skool has **no official API**. {1–2 oraciones explicando el problema concreto que tiene el lector de {Tool} hoy sin el actor}.
 
-The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-{tool-slug&fpr=cristian}) wraps the entire Skool admin surface in a single HTTP endpoint. {1 oración específica sobre por qué {Tool} se beneficia especialmente — ej. tool-use nativo, HTTP node nativo, etc.}.
+The [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-{tool-slug}&fpr=cristian) wraps the entire Skool admin surface in a single HTTP endpoint. {1 oración específica sobre por qué {Tool} se beneficia especialmente — ej. tool-use nativo, HTTP node nativo, etc.}.
 
 <!-- Para AI agents: añadir 2-3 bullets con razones específicas del modelo/framework -->
 <!-- Para automation tools: omitir bullets, ir directo a la tabla de "What you can automate" -->
@@ -244,7 +244,7 @@ The returned `cookies` string is valid for ~3.5 days. After that, re-run `auth:l
 
 ## {Start automating Skool today / Plug Skool into {Tool} today}
 
-[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-{tool-slug&fpr=cristian})
+[**→ Use the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-{tool-slug}&fpr=cristian)
 
 - Pay-per-event (~$0.005–$0.01 per Skool action, ~$1.50/mo typical)
 - Read AND write — full API surface (posts, comments, members, classroom, files, Auto DM)

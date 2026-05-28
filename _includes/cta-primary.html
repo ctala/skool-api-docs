@@ -6,7 +6,7 @@ Funnel is auto-set per section via _config.yml defaults (A = Apify actor, B = Sk
 
 {%- if page.funnel == "A" -%}
 <div class="cta-inline">
-  <a href="https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=inline&utm_campaign={{&fpr=cristian page.slug | default: page.url }}">→ Use the Skool API actor on Apify (~$1.50/mo)</a>
+  <a href="https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=inline&utm_campaign={{ page.slug | default: page.url }}&fpr=cristian">→ Use the Skool API actor on Apify (~$1.50/mo)</a>
 </div>
 {%- elsif page.funnel == "B" -%}
 <div class="cta-inline">

@@ -66,7 +66,7 @@ Auto DM is the highest-leverage 300 characters in your community. {Persona}-spec
 
 ### Can I migrate my existing {persona-asset-type} to Skool?
 
-Yes — drop markdown files in, the [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=persona&utm_campaign={persona-slug&fpr=cristian}) handles the import end-to-end (creates course → folders → pages → cover image upload → set body from markdown with auto TipTap conversion).
+Yes — drop markdown files in, the [Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=persona&utm_campaign={persona-slug}&fpr=cristian) handles the import end-to-end (creates course → folders → pages → cover image upload → set body from markdown with auto TipTap conversion).
 
 ### {Question 2}?
 
@@ -88,7 +88,7 @@ Yes — drop markdown files in, the [Apify actor](https://apify.com/cristiantala
 
 [**→ Create your Skool community**](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial. {Persona}-specific setup in under 10 minutes.
 
-*Want the automations from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=persona&utm_campaign={persona-slug&fpr=cristian}) — no code required.*
+*Want the automations from day one? [Use this Apify actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=persona&utm_campaign={persona-slug}&fpr=cristian) — no code required.*
 
 <script type="application/ld+json">
 {
