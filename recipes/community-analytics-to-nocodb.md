@@ -182,6 +182,18 @@ For a 5,000-member community: ~$10-15/month. Still trivial vs subscription analy
 - **Pre-churn outreach**: paid members whose `last_post_at` drops off, DM them before subscription renewal date
 - **Content strategy**: which post categories generate most engagement, optimize editorial calendar
 
+## Variation: research on communities you're a member of
+
+The same `members:list` + `posts:list` pattern works for **any community where you have a valid login** — useful if you're studying what's working in adjacent communities before launching your own, or auditing the engagement of communities you've joined as a paying member.
+
+A few rules of common sense:
+
+- **Stay within Skool's ToS.** Only access data your account can already see by scrolling the UI — no auth bypasses, no paywalled content you didn't pay for, no scraping of admin-only fields.
+- **Respect member privacy.** Aggregate metrics (engagement rates, posting cadence) are fine. Individual PII (emails, DMs, private notes) is not your data to use, even if technically reachable.
+- **Don't republish individual members' content.** Insights from patterns ≠ copying others' posts verbatim.
+
+The actor isn't a scraping tool — it's an automation layer over your own legitimate access. Use it that way.
+
 ## Caveats
 
 - **Skool API doesn't expose payment data directly** — you can't see who paid when. Track tier changes (`tier` field in `members:list`) as proxy for paid conversions.
