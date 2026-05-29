@@ -26,8 +26,8 @@ It's the exact flow that backs [Cágala, Aprende, Repite](https://www.skool.com/
 | **Actions used** | [`members:export`](../docs/members.md#membersexport--bulk-csv-export) |
 | **Setup time** | ~3 min |
 | **Ongoing cost** | `$0.05` per export run (regardless of community size) |
-| **Output** | CSV: `FirstName, LastName, Email, Invited By, JoinedDate, Question1-3, Answer1-3, Price, Recurring Interval, Tier, LTV` |
-| **Key gotcha** | Async 3-step flow under the hood. The actor wraps it — you get the CSV string back in one call |
+| **Output** | JSON array — one item per member with `firstName, lastName, email, invitedBy, joinedDate, survey[], tier, ltv` (the actor parses the underlying CSV for you) |
+| **Key gotcha** | Async 3-step flow under the hood. The actor wraps it — you get parsed member items back in one call |
 
 ## Prerequisites
 
@@ -37,21 +37,37 @@ It's the exact flow that backs [Cágala, Aprende, Repite](https://www.skool.com/
 
 ## What the export returns
 
-Real shape from a production community (728 members, 28-may-2026):
+The actor wraps Skool's 3-step async export flow and returns **parsed JSON** — one item per member, no CSV parsing on your side. Real shape (validated against a production community, 700+ members):
 
-```csv
-FirstName,LastName,Email,Invited By,JoinedDate,Question1,Question2,Question3,Answer1,Answer2,Answer3,Price,Recurring Interval,Tier,LTV
-Maria,Lopez,maria@example.com,,2026-04-12,What's your LinkedIn?,What are you building?,How did you find us?,linkedin.com/in/marialopez,SaaS for restaurants,Newsletter,0,,standard,0
-...
+```json
+[
+  {
+    "firstName": "Maria",
+    "lastName": "Lopez",
+    "email": "maria@example.com",
+    "invitedBy": "Cristian Tala",
+    "joinedDate": "2026-04-12 18:14:56",
+    "survey": [
+      { "question": "What's your LinkedIn?", "answer": "linkedin.com/in/marialopez" },
+      { "question": "What are you building?", "answer": "SaaS for restaurants" },
+      { "question": "How did you find us?", "answer": "Newsletter" }
+    ],
+    "tier": "standard",
+    "ltv": "$0"
+  },
+  ...
+]
 ```
 
-Data quality reality check (measured on a 728-member community):
+The underlying CSV from Skool (`FirstName,LastName,Email,Invited By,JoinedDate,Question1-3,Answer1-3,Price,Recurring Interval,Tier,LTV`) is already parsed: survey fields are merged into a single `survey` array of `{question, answer}` pairs, and price/recurring-interval are folded into the human-readable `ltv` string.
 
-- **~68% of members have a populated Email column.** The other ~32% (typically members who joined via the Skool Discovery network) don't share their email with the community owner — Skool keeps that field empty in the export.
-- **~88% have a LinkedIn URL in `Answer1`** — when the apply form asks for it. Apply-form answers are far more complete than the email column.
-- The `Invited By` column is empty unless the member came through a [referral link](../learn/skool-affiliate-program.md).
+Data quality reality check (measured on a 700+ member community):
 
-If you need the **acquisition source** (`Joined from {channel}`), that's NOT in the CSV — it's in `member.metadata.attrSrcComp` from the SSR payload. Use [`members:list`](../docs/members.md#memberslist) for that.
+- **~68% of members have a populated `email` field.** The other ~32% (typically members who joined via the Skool Discovery network) don't share their email with the community owner — Skool keeps that field empty in the export.
+- **~88% have a LinkedIn URL in their first survey answer** — when the apply form asks for it. Apply-form answers are far more complete than the email field.
+- The `invitedBy` field is empty unless the member came through a tracked [referral link](../learn/skool-affiliate-program.md).
+
+If you need the **acquisition source** (`Joined from {channel}`), that's NOT in the export — it's in `member.metadata.attrSrcComp` from the SSR payload. Use [`members:list`](../docs/members.md#memberslist) for that.
 
 ## Step 1 — Call the export action
 
@@ -79,11 +95,11 @@ Behind the scenes the actor runs the 3-step async flow that Skool's admin UI run
 2. `GET /wait?token={token}` → polls `in-progress` → `completed` (typically 2-8 sec)
 3. `POST /files/{file_id}/download-url` → returns a signed CloudFront URL (expires in ~5 min) → GET that URL = CSV body
 
-You don't see any of that — the actor returns the CSV string directly in the dataset.
+You don't see any of that — the actor returns the parsed member items directly in the dataset.
 
-## Step 2 — Get the CSV
+## Step 2 — Get the members
 
-The synchronous run-sync-get-dataset-items endpoint gives you the CSV in one HTTP call:
+The synchronous `run-sync-get-dataset-items` endpoint gives you one HTTP call → array of member objects:
 
 ```bash
 curl -X POST \
@@ -97,23 +113,24 @@ curl -X POST \
   }'
 ```
 
-Response is a JSON array with one item, where `csv` contains the full CSV body:
+Response is a JSON array — one object per member (see "What the export returns" above for the field shape). The array length is your member count.
 
-```json
-[
-  {
-    "success": true,
-    "csv": "FirstName,LastName,Email,...\nMaria,Lopez,maria@example.com,...\n...",
-    "rowCount": 728
-  }
-]
-```
-
-Pipe it straight to a file:
+Pipe straight to file as JSON:
 
 ```bash
-curl ... | jq -r '.[0].csv' > members-$(date +%F).csv
+curl ... > members-$(date +%F).json
 ```
+
+Or convert to CSV with `jq` if you want the flat tabular form:
+
+```bash
+curl ... | jq -r '
+  (.[0] | [.firstName, .lastName, .email, .invitedBy, .joinedDate, .tier, .ltv] | @csv),
+  (.[] | [.firstName, .lastName, .email, .invitedBy, .joinedDate, .tier, .ltv] | @csv)
+' > members-$(date +%F).csv
+```
+
+(The first line emits the header from the first member's keys, the second emits the data rows.)
 
 ## Step 3 — Pipe into your CRM / analytics
 
