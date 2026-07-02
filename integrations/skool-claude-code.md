@@ -1,20 +1,21 @@
 ---
-title: "Skool + Claude Code — Run Your Community from the Terminal (2026)"
+title: "Skool Claude Code Plugin — Run Your Community from the Terminal (2026)"
 description: "Operate Skool from Claude Code with a drop-in Skill. Approve members, reply to posts, publish courses in natural language — no API code to write. Setup, example session, helper scripts."
 slug: /integrations/skool-claude-code
 type: integration
 primary_keyword: "skool claude code"
+secondary_keywords: ["claude code plugin", "claude code plugins marketplace", "claude code skill"]
 search_volume_monthly: 10
 funnel: A
 playbook: integrations
-last_updated: 2026-05-21
+last_updated: 2026-07-02
 canonical: https://skool-api.cristiantala.com/integrations/skool-claude-code/
 render_with_liquid: false
 ---
 
 
 > **Quick reference (TL;DR for agents)**
-> - **What this enables:** operate a Skool community straight from the Claude Code terminal — "approve the pending members with a real LinkedIn", "publish this markdown as a course" — in plain English, no API code to write.
+> - **What this enables:** a Claude Code plugin that lets you operate a Skool community straight from the terminal — "approve the pending members with a real LinkedIn", "publish this markdown as a course" — in plain English, no API code to write.
 > - **Method:** install the **plugin** in two lines (`/plugin marketplace add ctala/skool-api-docs` → `/plugin install skool-actor@skool-api`). It ships a Claude Code **Skill** that wraps the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude-code&fpr=cristian). Claude Code reads the SKILL.md, picks the right action, runs it.
 > - **Auth flow:** `auth:login` once → `cookies` string cached in env → reuse for ~3.5 days.
 > - **Latency:** ~2s per action (cookies cached) / ~10s (`auth:login` cold start).
@@ -261,10 +262,10 @@ This is the same surface the bundled Skill encodes — use the Skill for the pol
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Skool + Claude Code — Run Your Community from the Terminal",
+  "headline": "Skool Claude Code Plugin — Run Your Community from the Terminal",
   "description": "Operate Skool from Claude Code with a drop-in Skill. Approve members, reply to posts, publish courses in natural language — no API code to write.",
   "datePublished": "2026-05-21",
-  "dateModified": "2026-05-21",
+  "dateModified": "2026-07-02",
   "author": {
     "@type": "Person",
     "name": "Cristian Tala",
@@ -276,5 +277,35 @@ This is the same surface the bundled Skill encodes — use the Skill for the pol
     "url": "https://cristiantala.com"
   },
   "mainEntityOfPage": "https://skool-api.cristiantala.com/integrations/skool-claude-code/"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Install the Skool Claude Code plugin",
+  "description": "Install the Skool actor as a Claude Code plugin in three commands, then run it from any Claude Code conversation.",
+  "totalTime": "PT5M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Add the marketplace",
+      "text": "Run /plugin marketplace add ctala/skool-api-docs inside Claude Code."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Install the plugin",
+      "text": "Run /plugin install skool-actor@skool-api to install the Skill and its helper scripts."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Reload plugins",
+      "text": "Run /reload-plugins so Claude Code picks up the new Skill. It auto-activates when you mention Skool — no flag to pass."
+    }
+  ]
 }
 </script>

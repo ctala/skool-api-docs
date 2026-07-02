@@ -46,4 +46,6 @@ Pointing your agent's browser/fetch tool at `skool.com` means loading the full r
 
 ## Docs
 
-Full reference, recipes and integration guides: <https://skool-api.cristiantala.com>
+Full setup, example session, and the full action surface: <https://skool-api.cristiantala.com/integrations/skool-claude-code/>
+
+Recipes and the rest of the reference docs: <https://skool-api.cristiantala.com>
