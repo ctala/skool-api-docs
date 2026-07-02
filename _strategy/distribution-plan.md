@@ -1,7 +1,8 @@
 # Distribution Plan — Skool All-in-One API actor + doc-site
 
-**Estado:** plan accionable, NO ejecutado aún (documentado 21-may-2026, retomar en sesión dedicada).
+**Estado:** parcialmente ejecutado. Doc-site + SEO montados (may-2026). **2-jul-2026: Claude Code plugin instalable publicado** (ver canal #8). Resto de awareness activa pendiente.
 **Objetivo:** ser el **"GO TO"** para automatizar Skool — que el dev/founder que quiere automatizar Skool nos encuentre **donde sea que esté**, no solo en Google. El SEO + contenido ya están montados; falta awareness activa.
+**Estrategia madre (2-jul-2026):** crecer por ADQUISICIÓN de usuarios nuevos, no subiendo precio a los leales (~99% del volumen es programático). Ver memoria `project_skool_actor_path_to_5k`.
 
 ---
 
@@ -63,6 +64,13 @@ Aportar valor primero, link cuando es relevante. NO spam.
 
 ### 7. LinkedIn de Cristian (43K) — oportunista
 - Post cuando haya ángulo (caso, milestone). **Ojo:** audiencia de Cristian = founders LATAM/ES, no devs globales → ángulo founder ("automaticé mi comunidad Skool con IA, así") más que técnico. No forzar.
+
+### 8. Claude Code plugin + community marketplace de Anthropic — ✅ plugin hecho, submission pendiente
+Estado 2-jul-2026: el Skill se empaquetó como **plugin instalable** (`/plugin marketplace add ctala/skool-api-docs` → `/plugin install skool-actor@skool-api`), validado con `claude plugin validate` (✔ plugin y marketplace), commit `5d17488`. Raw GitHub HTTP 200 — install funciona hoy.
+- **Pendiente (paso de Cristian, requiere su login):** someter a la **community marketplace oficial de Anthropic** (`claude-community`, repo `anthropics/claude-plugins-community`). Aprobado = aparece para todos los users de Claude Code que agreguen ese marketplace → distribución oficial gratis.
+  - Formulario individuos: [platform.claude.com/plugins/submit](https://platform.claude.com/plugins/submit) · Team/Enterprise: [claude.ai/admin-settings/directory/submissions/plugins/new](https://claude.ai/admin-settings/directory/submissions/plugins/new)
+  - Requisitos (todos ✔): `claude plugin validate` pasa · LICENSE MIT · README con install+usage · version explícita (1.0.0) · repo público.
+  - Post-aprobación: Anthropic pinnea a un commit SHA; CI bumpea el pin al pushear nuevos commits; catálogo público sincroniza nightly (delay entre aprobación y aparición).
 
 ---
 
