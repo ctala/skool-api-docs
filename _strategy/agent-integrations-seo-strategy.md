@@ -1,6 +1,6 @@
 # Agent Integrations — SEO Strategy
 
-**Estado:** propuesta estratégica (NO publicar páginas aún)
+**Estado:** ejecutado 21-may-2026 (commit `5ce6bda`, 9 páginas Tier 1+2 live) — corregido 2-jul-2026, el header quedó desactualizado y generaba falsa sensación de trabajo pendiente
 **Autor:** SEO Specialist
 **Fecha:** 2026-05-21
 **Scope:** familia de páginas "usar el Skool All-in-One API actor con [agente / CLI / framework de IA]"

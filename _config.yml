@@ -31,6 +31,8 @@ exclude:
   - scripts/
   - "*.py"
   - "*.sh"
+  - plugins/
+  - .claude-plugin/
 
 # Markdown processor
 markdown: kramdown

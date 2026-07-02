@@ -1,0 +1,25 @@
+{
+  "name": "skool-api",
+  "owner": {
+    "name": "Cristian Tala",
+    "email": "hello@cristiantala.com"
+  },
+  "metadata": {
+    "description": "Skool automation for AI agents — install the Skool API as a native skill.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "skool-actor",
+      "source": "./plugins/skool-actor",
+      "description": "Read and write to any Skool community from your AI agent — posts, comments, members, classroom, files, Auto DM. One HTTP call per action, never-throw contract, LLM-readable error hints.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Cristian Tala",
+        "url": "https://cristiantala.com"
+      },
+      "homepage": "https://skool-api.cristiantala.com",
+      "keywords": ["skool", "skool api", "community automation", "apify", "ai agent", "mcp"]
+    }
+  ]
+}

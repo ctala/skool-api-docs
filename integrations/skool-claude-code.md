@@ -15,7 +15,7 @@ render_with_liquid: false
 
 > **Quick reference (TL;DR for agents)**
 > - **What this enables:** operate a Skool community straight from the Claude Code terminal — "approve the pending members with a real LinkedIn", "publish this markdown as a course" — in plain English, no API code to write.
-> - **Method:** a drop-in Claude Code **Skill** (`~/.claude/skills/skool-actor/`) that wraps the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude-code&fpr=cristian). Claude Code reads the SKILL.md, picks the right action, runs it.
+> - **Method:** install the **plugin** in two lines (`/plugin marketplace add ctala/skool-api-docs` → `/plugin install skool-actor@skool-api`). It ships a Claude Code **Skill** that wraps the [Apify-hosted Skool All-in-One API actor](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=integration&utm_campaign=skool-claude-code&fpr=cristian). Claude Code reads the SKILL.md, picks the right action, runs it.
 > - **Auth flow:** `auth:login` once → `cookies` string cached in env → reuse for ~3.5 days.
 > - **Latency:** ~2s per action (cookies cached) / ~10s (`auth:login` cold start).
 > - **Cost:** Apify pay-per-event (~$0.005–$0.01 per Skool action). Claude Code on your existing Anthropic plan.
@@ -40,9 +40,22 @@ What makes Claude Code a better fit than the raw API or Claude Desktop:
 
 Sign up at [apify.com](https://apify.com?fpr=cristian) — the free tier covers most communities. Grab a token from [console.apify.com/account/integrations](https://console.apify.com/sign-up?fpr=cristian).
 
-### 2. Install the drop-in Skill
+### 2. Install the plugin (two lines)
 
-The Skill (and its helper scripts) are maintained in this repo. Install them into Claude Code:
+The Skill ships as a Claude Code **plugin** from this repo's marketplace. Inside Claude Code:
+
+```shell
+/plugin marketplace add ctala/skool-api-docs
+/plugin install skool-actor@skool-api
+/reload-plugins
+```
+
+That's it — the Skill and its helper scripts are installed and versioned. Update anytime with `/plugin marketplace update skool-api`.
+
+<details>
+<summary>Prefer a manual install (no plugin)?</summary>
+
+Drop the Skill straight into `~/.claude/skills/` instead:
 
 ```bash
 mkdir -p ~/.claude/skills/skool-actor/scripts
@@ -58,6 +71,8 @@ for s in login.sh post.sh comment.sh approve.sh batch-approve.sh; do
   chmod +x ~/.claude/skills/skool-actor/scripts/$s
 done
 ```
+
+</details>
 
 ### 3. Set your credentials in `~/.zshrc`
 

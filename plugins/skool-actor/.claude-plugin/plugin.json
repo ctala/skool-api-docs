@@ -1,0 +1,12 @@
+{
+  "name": "skool-actor",
+  "description": "Read and write to any Skool community from your AI agent — posts, comments, members, classroom courses, files, and Auto DM. One HTTP call per action, never-throw contract, LLM-readable error hints. Backed by the Apify-hosted Skool All-in-One API actor.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cristian Tala",
+    "url": "https://cristiantala.com"
+  },
+  "homepage": "https://skool-api.cristiantala.com",
+  "repository": "https://github.com/ctala/skool-api-docs",
+  "license": "MIT"
+}
