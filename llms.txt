@@ -27,6 +27,7 @@
 - [Getting Started](https://skool-api.cristiantala.com/docs/getting-started/)
 - [Groups](https://skool-api.cristiantala.com/docs/groups/)
 - [Members](https://skool-api.cristiantala.com/docs/members/)
+- [Notifications](https://skool-api.cristiantala.com/docs/notifications/)
 - [Posts & Comments](https://skool-api.cristiantala.com/docs/posts/)
 
 ## Integrations (AI agents, coding tools, automation)

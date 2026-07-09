@@ -224,3 +224,4 @@ The `linkedinUrl` on a member or pending applicant is whatever they pasted into 
 
 - [Auto DM new members](../recipes/auto-dm-new-members.md)
 - [Groups](groups.md) — for group-level settings
+- [Notifications](notifications.md) — `membership-request` notifications land here

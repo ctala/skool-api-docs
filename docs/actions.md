@@ -107,6 +107,18 @@ All actions use the same shape:
 
 [→ Groups docs](groups.md)
 
+## Notifications
+
+> Notifications are stored as messages. Cross-group: the feed returns items from every community the account belongs to. See [Notifications](notifications.md) for the data model.
+
+| Action | Params | Description |
+|---|---|---|
+| `notifications:list` | `limit?` (≤30), `type?`, `cursor?`, `unreadOnly?` | List notifications newest-first (mentions, replies, comments, likes, membership requests). Cursor pagination |
+| `notifications:markRead` | `id`, `createdAt` | Mark one notification as read |
+| `notifications:markAllRead` | — | Mark all as read for the group. Effect is deferred (200 first, read state propagates a few seconds later) |
+
+[→ Notifications docs](notifications.md)
+
 ## privacy values (for courses)
 
 | Value | Meaning |

@@ -337,4 +337,5 @@ Skool returns ~32 posts per page. A community with 500 posts → 16 actor calls.
 - [Authentication](authentication.md) — how the cookies you pass actually work
 - [Members](members.md) — author IDs come from member listings
 - [Classroom](classroom.md) — for rich content (course pages with TipTap)
+- [Notifications](notifications.md) — catch mentions/replies pointing at a post
 - [Recipe: Reply to unanswered posts](../recipes/reply-unanswered-posts.md)

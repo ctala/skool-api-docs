@@ -12,6 +12,19 @@ To get notified of new releases:
 
 ---
 
+## [0.3.37] — 2026-07-09
+
+**Promoted to `latest`.** Adds the notifications surface.
+
+### Added
+- `notifications:list` — read the account's notification feed (mentions, replies, comments, likes, membership requests), newest-first, with cursor pagination. Cross-group. Each item's `metadata.data` is parsed into flat fields (`title`, `content`, `action`, `imageUrl`) plus a relative deep-link (`?p=<commentId>`).
+- `notifications:markRead` — mark one notification as read.
+- `notifications:markAllRead` — mark all as read for the group. **Effect is deferred**: the call returns `200` first and the read state propagates a few seconds later — poll `notifications:list` to confirm.
+
+See [Notifications docs](https://skool-api.cristiantala.com/docs/notifications/).
+
+---
+
 ## [0.3.8] — 2026-05-06
 
 **Promoted to `latest`.** Production release. All previous tags retired.
