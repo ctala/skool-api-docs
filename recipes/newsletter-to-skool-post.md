@@ -180,3 +180,25 @@ That's a bigger recipe — out of scope here. Open an issue if you want me to wr
 - [Posts & Comments](../docs/posts.md) — content format constraints
 - [Files](../docs/files.md) — image upload flow
 - [Recipe: Reply to unanswered posts](reply-unanswered-posts.md) — companion automation
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Mirror your newsletter as a Skool community post",
+  "description": "Auto-mirror your Listmonk, ConvertKit or Beehiiv newsletter as a Skool community post, converting the HTML to plain text and publishing with posts:create.",
+  "totalTime": "PT20M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "n8n"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "Trigger on newsletter send", "text": "Configure a webhook such as Listmonk campaign_finished, or poll an RSS feed, to fire the workflow when a campaign is sent."},
+    {"@type": "HowToStep", "name": "Fetch the campaign body", "text": "Call your newsletter platform's API to retrieve the campaign HTML body by campaign id."},
+    {"@type": "HowToStep", "name": "Convert HTML to plain text", "text": "Strip HTML to Skool-safe plain text with light markdown, since Skool posts render plain text only and tags appear literally."},
+    {"@type": "HowToStep", "name": "Handle images", "text": "Either strip image markers or upload each image with files:uploadImage. For visual-heavy newsletters, link to the web version instead."},
+    {"@type": "HowToStep", "name": "Publish the post", "text": "Append a CTA back to the newsletter and a reply-driving question, then call posts:create with the subject as title and a newsletter labelId."}
+  ]
+}
+</script>

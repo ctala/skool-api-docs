@@ -160,3 +160,23 @@ The hardest part of building Skool automation isn't the API logic — it's the a
 
 *New to Skool? [Launch your community here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
 *Need an n8n instance? [Get started free](https://n8n.partnerlinks.io/wpqwwllhiznx) — the workflow tool we use throughout these recipes.*
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Auto-detect and delete Skool spam posts",
+  "description": "Find low-signal or spam posts (off-topic, promo, bot drops) and delete them in bulk via posts:delete, with a recommended human-in-the-loop review gate.",
+  "totalTime": "PT5M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "Filter spam candidates", "text": "Surface candidates by keyword with posts:filter, by low engagement with posts:list plus a client-side filter for zero comments and over 48h old, and by new-author link-dropping patterns."},
+    {"@type": "HowToStep", "name": "Review the candidate list", "text": "Print each candidate (author, title, body preview, join date) to a terminal, sheet or Telegram thread and manually mark the ones to delete."},
+    {"@type": "HowToStep", "name": "Delete confirmed spam", "text": "Loop posts:delete for the confirmed posts. The action is irreversible, so only delete after review."},
+    {"@type": "HowToStep", "name": "Notify borderline authors", "text": "For borderline cases, DM the author before removing to preserve the relationship, reserving bulk delete for obvious spam."}
+  ]
+}
+</script>

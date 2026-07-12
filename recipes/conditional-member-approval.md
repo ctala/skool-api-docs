@@ -188,3 +188,23 @@ The hardest part of building Skool automation isn't the API logic — it's the a
 [**→ Open the actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign=conditional-member-approval&fpr=cristian)
 
 *New to Skool? [Launch your community here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Auto-approve Skool members by deterministic criteria",
+  "description": "Approve Skool waitlist applicants automatically by email domain, LinkedIn presence or apply-form keywords using pure rules, with no LLM cost.",
+  "totalTime": "PT10M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "List pending applicants", "text": "Call members:pending to pull the queue with memberId, name, bio, answers and source, the fields your rules evaluate."},
+    {"@type": "HowToStep", "name": "Apply deterministic rules", "text": "Run a pure-rules filter (LinkedIn regex, answer length, email domain whitelist, bot-name detection) that returns approve, reject or hold per applicant."},
+    {"@type": "HowToStep", "name": "Batch approve and loop reject", "text": "Approve the pass list in one members:batchApprove call and loop members:reject for the reject list."},
+    {"@type": "HowToStep", "name": "Verify the queue", "text": "Re-run members:pending to confirm only the hold bucket remains, and notify yourself with the count for manual review."}
+  ]
+}
+</script>

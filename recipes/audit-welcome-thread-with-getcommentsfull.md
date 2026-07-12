@@ -172,3 +172,24 @@ Use `posts:getComments` for day-to-day. Use `posts:getCommentsFull` when you spe
 - [Reply to unanswered posts automatically](reply-unanswered-posts.md) — same pattern for top-level posts (not nested comments)
 - [Auto DM new members](auto-dm-new-members.md) — prevent the welcome thread from getting buried by automating the first-touch DM
 - [Community analytics to NocoDB](community-analytics-to-nocodb.md) — export this audit data for tracking over time
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Audit a long Skool welcome thread with getCommentsFull",
+  "description": "Skool's REST API caps comment listings at about 35. posts:getCommentsFull scrapes the whole welcome thread so you can find members you never replied to.",
+  "totalTime": "PT10M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "LLM API"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "Get the full comment tree", "text": "Call posts:getCommentsFull with the thread's postId and postSlug. This Playwright-based action bypasses the 35-comment REST cap and returns every comment."},
+    {"@type": "HowToStep", "name": "Find comments without admin replies", "text": "Group the flat array into top-level comments and nested replies, then filter for member intros that no admin has answered."},
+    {"@type": "HowToStep", "name": "Generate personalized drafts", "text": "Pipe each unanswered intro through an LLM to draft a warm, specific welcome that references one concrete detail from the member's message."},
+    {"@type": "HowToStep", "name": "Post replies with human approval", "text": "Send drafts to a review queue and only post via posts:createComment after manual approval, using the member comment's real Skool ID as parentId."}
+  ]
+}
+</script>

@@ -145,3 +145,23 @@ Many communities run both: AI auto-approves the obvious yeses, and a periodic hu
 ---
 
 [**→ Open the Skool All-in-One API actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign=batch-approve&fpr=cristian) — pay-per-event (~$1.50/mo typical).
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Review and batch-approve your Skool waitlist",
+  "description": "Approve pending Skool members in bulk via the API: list the waitlist, screen each applicant against your criteria, then batch-approve the good ones in one call.",
+  "totalTime": "PT5M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "List the waitlist", "text": "Call members:pending to pull applicants with their apply-form answers and both id and memberId."},
+    {"@type": "HowToStep", "name": "Screen each applicant", "text": "Apply a written rubric (reachable LinkedIn plus a specific answer to approve, bot names or all-vague answers to reject) and collect the memberId of everyone who passes."},
+    {"@type": "HowToStep", "name": "Batch-approve the winners", "text": "Pass the collected memberIds to members:batchApprove in one call. Failures return per-item results without blocking the batch."},
+    {"@type": "HowToStep", "name": "Verify the queue", "text": "Re-run members:pending to confirm only intentionally held applicants remain. The read-back is the real confirmation, not the 200."}
+  ]
+}
+</script>

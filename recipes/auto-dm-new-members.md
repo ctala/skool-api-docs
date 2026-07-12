@@ -103,3 +103,22 @@ Track conversion: `% of new members who reply within 24h`. CAR's v2 (current) ge
 - [Groups docs](../docs/groups.md)
 - [Members docs](../docs/members.md) — for member lifecycle context
 - [Recipe: Auto-approve members](auto-approve-members-n8n.md) — pair this with auto-approval for fully automated onboarding
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Auto-DM new Skool members with groups:setAutoDM",
+  "description": "Set or update your Skool auto welcome DM programmatically with groups:setAutoDM, rotating offers and onboarding links without UI clicks.",
+  "totalTime": "PT5M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "Enable the Auto DM plugin", "text": "Turn on Settings, Plugins, Auto DM new members in Skool so the configured message actually fires when someone joins."},
+    {"@type": "HowToStep", "name": "Set the message via groups:setAutoDM", "text": "Call groups:setAutoDM with a plain-text message up to 300 characters using the #NAME# and #GROUPNAME# tokens. Calling it again replaces the existing message."},
+    {"@type": "HowToStep", "name": "Craft and iterate the copy", "text": "Write a short, scannable DM with one concrete next action and one reply-triggering question, then A/B test versions and track the 24h reply rate."}
+  ]
+}
+</script>

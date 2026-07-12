@@ -176,3 +176,24 @@ Don't put links in the cover JPEG — they're not clickable in Skool's UI. Use t
 - [Classroom docs](../docs/classroom.md) — full data model + R-PUT-COURSE explainer
 - [Files docs](../docs/files.md) — image upload flow
 - [Recipe: Publish a course from markdown](publish-course-from-markdown.md) — full course creation pipeline
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Batch-update Skool course covers without resetting privacy or tier",
+  "description": "Refresh every Skool course cover via the API. classroom:updateCourse uses read-then-write so the change applies without resetting privacy, tier or price.",
+  "totalTime": "PT15M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "Browserless / Playwright"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "Define the cover plan", "text": "Build a JSON array with one entry per course (courseId, category color, titles, tags) with everything needed to render each cover."},
+    {"@type": "HowToStep", "name": "Render each cover", "text": "Feed the per-course values into an HTML template and screenshot to a 1460x752 JPEG via Browserless, Playwright or Puppeteer."},
+    {"@type": "HowToStep", "name": "Upload and apply with read-then-write", "text": "Upload the JPEG with files:uploadImage, then call classroom:updateCourse, which fetches current state and merges the cover so privacy, tier and amount are preserved."},
+    {"@type": "HowToStep", "name": "Verify privacy and tier", "text": "Spot-check covers visually and call classroom:listCourses to confirm each course's privacy and min_tier still match the pre-batch state."}
+  ]
+}
+</script>

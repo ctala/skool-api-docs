@@ -178,3 +178,27 @@ If the LLM draft references a specific course, member, or fact, **verify it exis
 - [Posts & Comments](../docs/posts.md)
 - [AI Agents integration](../docs/agents.md) — full pattern for LLM + actor loops
 - [Auto-approve members with n8n](auto-approve-members-n8n.md) — companion recipe
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Reply to unanswered Skool posts automatically",
+  "description": "Find Skool posts with zero comments, draft an on-brand reply with an LLM, and publish after optional human approval so no member's question sits unanswered.",
+  "totalTime": "PT20M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "n8n"},
+    {"@type": "HowToTool", "name": "LLM API"},
+    {"@type": "HowToTool", "name": "Telegram bot"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "Find unanswered posts", "text": "Call posts:filter with unanswered set to true and a since window tuned to your community's pace."},
+    {"@type": "HowToStep", "name": "Filter by relevance", "text": "Skip very recent posts, announcements and already-engaged authors so only posts that genuinely need a reply proceed."},
+    {"@type": "HowToStep", "name": "Draft with an LLM", "text": "Prompt the LLM with the post content, your brand voice and constraints to produce a concise, human-sounding plain-text draft."},
+    {"@type": "HowToStep", "name": "Approve via Telegram", "text": "Send the draft to Telegram and only publish on approval. Require approval for at least the first 100 replies to catch tone drift."},
+    {"@type": "HowToStep", "name": "Publish and log", "text": "Publish the top-level comment with posts:createComment where rootId equals parentId equals postId, and log the decision for prompt iteration."}
+  ]
+}
+</script>

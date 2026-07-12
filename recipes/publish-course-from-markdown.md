@@ -198,3 +198,25 @@ Once the course exists, refresh covers via `classroom:updateCourse` (read-then-w
 - [Classroom docs](../docs/classroom.md)
 - [Files docs](../docs/files.md) — cover upload flow
 - [Recipe: Batch update course covers](batch-update-course-covers.md) — partner recipe for refreshes
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Publish a Skool course from markdown files",
+  "description": "Turn a directory of markdown files into a fully-rendered Skool course with cover, folders, lessons and tier gating in one script.",
+  "totalTime": "PT15M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "Node.js"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "Structure your course directory", "text": "Lay out the course as a tree of markdown files: an _index.md for metadata, a cover JPEG, and module and lesson files named M##/ and L#.#-slug.md."},
+    {"@type": "HowToStep", "name": "Discover modules and validate titles", "text": "Read the filesystem to build the module and lesson list, then fail fast if any course, folder or page title exceeds Skool's 50-character limit."},
+    {"@type": "HowToStep", "name": "Upload cover and create the course", "text": "Upload the 1460x752 cover with files:uploadImage and create the course with classroom:createCourse, setting privacy, minTier and state."},
+    {"@type": "HowToStep", "name": "Create folders, pages and bodies", "text": "Delete the auto-created placeholder page, then per module create a folder, create pages and set each lesson body from markdown with classroom:setBody, pacing writes."},
+    {"@type": "HowToStep", "name": "Verify the published course", "text": "Open the classroom URL and confirm the course, folders and lessons rendered as expected."}
+  ]
+}
+</script>

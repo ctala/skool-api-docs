@@ -148,3 +148,23 @@ Typical "approve 10 pending members" run via MCP: ~$0.12.
 - [Getting Started](../docs/getting-started.md) — first call, auth flow
 - [AI Agents integration](../docs/agents.md) — also covers direct function-calling (without MCP)
 - [Audit a long welcome thread](audit-welcome-thread-with-getcommentsfull.md) — useful MCP prompt
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Use the Skool API as an MCP tool for Claude, Cursor and Cline",
+  "description": "Expose all 33 Skool API actions to any MCP client so Claude Desktop, Cursor or Cline can approve members, post and audit threads with zero custom code.",
+  "totalTime": "PT5M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "MCP client (Claude Desktop / Cursor / Cline)"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "Locate your MCP client config", "text": "Open the config file for Claude Desktop, Cursor or Cline. Paths differ by operating system and client."},
+    {"@type": "HowToStep", "name": "Add the Skool API MCP server", "text": "Add an mcpServers entry that runs the Apify actors-mcp-server with the cristiantala/skool-all-in-one-api actor and your APIFY_TOKEN."},
+    {"@type": "HowToStep", "name": "Restart the client", "text": "Restart the MCP client so it launches the server and discovers all 33 Skool actions as tools."},
+    {"@type": "HowToStep", "name": "Prompt the agent", "text": "Ask the agent in natural language to approve members, post content or audit threads, confirming before each write action."}
+  ]
+}
+</script>

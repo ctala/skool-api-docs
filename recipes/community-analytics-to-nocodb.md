@@ -217,3 +217,26 @@ The actor isn't a scraping tool — it's an automation layer over your own legit
 - [Members documentation](../docs/members.md) — full reference for `members:list` and related actions
 - [Auto-approve members with n8n + GPT](auto-approve-members-n8n.md) — combines well with cohort tracking
 - [Audit welcome thread](audit-welcome-thread-with-getcommentsfull.md) — find members who introduced themselves but never posted again
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Export Skool community analytics to NocoDB or Airtable",
+  "description": "Build your own Skool BI dashboard with scheduled actor runs that export members and engagement to NocoDB, Airtable or Postgres for churn tracking.",
+  "totalTime": "PT30M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "n8n"},
+    {"@type": "HowToTool", "name": "NocoDB"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "Create the schema", "text": "Set up tables in NocoDB or your database for member snapshots, post engagement and per-member activity."},
+    {"@type": "HowToStep", "name": "Schedule the weekly member snapshot", "text": "Run an n8n cron that calls members:list, flattens the array with a snapshot date, upserts into members_snapshots and computes joiner, churn and upgrade deltas."},
+    {"@type": "HowToStep", "name": "Schedule the daily post-engagement sync", "text": "Run a daily cron that calls posts:list and upserts each post by post_id, updating comment and like counts and flagging fast-growing threads."},
+    {"@type": "HowToStep", "name": "Roll up member activity weekly", "text": "Compute weekly per-member posts, comments and last-post timestamps from the engagement table via a scheduled SQL query."},
+    {"@type": "HowToStep", "name": "Build dashboards", "text": "Query the time-series data for weekly active members, activation rate and churn signals to feed Metabase or Grafana dashboards."}
+  ]
+}
+</script>

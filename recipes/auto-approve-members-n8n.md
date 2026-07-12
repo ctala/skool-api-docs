@@ -219,3 +219,26 @@ If your scheduled run hits `WAF_EXPIRED` mid-loop, only some approvals will succ
 - [Auto DM new members](auto-dm-new-members.md) — pair this with a personalized welcome message
 - [Reply to unanswered posts](reply-unanswered-posts.md) — same pattern, applied to comments
 - [Members documentation](../docs/members.md) — full member API reference
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Auto-approve Skool members with n8n + GPT-4o AI screening",
+  "description": "An n8n workflow screens new Skool applicants with a LinkedIn check plus GPT-4o review of the application answer and auto-approves the ones that pass.",
+  "totalTime": "PT30M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "n8n"},
+    {"@type": "HowToTool", "name": "GPT-4o"},
+    {"@type": "HowToTool", "name": "Telegram bot"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "Cache Skool cookies", "text": "Run a manual auth:login workflow and save the cookies to your data store, refreshing every ~3 days when WAF_EXPIRED fires."},
+    {"@type": "HowToStep", "name": "Read pending applicants", "text": "On a 15-minute schedule, call members:pending to pull the queue with memberId, bio, LinkedIn, country and application answer."},
+    {"@type": "HowToStep", "name": "Filter against quality criteria", "text": "Encode your community standards (LinkedIn present, bio length, target country, non-spam answer) or add LLM scoring, then approve passers with members:approve using memberId."},
+    {"@type": "HowToStep", "name": "Route the rest to manual review", "text": "Leave non-passing applicants in pending and notify yourself on Telegram with an audit trail. Never auto-reject."}
+  ]
+}
+</script>

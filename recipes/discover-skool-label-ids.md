@@ -152,3 +152,23 @@ The hardest part of building Skool automation isn't the API logic — it's the a
 [**→ Open the actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign=discover-skool-label-ids&fpr=cristian)
 
 *New to Skool? [Launch your community here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Discover your Skool community's label IDs",
+  "description": "Pull your Skool group's category labelIds programmatically, needed to filter posts by category, create labelled posts or audit your category strategy.",
+  "totalTime": "PT3M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "Call groups:get", "text": "Request the full group config. The category labels live under metadata.post_categories with each label's id, name, color and order."},
+    {"@type": "HowToStep", "name": "Save the label map", "text": "Reduce the categories to a flat name-to-id dictionary and store it in env vars, a JSON file or your secrets store."},
+    {"@type": "HowToStep", "name": "Verify with posts:filter", "text": "Confirm a labelId resolves to the expected posts by calling posts:filter with that labelId."},
+    {"@type": "HowToStep", "name": "Use the IDs downstream", "text": "Reference the saved labelIds in posts:create, posts:filter or posts:update for category-aware automations."}
+  ]
+}
+</script>

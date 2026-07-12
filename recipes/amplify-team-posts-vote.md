@@ -152,3 +152,22 @@ The hardest part of building Skool automation isn't the API logic — it's the a
 [**→ Open the actor on Apify**](https://apify.com/cristiantala/skool-all-in-one-api?utm_source=skool-api-docs&utm_medium=recipe&utm_campaign=amplify-team-posts-vote&fpr=cristian)
 
 *New to Skool? [Launch your community here](https://www.skool.com/signup?ref=114150f098fc40ba9b365fa78be01a63) — 14-day free trial.*
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Auto-amplify Skool team posts (likes via API)",
+  "description": "Use posts:vote to like or unlike posts from team accounts, with honest framing on when it is legitimate validation versus fake engagement.",
+  "totalTime": "PT5M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Apify"},
+    {"@type": "HowToTool", "name": "Skool admin cookies"}
+  ],
+  "step": [
+    {"@type": "HowToStep", "name": "Find posts to like", "text": "Call posts:list by recency or posts:filter by labelId to surface the posts your team account will validate."},
+    {"@type": "HowToStep", "name": "Vote like or unlike", "text": "Call posts:vote with the postId and vote set to like or unlike. One vote per account per post, and re-liking is a no-op."},
+    {"@type": "HowToStep", "name": "Loop across team accounts", "text": "Switch the cookie per team account (founder, VA, designer) to contribute each account's honest signal. Keep it to 3-4 accounts."}
+  ]
+}
+</script>
