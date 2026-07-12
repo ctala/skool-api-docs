@@ -1,3 +1,14 @@
+---
+title: "Publish a Skool course from markdown files (one script)"
+description: "Turn a directory of markdown files into a fully-rendered Skool course — cover, folders, lessons and tier gating — in one script."
+slug: /recipes/publish-course-from-markdown
+type: recipe
+funnel: A
+section: Recipes
+last_updated: 2026-07-12
+render_with_liquid: false
+---
+
 # Publish a Skool course from markdown files
 
 Take a directory tree of markdown files, ship a fully-rendered Skool course with cover, folders, lessons, tier gating — in one script. No clicking "New page" 60 times.

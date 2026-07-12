@@ -1,3 +1,14 @@
+---
+title: "Audit a long Skool welcome thread (>35 comments) with getCommentsFull"
+description: "Skool's API caps comment listings at ~35 — getCommentsFull scrapes the whole welcome thread so you can find members you never replied to."
+slug: /recipes/audit-welcome-thread-with-getcommentsfull
+type: recipe
+funnel: A
+section: Recipes
+last_updated: 2026-07-12
+render_with_liquid: false
+---
+
 # Audit a long welcome thread (>35 comments) with `posts:getCommentsFull`
 
 **Use case**: Your community has a pinned "Introduce yourself" thread that grew to hundreds of comments. You want to verify that every new member got a personalized welcome reply from you — but Skool's REST API caps comment listings at ~35 per thread. How do you scrape the full thread and find members you haven't replied to?

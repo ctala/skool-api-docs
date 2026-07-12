@@ -14,8 +14,8 @@ Run from the repo root (it reads slugs from integrations/*.md and recipes/*.md).
 """
 import glob, re, sys, json, urllib.request, urllib.error
 
-HOST = "ctala.github.io"
-BASE = "https://ctala.github.io/skool-api-docs"
+HOST = "skool-api.cristiantala.com"
+BASE = "https://skool-api.cristiantala.com"
 KEY = "b450a501c39946cea17cee111bcf08f5"  # public key — file lives at {BASE}/{KEY}.txt
 KEY_LOCATION = f"{BASE}/{KEY}.txt"
 

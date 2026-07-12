@@ -1,3 +1,14 @@
+---
+title: "Use the Skool API as an MCP tool for Claude, Cursor & Cline"
+description: "Expose all 33 Skool API actions to any MCP client — approve members, post and audit threads from Claude Desktop, Cursor or Cline with zero custom code."
+slug: /recipes/use-skool-api-as-mcp-tool
+type: recipe
+funnel: A
+section: Recipes
+last_updated: 2026-07-12
+render_with_liquid: false
+---
+
 # Use the Skool API as MCP tool for Claude / Cursor / Cline
 
 **Use case**: You want your AI agent (Claude Desktop, Cursor, Cline, or any MCP client) to operate your Skool community directly — approve members, post content, audit threads — without writing custom integration code. Apify exposes any public actor as a Model Context Protocol server, so you get all 33 Skool API actions as discoverable AI tools with zero setup beyond config.

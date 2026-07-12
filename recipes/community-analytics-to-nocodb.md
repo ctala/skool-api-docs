@@ -1,3 +1,14 @@
+---
+title: "Skool community analytics: export data to NocoDB or Airtable"
+description: "Build your own Skool BI dashboard — scheduled actor runs export members and engagement to NocoDB, Airtable or Postgres for churn tracking."
+slug: /recipes/community-analytics-to-nocodb
+type: recipe
+funnel: A
+section: Recipes
+last_updated: 2026-07-12
+render_with_liquid: false
+---
+
 # Community analytics: export Skool data to NocoDB / Airtable
 
 **Use case**: Skool's built-in analytics are minimal. You want your own BI dashboard tracking members over time, engagement by category, churn signals, and free → paid conversion. This recipe shows the pattern: scheduled actor runs that export Skool data to your own database (NocoDB, Airtable, Postgres, or anywhere) for analysis.

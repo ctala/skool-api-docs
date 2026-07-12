@@ -115,7 +115,7 @@ Toda página de AI agent incluye dos secciones nuevas (ver el piloto `integratio
 `for/ai-agents.md` es el **primer canónico** (Claude tool-use / OpenAI function-calling / MCP / LangChain snippets + agent loop). **NO duplicar el primer completo** en cada página — enlazarlo. Lo único por página (≥40% del contenido): Why, Setup/config, Example, gotchas específicos del tool. Así la familia de páginas refuerza topical authority hacia el pillar sin caer en duplicate content.
 
 **R8 — Links a la versión web indexable.**
-Internal links siempre como **paths relativos** (`skool-mcp.md`, `../docs/actions.md`) — Jekyll los resuelve a URLs `https://skool-api.cristiantala.com/...` que los buscadores rastrean e indexan. NUNCA linkear referencias de contenido a `github.com/blob/...` (no es la URL canónica indexable). `raw.githubusercontent.com` SOLO para descargas (instalar SKILL/scripts). `canonical` y `mainEntityOfPage` siempre a `ctala.github.io`.
+Internal links siempre como **paths relativos** (`skool-mcp.md`, `../docs/actions.md`) — Jekyll los resuelve a URLs `https://skool-api.cristiantala.com/...` que los buscadores rastrean e indexan. NUNCA linkear referencias de contenido a `github.com/blob/...` (no es la URL canónica indexable). `raw.githubusercontent.com` SOLO para descargas (instalar SKILL/scripts). `canonical` y `mainEntityOfPage` siempre a `skool-api.cristiantala.com`.
 
 ---
 
@@ -166,16 +166,16 @@ GitHub Pages hace deploy automático en ~2 minutos.
 
 ### Paso 7 — IndexNow ping (Bing/Yandex/Naver/Seznam)
 Después del deploy, notificar a los motores de búsqueda alternativos.
-La key de IndexNow para `ctala.github.io` está documentada en `reference_indexnow_keys.md` (memory del repo Estrategias).
+La key de IndexNow para `skool-api.cristiantala.com` está documentada en `reference_indexnow_keys.md` (memory del repo Estrategias).
 
 ```bash
 # Ejemplo de ping (reemplazar KEY y URL)
 curl -X POST "https://api.indexnow.org/indexnow" \
   -H "Content-Type: application/json" \
   -d '{
-    "host": "ctala.github.io",
+    "host": "skool-api.cristiantala.com",
     "key": "{KEY}",
-    "keyLocation": "https://ctala.github.io/{KEY}.txt",
+    "keyLocation": "https://skool-api.cristiantala.com/{KEY}.txt",
     "urlList": [
       "https://skool-api.cristiantala.com/integrations/skool-{tool-slug}/"
     ]
@@ -186,7 +186,7 @@ curl -X POST "https://api.indexnow.org/indexnow" \
 Para una sola página nueva el sitemap se actualiza solo con `jekyll-sitemap`. Solo necesario si se publica un batch de 3+ páginas:
 ```bash
 python3 .claude/skills/elhda-new-episode/scripts/gsc_resubmit_sitemap.py \
-  --site sc-domain:ctala.github.io
+  --site sc-domain:cristiantala.com
 ```
 (Script vive en el repo Estrategias, no en skool-api-docs.)
 
@@ -214,7 +214,7 @@ Publicar una versión en español del core de la página como post independiente
 
 Si el tool tiene audiencia global significativa (Claude, GPT, Cursor, LangChain: sí; tools nicho LATAM: no).
 - Misma estructura que ES pero en inglés
-- No duplicar: el post EN puede ser el mismo texto de la página canónica, con canonical apuntando a `ctala.github.io`
+- No duplicar: el post EN puede ser el mismo texto de la página canónica, con canonical apuntando a `skool-api.cristiantala.com`
 - Cuenta: `cristiantalasanchez`
 
 ### Canal 3 — GitHub cross-link desde recipes relevantes
@@ -237,7 +237,7 @@ Para cualquier página de AI agent (Claude, GPT, LangChain, Cursor, Cline, etc.)
 
 ### Anti-patterns de distribución — no repetir
 
-- No publicar en Medium con canonical a sí mismo en Medium — siempre canonical a `ctala.github.io`
+- No publicar en Medium con canonical a sí mismo en Medium — siempre canonical a `skool-api.cristiantala.com`
 - No publicar en dev.to el mismo texto que skool-api-docs sin canonical configurado — Google penaliza duplicate content
 - No crear post de LinkedIn para cada página — solo tools con audiencia > 50K usuarios activos merita el effort
 - No syndication en Hashnode — canal deprecated desde 17-may-2026 (killed free API)
@@ -279,7 +279,7 @@ Páginas candidatas (aún no publicadas):
 
 ## 7. Notas sobre el sitio Jekyll
 
-- `_config.yml` excluye `templates/` del build — este playbook NO se publica en `ctala.github.io`.
+- `_config.yml` excluye `templates/` del build — este playbook NO se publica en el sitio live.
 - `jekyll-seo-tag` toma `title`, `description`, y `canonical` del frontmatter para generar `<title>`, `<meta name="description">`, y `<link rel="canonical">` automáticamente.
 - `jekyll-sitemap` genera `sitemap.xml` automáticamente a partir de todos los `.md` publicados.
 - `permalink: pretty` en `_config.yml` convierte `integrations/skool-claude.md` en `/integrations/skool-claude/index.html` — las URLs terminan en `/`.

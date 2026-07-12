@@ -1,3 +1,14 @@
+---
+title: "Batch-update Skool course covers without resetting privacy or tier"
+description: "Refresh every Skool course cover via API — read-then-write applies the change without resetting privacy, tier, or price."
+slug: /recipes/batch-update-course-covers
+type: recipe
+funnel: A
+section: Recipes
+last_updated: 2026-07-12
+render_with_liquid: false
+---
+
 # Batch update course covers
 
 Refresh the visual identity of every course in your classroom — without resetting privacy, tier, or amount. Uses `classroom:updateCourse`'s read-then-write to safely apply only the cover change.

@@ -1,3 +1,14 @@
+---
+title: "Auto-DM new Skool members (set the welcome DM via API)"
+description: "Set or update your Skool auto welcome DM programmatically with groups:setAutoDM — rotate offers and onboarding links without UI clicks."
+slug: /recipes/auto-dm-new-members
+type: recipe
+funnel: A
+section: Recipes
+last_updated: 2026-07-12
+render_with_liquid: false
+---
+
 # Auto DM new members
 
 Send a personalized welcome DM the moment someone joins your Skool community. Skool has this feature built in — `groups:setAutoDM` lets you set/update the message programmatically (no UI clicks).

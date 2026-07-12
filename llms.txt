@@ -23,6 +23,7 @@
 - [Authentication](https://skool-api.cristiantala.com/docs/authentication/)
 - [Classroom](https://skool-api.cristiantala.com/docs/classroom/)
 - [Error Handling](https://skool-api.cristiantala.com/docs/error-handling/)
+- [Events — Skool API Reference](https://skool-api.cristiantala.com/docs/events/): Read upcoming and past Skool events via the API. Power event reminder automations, attendance analytics, and external calendar sync.
 - [Files](https://skool-api.cristiantala.com/docs/files/)
 - [Getting Started](https://skool-api.cristiantala.com/docs/getting-started/)
 - [Groups](https://skool-api.cristiantala.com/docs/groups/)
@@ -32,7 +33,7 @@
 
 ## Integrations (AI agents, coding tools, automation)
 
-- [Skool + Claude Code — Run Your Community from the Terminal (2026)](https://skool-api.cristiantala.com/integrations/skool-claude-code/): Operate Skool from Claude Code with a drop-in Skill. Approve members, reply to posts, publish courses in natural language — no API code to write. Setup, example session, helper scripts.
+- [Skool Claude Code Plugin — Run Your Community from the Terminal (2026)](https://skool-api.cristiantala.com/integrations/skool-claude-code/): Operate Skool from Claude Code with a drop-in Skill. Approve members, reply to posts, publish courses in natural language — no API code to write. Setup, example session, helper scripts.
 - [Skool + Claude — Use Anthropic's Claude to Operate a Skool Community (2026)](https://skool-api.cristiantala.com/integrations/skool-claude/): Connect Claude (Anthropic API, Claude Desktop, Claude Code) to Skool. Tool-use schema, MCP integration, agent loops, real production patterns.
 - [Skool + Cline — Manage Your Community in VS Code via MCP (2026)](https://skool-api.cristiantala.com/integrations/skool-cline/): Connect Skool to Cline with one MCP server entry. Approve members, reply to posts, publish courses from the Cline panel — no API code. Setup, example, gotchas.
 - [Skool + CrewAI — Give Your Crew a Skool Tool (2026)](https://skool-api.cristiantala.com/integrations/skool-crewai/): Connect Skool to CrewAI with a custom tool. Wrap the Apify-hosted Skool actor as a BaseTool or @tool, hand it to an Agent, and let your crew approve members, post, and publish courses.
@@ -53,18 +54,30 @@
 
 ## Recipes
 
-- [Audit a long welcome thread (>35 comments) with `posts:getCommentsFull`](https://skool-api.cristiantala.com/recipes/audit-welcome-thread-with-getcommentsfull/)
+- [Auto-amplify Skool posts from team accounts (likes / unlikes via API)](https://skool-api.cristiantala.com/recipes/amplify-team-posts-vote/): Use posts:vote to systematically like or unlike posts from team accounts. Honest framing on when this is legitimate validation vs when it becomes fake engagement.
+- [Attach files to Skool lesson pages (PDFs, ZIPs, sheets)](https://skool-api.cristiantala.com/recipes/attach-files-to-lessons/): Add downloadable resources to your Skool classroom lessons via the API — PDFs, ZIPs, spreadsheets, or external links. Includes the privacy-flag trap that breaks half the integrations.
+- [Audit a long Skool welcome thread (>35 comments) with getCommentsFull](https://skool-api.cristiantala.com/recipes/audit-welcome-thread-with-getcommentsfull/): Skool's API caps comment listings at ~35 — getCommentsFull scrapes the whole welcome thread so you can find members you never replied to.
 - [Auto-approve Skool members with n8n + GPT-4o AI screening](https://skool-api.cristiantala.com/recipes/auto-approve-members-n8n/)
-- [Auto DM new members](https://skool-api.cristiantala.com/recipes/auto-dm-new-members/)
+- [Auto-DM new Skool members (set the welcome DM via API)](https://skool-api.cristiantala.com/recipes/auto-dm-new-members/): Set or update your Skool auto welcome DM programmatically with groups:setAutoDM — rotate offers and onboarding links without UI clicks.
 - [Automate Skool Community Event Announcements](https://skool-api.cristiantala.com/recipes/automate-skool-events/): Auto-announce upcoming Skool calendar events to your feed, Slack, Telegram, or WhatsApp. Uses events:upcoming + posts:create. Reduces no-shows + drives attendance.
-- [Batch update course covers](https://skool-api.cristiantala.com/recipes/batch-update-course-covers/)
-- [Community analytics: export Skool data to NocoDB / Airtable](https://skool-api.cristiantala.com/recipes/community-analytics-to-nocodb/)
+- [Batch launch Skool courses from a spreadsheet (covers + folders + lessons)](https://skool-api.cristiantala.com/recipes/batch-create-courses-spreadsheet/): Spin up multiple Skool courses in one script: read a spreadsheet, upload covers, create the course tree (course → folders → lessons), publish Markdown bodies. End-to-end automation.
+- [Batch-update Skool course covers without resetting privacy or tier](https://skool-api.cristiantala.com/recipes/batch-update-course-covers/): Refresh every Skool course cover via API — read-then-write applies the change without resetting privacy, tier, or price.
+- [Bulk-reject Skool waitlist applicants (the missing complement to batch-approve)](https://skool-api.cristiantala.com/recipes/bulk-reject-waitlist/): Reject low-signal Skool membership applications in bulk via the API — list pending, screen out the obvious nos, mark them rejected in one call. Pairs with batch-approve.
+- [Skool community analytics: export data to NocoDB or Airtable](https://skool-api.cristiantala.com/recipes/community-analytics-to-nocodb/): Build your own Skool BI dashboard — scheduled actor runs export members and engagement to NocoDB, Airtable or Postgres for churn tracking.
+- [Auto-approve Skool members by deterministic criteria (no LLM needed)](https://skool-api.cristiantala.com/recipes/conditional-member-approval/): Approve Skool waitlist applicants automatically by email domain, LinkedIn presence, or apply-form keywords — pure rules, no LLM cost. The lightweight cousin of the AI screening recipe.
+- [Discover your Skool community's label IDs (for category-filtered automations)](https://skool-api.cristiantala.com/recipes/discover-skool-label-ids/): Pull your Skool group's category labelIds programmatically — needed to filter posts by category, create labelled posts, or audit your category strategy.
+- [Auto-post Skool event reminders to the feed (24h + 1h before)](https://skool-api.cristiantala.com/recipes/event-reminders-to-feed/): Pull upcoming Skool events and post timed reminders to the community feed automatically. The cron-driven flow that keeps event attendance from cratering.
+- [Export Skool members to CSV (email, tier, LTV, survey answers)](https://skool-api.cristiantala.com/recipes/export-skool-members-csv/): Export your full Skool member list as CSV via the API — same data as the admin Export button, but automatable: email, joined date, tier, LTV, application answers.
+- [Generate N Skool lessons from a JSON spec (template system)](https://skool-api.cristiantala.com/recipes/generate-lessons-from-json/): Build a Skool course skeleton from a single JSON spec — drop a {course, folders, pages} object, get a fully wired course tree with bodies and resources. The reusable lesson factory.
+- [Auto-detect Skool posts by keyword and reply (with human approval)](https://skool-api.cristiantala.com/recipes/keyword-monitoring-replies/): Monitor the Skool feed for posts mentioning specific keywords (your product, a competitor, a pain point) and draft contextual replies with LLM + human approval before publish.
 - [Mirror your newsletter as a Skool community post](https://skool-api.cristiantala.com/recipes/newsletter-to-skool-post/)
-- [Publish a Skool course from markdown files](https://skool-api.cristiantala.com/recipes/publish-course-from-markdown/)
+- [Publish a Skool course from markdown files (one script)](https://skool-api.cristiantala.com/recipes/publish-course-from-markdown/): Turn a directory of markdown files into a fully-rendered Skool course — cover, folders, lessons and tier gating — in one script.
 - [Auto-Reply to Skool Onboarding Comments — Pinned 'Start Here' Threads](https://skool-api.cristiantala.com/recipes/reply-onboarding-comments/): Detect unanswered comments in pinned onboarding threads, draft contextual replies, approve in Telegram, publish. Production recipe from a production Skool community.
 - [Reply to unanswered Skool posts automatically](https://skool-api.cristiantala.com/recipes/reply-unanswered-posts/)
 - [Review and batch-approve your Skool waitlist (human-in-the-loop)](https://skool-api.cristiantala.com/recipes/review-and-batch-approve-waitlist/): Approve pending Skool members in bulk via the API: list the waitlist, screen each applicant against your criteria, then batch-approve the good ones in one call. The human-reviewed alternative to fully automated AI approval.
-- [Use the Skool API as MCP tool for Claude / Cursor / Cline](https://skool-api.cristiantala.com/recipes/use-skool-api-as-mcp-tool/)
+- [Auto-detect and delete spam posts in your Skool community](https://skool-api.cristiantala.com/recipes/spam-cleanup-posts-delete/): Find low-signal or spam posts (off-topic, promo, bot drops) and delete them in bulk via posts:delete. Human-in-the-loop approval gate optional but recommended.
+- [Edit published Skool posts via API (title, content, labels)](https://skool-api.cristiantala.com/recipes/update-published-posts/): Update a published Skool post's title, content, or category label via the API. Includes the silent-fail gotcha that costs everyone a debugging session and the read-then-write fix.
+- [Use the Skool API as an MCP tool for Claude, Cursor & Cline](https://skool-api.cristiantala.com/recipes/use-skool-api-as-mcp-tool/): Expose all 33 Skool API actions to any MCP client — approve members, post and audit threads from Claude Desktop, Cursor or Cline with zero custom code.
 
 ## For AI agents
 

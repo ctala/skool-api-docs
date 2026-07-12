@@ -11,7 +11,7 @@ Title resolution per page: front-matter `title:` → first `# H1` → filename.
 """
 import glob, re
 
-BASE = "https://ctala.github.io/skool-api-docs"
+BASE = "https://skool-api.cristiantala.com"
 
 
 def fm(p):
