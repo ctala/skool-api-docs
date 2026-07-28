@@ -13,7 +13,7 @@ render_with_liquid: false
 
 **Use case**: Your community has a pinned "Introduce yourself" thread that grew to hundreds of comments. You want to verify that every new member got a personalized welcome reply from you — but Skool's REST API caps comment listings at ~35 per thread. How do you scrape the full thread and find members you haven't replied to?
 
-This recipe uses `posts:getCommentsFull` — a Playwright-based action that bypasses the REST cap by scrolling the thread page and extracting every comment from the DOM. Costs $0.05 per invocation (the scrape fee) but returns the full thread.
+This recipe uses `posts:getCommentsFull` — it bypasses the one-call cap by paging Skool's comment endpoint with the cursor its own UI uses (`created-gt`). Costs $0.05 per invocation (the scrape fee) and returns the full thread in about 5 seconds per 1000 comments, with real comment ids, real author ids and ISO 8601 timestamps.
 
 ## When you need this
 
@@ -159,7 +159,7 @@ For a 200-comment thread: ~$0.05 + (200 × $0.005) = ~$1.05 per audit run. Most 
 
 | | `posts:getComments` (REST) | `posts:getCommentsFull` (Playwright) |
 |---|---|---|
-| Speed | ~2s | ~30-60s |
+| Speed | ~2s | ~5s per 1000 comments |
 | Cost | $0 (just dataset) | $0.05 + dataset |
 | Max comments per thread | ~35 (25 head + 10 tail) | All (verified up to 200+) |
 | Returns real comment IDs | Yes | No (synthetic `scraped-N`) |

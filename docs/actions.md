@@ -44,7 +44,7 @@ All actions use the same shape:
 | `posts:unpin` | `postId` | Remove pin |
 | `posts:vote` | `postId`, `vote: "up" \| ""` | Like / unlike |
 | `posts:getComments` | `postId` | Comment tree via REST (~2s, max ~35 top-level). Free read |
-| `posts:getCommentsFull` | `postId` OR `postSlug` | **Full thread coverage** via Playwright DOM scroll (~30-60s, no cap). $0.05 scrape-operation event. Use when `posts:getComments` truncates and you need every reply. Added in 0.3.24 |
+| `posts:getCommentsFull` | `postId` | **Full thread coverage** via `created-gt` cursor pagination (~5s per 1000 comments, no cap). Real comment ids, author ids and ISO dates. $0.05 scrape-operation event. Use when `posts:getComments` truncates. Rewritten in 0.3.44 |
 | `posts:createComment` | `rootId`, `parentId`, `content` | Create comment or nested reply. For top-level: `rootId == parentId == postId`. For nested: `parentId == commentId` |
 
 [→ Posts & Comments docs](posts.md)

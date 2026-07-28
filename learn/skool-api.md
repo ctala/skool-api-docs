@@ -65,7 +65,7 @@ You save the `cookies` string and pass it in every subsequent call instead of em
 | Resource | Read | Write |
 |---|---|---|
 | **Posts** | List, filter (`unanswered`, `since`, `labelId`), paginate, get single, full comment trees | Create, update, delete, pin, unpin, like |
-| **Comments** | Nested trees via REST (~35 cap) OR full Playwright scrape (no cap, $0.05) | Create top-level + nested, edit, delete |
+| **Comments** | Nested trees via REST (~35 in one call) OR the full thread via cursor pagination (no cap, $0.05) | Create top-level + nested, edit, delete |
 | **Members** | List active, list pending applicants | Approve, reject, ban, batch-approve |
 | **Events** | List all calendar events, list upcoming with next-occurrence + timezone | — |
 | **Classroom** | List courses, full tree, single page | Create course/folder/page, set body (markdown→TipTap auto), update cover/title/desc/privacy/tier, update Resources, delete |

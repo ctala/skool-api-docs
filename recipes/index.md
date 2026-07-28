@@ -27,6 +27,7 @@ Copy-paste-ready integrations using the [Apify-hosted Skool All-in-One API actor
 | [**Community analytics to NocoDB**](community-analytics-to-nocodb.md) | Python | Track engagement, churn, conversion to paid via your own BI tool |
 | [**Automate event announcements**](automate-skool-events.md) | Python / n8n + cron | 24h + 1h reminders to feed + Telegram. Uses new `events:upcoming` (v0.3.24+) |
 | [**Export Skool members to CSV**](export-skool-members-csv.md) | curl / Python | Bulk export email + tier + LTV + survey answers — the only reliable source for member emails. CRM pipeline foundation |
+| [**Fix members:export email verification**](fix-members-export-email-verification.md) | curl / any inbox | `401 email verification required` since Skool made the export a sensitive action. Pin + verify a `client_id`, and automate the ~2-day re-verification |
 | [**Edit published posts**](update-published-posts.md) | Any HTTP client | Update title/content/labels of any published post. Includes the silent-fail wrapper gotcha and write+verify-fetch fix |
 | [**Attach files to lesson pages**](attach-files-to-lessons.md) | Any HTTP client | Add PDFs/ZIPs/sheets/links as classroom resources. Covers the `privacy: 1` trap and array-replacement semantics |
 | [**Batch launch courses from a spreadsheet**](batch-create-courses-spreadsheet.md) | Python / Node | End-to-end pipeline: covers → courses → folders → pages → bodies → resources. The 23-course classroom builder |

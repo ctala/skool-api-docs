@@ -148,7 +148,7 @@ The actor exposes the entire Skool admin surface as MCP tools. You ask in plain 
 | `posts:createComment` | Comment on a post or reply to a comment |
 | `posts:pin` / `posts:unpin` | Pin or unpin a post |
 | `posts:vote` | Upvote / clear vote |
-| `posts:getComments` / `posts:getCommentsFull` | Read a post's comment tree (fast / full-scroll, no cap) |
+| `posts:getComments` / `posts:getCommentsFull` | Read a post's comment tree (one page / entire thread, no cap) |
 
 **Members**
 

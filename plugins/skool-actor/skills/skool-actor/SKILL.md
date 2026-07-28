@@ -76,7 +76,7 @@ Decide the action, then assemble `params` from this table.
 | `posts:pin` / `posts:unpin` | `postId` | |
 | `posts:vote` | `postId`, `vote: "up" \| ""` | |
 | `posts:getComments` | `postId` | REST, fast (~2s). Returns nested tree, max ~35 top-level. Free read |
-| `posts:getCommentsFull` | `postId` OR `postSlug` | Playwright DOM scroll, slow (~30-60s), **no cap** — gets every reply. $0.05 scrape-operation event. Use when `posts:getComments` truncates |
+| `posts:getCommentsFull` | `postId` | Cursor pagination, **no cap** — every reply, with real ids/author ids/ISO dates. ~5s per 1000 comments. $0.05 scrape-operation event. Use when `posts:getComments` truncates |
 
 ### Members
 

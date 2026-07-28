@@ -29,6 +29,8 @@ It's the exact flow that backs [Cágala, Aprende, Repite](https://www.skool.com/
 | **Output** | JSON array — one item per member with `firstName, lastName, email, invitedBy, joinedDate, survey[], tier, ltv` (the actor parses the underlying CSV for you) |
 | **Key gotcha** | Async 3-step flow under the hood. The actor wraps it — you get parsed member items back in one call |
 
+> ⚠️ **Since 30 June 2026 this export is a "sensitive action".** It needs a `client_id` that has been **email-verified** on your account, and that verification lapses every ~2 days. If you get `401 email verification required` or `400 invalid client ID`, follow [Fix members:export email verification](fix-members-export-email-verification.md) first — the rest of this recipe assumes it is sorted.
+
 ## Prerequisites
 
 - Apify token ([get one](https://console.apify.com/sign-up?fpr=cristian))

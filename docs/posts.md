@@ -134,9 +134,9 @@ Returns nested replies:
 | Method | Speed | Coverage | When to use |
 |---|---|---|---|
 | `posts:getComments` | ~400ms | ~35 top-level | Quick reads, most posts (free) |
-| `posts:getCommentsFull` (Playwright) | ~9-60s | No cap (every reply visible to a human) | When the post has more comments than REST returns. $0.05 scrape-operation event |
+| `posts:getCommentsFull` | ~5s per 1000 comments | No cap (the entire thread) | When the post has more comments than one REST call returns. $0.05 scrape-operation event |
 
-Skool's own UI shows max ~58 of 100+ comments. This is a Skool platform limitation, not the actor.
+One call returns ~25-30 top-level comments. The endpoint pages with `created-gt` — a microsecond timestamp echoed back as `last` — and `posts:getCommentsFull` walks it to the end. Verified at 1095/1095 on a 1000-comment thread in about 5 seconds. Because the data comes from the API and not the rendered page, every comment carries a real 32-hex `id` (stable across runs), a real `author.id`, an ISO 8601 `createdAt` and `parentId` threading.
 
 ## Write actions
 
