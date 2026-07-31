@@ -170,6 +170,55 @@ If your community **requires categories**, the call fails with `MISSING_CATEGORY
 
 Get available labels via `groups:get`. They're in `metadata.label_options`.
 
+#### Optional: email every member, attach a poll, attach an image
+
+```json
+{
+  "action": "posts:create",
+  "params": {
+    "title": "Weekly changelog",
+    "content": "Everything that shipped this week.",
+    "labelId": "category-id",
+    "notifyAll": true,
+    "pollId": "id-from-posts:createPoll",
+    "attachmentId": "id-from-files:uploadImage"
+  }
+}
+```
+
+| Param | What it does |
+|---|---|
+| `notifyAll` | Emails **every member** of the group — the "Send email to all members" toggle in Skool's composer. Admin only. |
+| `pollId` | Attaches a poll created with [`posts:createPoll`](#postscreatepoll--create-a-poll). |
+| `attachmentId` | Attaches an image uploaded with [`files:uploadImage`](files.md). A single file id, **not** an array. |
+
+> **`notifyAll` cannot be undone, or added later.** Skool only offers the email at creation time — there is no way to notify members about a post that already exists. Get it right the first time.
+
+> **A `200` does not mean the email was sent.** Skool ignores an unrecognised notify value and returns success anyway. The actor guards this by taking a strict boolean (the string `"true"` is rejected rather than guessed at), but if you're calling `api2.skool.com` directly, know that a typo emails nobody and reports no error. Verify in an inbox: the broadcast email's footer reads *"Don't want admin broadcast emails"*, unlike the usual *"Don't want to be notified when…"*.
+
+> **Broadcasts are rate-limited (~72h per group).** A second one inside the window fails with `notify limit exceeded` — and the rejection is **atomic: the post is not created**. Don't retry assuming the post exists; and don't "fix" it by re-publishing without `notifyAll`, because that post can never be emailed afterwards.
+
+### `posts:createPoll` — create a poll
+
+Polls are their own object, so attaching one takes **two calls**: create the poll, then reference it from the post.
+
+```json
+{
+  "action": "posts:createPoll",
+  "params": { "options": ["Option A", "Option B", "Option C"] }
+}
+```
+
+```json
+{ "pollId": "a0169196540f40f082039657d2b17755" }
+```
+
+Then pass that id as `pollId` in `posts:create`.
+
+> **A poll has no title or question field.** Skool's poll is just a list of options — the question lives in the **post's `content`**. If you're wondering where to put "What should we build next?", that's the post body.
+
+Two or more options are required; empty and whitespace-only entries are dropped. Results come back on the post as `pollData` (read-only), with vote counts per option.
+
 ### `posts:update` — edit a post or comment
 
 ```json

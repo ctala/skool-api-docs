@@ -37,7 +37,8 @@ All actions use the same shape:
 | `posts:list` | `page?`, `sort?`, `limit?` | Single page of posts |
 | `posts:filter` | `since?`, `until?`, `unanswered?`, `labelId?`, `limit?` | Filter posts by criteria (combine any) |
 | `posts:get` | `postId` | Single post by ID |
-| `posts:create` | `title`, `content`, `labelId?`, `videoIds?` | Create a post (plain text content) |
+| `posts:create` | `title`, `content`, `labelId?`, `videoIds?`, `notifyAll?`, `pollId?`, `attachmentId?` | Create a post (plain text content). `notifyAll` emails every member — admin-only and irreversible |
+| `posts:createPoll` | `options` (2+) | Create a poll, then pass `pollId` to `posts:create`. Polls have no title: the question is the post content |
 | `posts:update` | `postId`, `title?`, `content?` | Edit a post or comment |
 | `posts:delete` | `postId` | Delete a post or comment (cascades) |
 | `posts:pin` | `postId` | Pin to top of feed |

@@ -22,6 +22,7 @@ Copy-paste-ready integrations using the [Apify-hosted Skool All-in-One API actor
 | [**Auto DM new members**](auto-dm-new-members.md) | Direct API | Set/update the welcome message that triggers when someone joins |
 | [**Batch update course covers**](batch-update-course-covers.md) | Python | Refresh visual identity across N courses without resetting privacy/tier |
 | [**Newsletter to Skool post**](newsletter-to-skool-post.md) | n8n / webhook | Mirror your Listmonk/ConvertKit newsletter as a community post |
+| [**Weekly changelog: image + poll + email to all**](weekly-changelog-post-with-poll-and-broadcast.md) | Actor / script | Publish the community update with an image, a poll and the broadcast email — and the three ways it fails while returning 200 |
 | [**Audit welcome thread (>35 comments)**](audit-welcome-thread-with-getcommentsfull.md) | Python | Bypass Skool's REST cap with `posts:getCommentsFull` to find unreplied members |
 | [**Skool API as MCP tool**](use-skool-api-as-mcp-tool.md) | MCP server | Expose all 33 actions to your Claude / Cursor / Cline agent |
 | [**Community analytics to NocoDB**](community-analytics-to-nocodb.md) | Python | Track engagement, churn, conversion to paid via your own BI tool |

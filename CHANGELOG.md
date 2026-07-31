@@ -12,6 +12,29 @@ To get notified of new releases:
 
 ---
 
+## [0.3.48] — 2026-07-31
+
+**Promoted to `latest`.** The three composer features the API never exposed: email-all-members, polls, and image attachments.
+
+### Added
+
+- **`notifyAll` on `posts:create`** — the "Send email to all members" toggle. Admin-only, and **impossible to add later**: Skool only offers the email at creation time.
+- **`posts:createPoll`** — `options[]` → `pollId`, attached via `posts:create`. Two calls, because a poll is its own object. **Polls have no title or question field** — the question is the post's `content`.
+- **`attachmentId` on `posts:create`** — attach an image uploaded with `files:uploadImage`. One file id as a string, not an array.
+- `files:uploadImage` now takes `contentType`, so PNGs stop getting a `.jpg` URL that 404s.
+
+### Three ways these fail while returning `200`
+
+Worth reading before automating any of them — none of these surface as an error:
+
+- **A wrong notify value emails nobody.** Skool doesn't validate it: an unrecognised value creates the post and sends nothing, silently.
+- **A privately-uploaded image renders as an empty grey box.** Using `files:uploadFile` (which sends `privacy: 1`, correct for classroom resources) for a post image succeeds at every step — upload, S3, post — and the response merely omits `read_url`. Use `files:uploadImage`.
+- **Broadcasts are rate-limited (~72h per group), and the rejection is atomic.** On `notify limit exceeded` the post is **not** created. Retrying on the assumption that it was double-posts.
+
+Full guidance: [posts](docs/posts.md), [files](docs/files.md), and the recipe [Weekly changelog with poll + broadcast](recipes/weekly-changelog-post-with-poll-and-broadcast.md).
+
+---
+
 ## [0.3.37] — 2026-07-09
 
 **Promoted to `latest`.** Adds the notifications surface.

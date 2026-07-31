@@ -187,6 +187,20 @@ If you try to use a `privacy: 0` file as a classroom resource, Skool rejects wit
 
 See the full recipe: [Attach files to lesson pages](../recipes/attach-files-to-lessons.md).
 
+### Attaching an image to a feed post — use `uploadImage`, and nothing else
+
+To put an image on a post: upload with `files:uploadImage`, then pass the returned file id as `attachmentId` in [`posts:create`](posts.md#postscreate--create-a-new-post). `metadata.attachments` holds **one** file id as a string, not an array.
+
+**Using `files:uploadFile` here is the trap, and it fails silently.** Because it sends `privacy: 1`, every step still succeeds — upload `200`, S3 PUT `200`, post created `200` — Skool even postprocesses the image and computes correct thumbnail dimensions. But the register response omits `read_url`, the asset 403s, and the post renders **an empty grey box**. Nothing in any response says so.
+
+The reliable check is the register response: **if it has no `read_url`, the image will not display.** Verify by opening the post, not by reading status codes.
+
+```json
+{ "action": "files:uploadImage", "params": { "contentType": "image/png" } }
+```
+
+Set `contentType` when uploading anything other than JPEG — the public URL's extension is derived from it, so a PNG uploaded as the default JPEG gets a `.jpg` URL that 404s.
+
 ## See also
 
 - [Classroom](classroom.md) — courses use covers heavily (and lesson resources need `uploadFile`)

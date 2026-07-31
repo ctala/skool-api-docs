@@ -108,6 +108,7 @@ Real, copy-paste-ready integrations:
 - [**Auto DM new members**](recipes/auto-dm-new-members.md) — set/update the welcome message that triggers when someone joins
 - [**Batch update course covers**](recipes/batch-update-course-covers.md) — refresh visual identity across N courses without resetting privacy/tier
 - [**Newsletter to Skool post**](recipes/newsletter-to-skool-post.md) — mirror your Listmonk/ConvertKit newsletter as a community post
+- [**Weekly changelog with poll + broadcast**](recipes/weekly-changelog-post-with-poll-and-broadcast.md) — image, poll and "email all members" in one post (and why a 200 proves none of them worked)
 - [**Audit a long welcome thread (>35 comments)**](recipes/audit-welcome-thread-with-getcommentsfull.md) — bypass Skool's REST cap with `posts:getCommentsFull` to find members you haven't replied to yet
 - [**Use the Skool API as MCP tool for Claude / Cursor / Cline**](recipes/use-skool-api-as-mcp-tool.md) — expose all 33 actions to your AI agents via Apify's hosted MCP server
 - [**Community analytics: export Skool data to NocoDB / Airtable**](recipes/community-analytics-to-nocodb.md) — track engagement, churn, conversion to paid via your own BI tool
