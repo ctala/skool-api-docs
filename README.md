@@ -26,7 +26,7 @@
 
 Skool **does not have an official API**. The community has reverse-engineered bits and pieces, but nobody has shipped a complete, write-capable, auth-handled, production-ready integration that AI agents and no-code tools can use.
 
-This actor is that integration. It powers a real production community ([Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite) — daily writes, automated onboarding, full classroom). If it breaks, it breaks for me first. Bugs get fixed fast.
+This actor is that integration. It powers a real production community ([Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about) — daily writes, automated onboarding, full classroom). If it breaks, it breaks for me first. Bugs get fixed fast.
 
 ### Built by a solo community admin, for solo community admins
 
@@ -171,7 +171,7 @@ The actor's source code is **not open-source** (commercial product), but this do
 
 - 🐛 [Open a bug report](https://github.com/ctala/skool-api-docs/issues/new?template=bug-report.md)
 - 💡 [Open a feature request](https://github.com/ctala/skool-api-docs/issues/new?template=feature-request.md)
-- 💬 Discuss with the community in [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite) (Spanish-speaking founders)
+- 💬 Discuss with the community in [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about) (Spanish-speaking founders)
 
 ## Articles & deep dives
 
@@ -181,7 +181,7 @@ The actor's source code is **not open-source** (commercial product), but this do
 ## Related
 
 - 🐦 Built by [Cristian Tala](https://cristiantala.com) — operator using AI to run a community of founders solo
-- 🎓 [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite) — the Skool community where this actor was forged
+- 🎓 [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about) — the Skool community where this actor was forged
 - 📰 [Tutorials & deep dives](https://cristiantala.com/blog) — recipes, lessons, case studies
 
 ## License

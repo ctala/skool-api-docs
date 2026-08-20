@@ -232,7 +232,7 @@ for (const post of posts.posts) {
 }
 ```
 
-This is the pattern running for [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite) — checks daily, drafts via Claude, requires Telegram approval before publishing.
+This is the pattern running for [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about) — checks daily, drafts via Claude, requires Telegram approval before publishing.
 
 ## Mistakes to avoid with agents
 

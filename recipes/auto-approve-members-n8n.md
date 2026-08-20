@@ -12,7 +12,7 @@ End-to-end recipe: when someone applies to your Skool community, an n8n workflow
 >
 > The template includes the full Apify HTTP Request setup, GPT-4o screening node with prompt, error handling, and Telegram audit trail. Import it into your n8n instance and just plug in your credentials.
 
-This is the exact pattern running in production for [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite) — handles ~3 applicants/day, approves ~70% automatically, queues the rest for human review.
+This is the exact pattern running in production for [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about) — handles ~3 applicants/day, approves ~70% automatically, queues the rest for human review.
 
 **Below**: the full walkthrough if you want to understand how it works (or build it from scratch in another tool).
 

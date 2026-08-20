@@ -13,7 +13,7 @@ render_with_liquid: false
 
 Refresh the visual identity of every course in your classroom — without resetting privacy, tier, or amount. Uses `classroom:updateCourse`'s read-then-write to safely apply only the cover change.
 
-This is exactly how the 17 covers in [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite) were updated in one batch in May 2026.
+This is exactly how the 17 covers in [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about) were updated in one batch in May 2026.
 
 ## When to use
 

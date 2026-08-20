@@ -124,7 +124,7 @@ posts:filter --query "old-url.com" → for each: posts:get → posts:update (rep
 
 **Edit a pinned announcement.** Pinned posts in the feed get the most eyeballs. The API lets you update them without unpinning (avoiding the "new post" notification spam that re-pinning triggers).
 
-**Correct typos in onboarding pinned threads.** The "Start here" post in [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite)'s feed is updated this way when steps change — no notification fired, content updates in place.
+**Correct typos in onboarding pinned threads.** The "Start here" post in [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about)'s feed is updated this way when steps change — no notification fired, content updates in place.
 
 ## Production gotchas
 

@@ -23,7 +23,7 @@ canonical: https://skool-api.cristiantala.com/recipes/reply-onboarding-comments/
 
 Most communities have pinned "Start Here" and "Introduce Yourself" threads. New members drop comments in those threads, the owner never gets back to all of them, and 1-week retention silently drops. This recipe finds the unanswered comments, drafts a reply that's actually specific to what the member wrote (not "Welcome! 🎉"), surfaces them for approval, and publishes once approved.
 
-In production on [a production Skool community](https://www.skool.com/cagala-aprende-repite), this pattern keeps 1-week retention above 60% versus ~30% baseline before automation.
+In production on [a production Skool community](https://www.skool.com/cagala-aprende-repite/about), this pattern keeps 1-week retention above 60% versus ~30% baseline before automation.
 
 ## Prerequisites
 
@@ -77,7 +77,7 @@ Save the `cookies` string. Valid ~3.5 days.
 
 Most communities have 1-3 pinned onboarding threads. Use [`posts:list`](../docs/posts.md) with `pinned: true`, or just hardcode the `postId` of each (they don't change).
 
-For [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite):
+For [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about):
 
 ```python
 PINNED_THREADS = {

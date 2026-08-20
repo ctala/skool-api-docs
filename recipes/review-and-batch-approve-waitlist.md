@@ -13,7 +13,7 @@ render_with_liquid: false
 
 When applicants pile up in your Skool approval queue, you have two options: let an AI auto-approve everyone (see [Auto-approve members with n8n + GPT-4o](auto-approve-members-n8n.md)), or **review them yourself and approve the good ones in bulk**. This recipe is the second pattern — a human-in-the-loop flow where *you* keep the judgment call but the API removes the click-fatigue of approving one by one in the Skool UI.
 
-It's the exact flow used to clear the waitlist of [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite): list pending → screen against criteria → `members:batchApprove` → verify the queue is empty.
+It's the exact flow used to clear the waitlist of [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about): list pending → screen against criteria → `members:batchApprove` → verify the queue is empty.
 
 ## Quick reference (TL;DR for agents)
 

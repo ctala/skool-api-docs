@@ -13,7 +13,7 @@ render_with_liquid: false
 
 Skool sends an email when you create an event, and another email at the start. Email open rates being what they are, that's not enough to keep attendance up. The **feed** is where the active members live — a timely reminder post 24h + 1h before an event is the lever that consistently doubles attendance.
 
-This recipe is the cron-driven flow used in production to announce events for [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite)'s weekly Cafecito, Workshops, and Posting Party. Same pattern works for any recurring event.
+This recipe is the cron-driven flow used in production to announce events for [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about)'s weekly Cafecito, Workshops, and Posting Party. Same pattern works for any recurring event.
 
 ## Quick reference (TL;DR for agents)
 

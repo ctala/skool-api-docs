@@ -6,7 +6,7 @@ render_with_liquid: false
 
 Your community's worst experience: a member posts a question, no one answers for 24 hours, they conclude "this place is dead" and stop coming back. This recipe finds posts with 0 comments and drafts an on-brand reply via LLM, with optional human approval before publishing.
 
-Production version of this is what keeps engagement at 40% in [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite).
+Production version of this is what keeps engagement at 40% in [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about).
 
 ## What you'll build
 

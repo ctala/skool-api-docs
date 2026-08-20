@@ -15,7 +15,7 @@ Manually creating courses in the Skool admin UI is slow: upload cover, type titl
 
 The API makes it a script. This recipe is the **end-to-end course launch pipeline** — read a spreadsheet listing your courses + lessons, upload each cover, build the course tree (course → folders → pages), publish each lesson body as TipTap JSON, attach resources. One script run, repeatable, no clicks.
 
-It's how [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite) shipped its current **23-course classroom** — every course built from a Markdown source tree via this pattern.
+It's how [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about) shipped its current **23-course classroom** — every course built from a Markdown source tree via this pattern.
 
 ## Quick reference (TL;DR for agents)
 

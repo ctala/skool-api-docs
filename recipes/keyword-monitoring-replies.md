@@ -13,7 +13,7 @@ render_with_liquid: false
 
 Most Skool communities miss half the conversations that matter — a member mentions a pain point, another asks about an integration, someone references a competitor. You want to be **in those threads** with a useful reply, but checking the feed every 30 minutes for keywords isn't a use of your time.
 
-This recipe is the **keyword-driven monitoring loop** used in production at [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite). The cron runs every N hours, finds posts matching your keyword list that you haven't replied to yet, drafts a contextual reply with an LLM, and sends it to **Telegram for human approval** before publishing. You get a notification, click ✅ or ❌, the published reply lands in the feed under your account.
+This recipe is the **keyword-driven monitoring loop** used in production at [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about). The cron runs every N hours, finds posts matching your keyword list that you haven't replied to yet, drafts a contextual reply with an LLM, and sends it to **Telegram for human approval** before publishing. You get a notification, click ✅ or ❌, the published reply lands in the feed under your account.
 
 It's the same engine behind the `skool-feed-comments` skill — productionized to keep voice consistent and prevent the LLM from publishing anything cringe-worthy unsupervised.
 

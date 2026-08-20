@@ -15,7 +15,7 @@ When you publish a course on Skool, each lesson page can carry downloadable reso
 
 This recipe is the second half of the "ship a course from Markdown" pipeline — once your course tree is built (folders + pages with body), this is how you attach the downloadable assets that turn lessons from "read-only content" into "templates the member can copy and use."
 
-Used in production to attach **23 Google Sheet templates** (the canonical [Cofre del Pirata T-xx pattern](../guide/skool-courses.md)) across 4 courses in [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite).
+Used in production to attach **23 Google Sheet templates** (the canonical [Cofre del Pirata T-xx pattern](../guide/skool-courses.md)) across 4 courses in [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about).
 
 ## Quick reference (TL;DR for agents)
 

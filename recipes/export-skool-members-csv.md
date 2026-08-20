@@ -15,7 +15,7 @@ The Skool admin panel has an "Export" button that downloads your member roster a
 
 The exported CSV is the **only reliable source for member emails on Skool**. The server-rendered member list returns `email:""` (Skool strips it from the SSR payload), and `GET /users/{id}` only returns the email of the *authenticated* user — even community owners see masked emails for third parties. The bulk export is the workaround Skool itself uses for the admin UI button.
 
-It's the exact flow that backs [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite)'s [CRM single-source-of-truth pipeline](../automation/export-skool-members.md).
+It's the exact flow that backs [Cágala, Aprende, Repite](https://www.skool.com/cagala-aprende-repite/about)'s [CRM single-source-of-truth pipeline](../automation/export-skool-members.md).
 
 ## Quick reference (TL;DR for agents)
 
