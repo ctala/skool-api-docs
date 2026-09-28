@@ -78,7 +78,7 @@ Returns members in the approval queue. Each item has the same shape as `members:
 }
 ```
 
-### `members:reject` — reject a pending applicant, or remove an active member
+### `members:reject` — reject a pending applicant
 
 ```json
 {
@@ -89,11 +89,24 @@ Returns members in the approval queue. Each item has the same shape as `members:
 }
 ```
 
-This is the same call Skool's own **"Remove from group"** button makes (`POST /members/{memberId}/role` with `{"new":"declined"}`), so it works on **active members too**, not only on pending applicants:
+Under the hood this is the same call as Skool's **"Remove from group"** button, so on builds before 0.5.0 it also removes **active** members. From 0.5.0 on, use `members:remove` for that — same request, clearer name.
+
+### `members:remove` — remove an active member (no ban) · 0.5.0+
+
+```json
+{
+  "action": "members:remove",
+  "cookies": "...",
+  "groupSlug": "your-community",
+  "params": { "memberId": "32-char-hex" }
+}
+```
+
+The same call Skool's own **"Remove from group"** button makes (`POST /members/{memberId}/role` with `{"new":"declined"}`):
 
 - The member leaves the group immediately and the member count drops by one.
 - They are **not banned**: Skool lists them under *Churned*, and they can rejoin through the normal join flow (paying, if your group is paid).
-- `memberId` is the member id from `members:list` (`memberId`), not the user id.
+- `memberId` is the member id from `members:list` (`memberId`), not the user id. An unknown id returns `success:false` with `MEMBER_NOT_FOUND`.
 - Verified on 1,724 removals in a production group (Sept 2026). Rate: 1 call per second ran with no 429s.
 - ⚠️ Not verified on members with an active paid subscription. Test on one before removing paying members.
 
