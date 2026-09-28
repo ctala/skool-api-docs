@@ -78,7 +78,7 @@ Returns members in the approval queue. Each item has the same shape as `members:
 }
 ```
 
-### `members:reject` — reject a pending applicant
+### `members:reject` — reject a pending applicant, or remove an active member
 
 ```json
 {
@@ -88,6 +88,16 @@ Returns members in the approval queue. Each item has the same shape as `members:
   "params": { "memberId": "32-char-hex" }
 }
 ```
+
+This is the same call Skool's own **"Remove from group"** button makes (`POST /members/{memberId}/role` with `{"new":"declined"}`), so it works on **active members too**, not only on pending applicants:
+
+- The member leaves the group immediately and the member count drops by one.
+- They are **not banned**: Skool lists them under *Churned*, and they can rejoin through the normal join flow (paying, if your group is paid).
+- `memberId` is the member id from `members:list` (`memberId`), not the user id.
+- Verified on 1,724 removals in a production group (Sept 2026). Rate: 1 call per second ran with no 429s.
+- ⚠️ Not verified on members with an active paid subscription. Test on one before removing paying members.
+
+Use it for clean-ups ("remove everyone who never participated") where `members:ban` would be too harsh.
 
 ### `members:ban` — ban an active member
 

@@ -57,7 +57,7 @@ All actions use the same shape:
 | `members:list` | `page?`, `limit?` | Active members with role + tier info |
 | `members:pending` | `limit?` | Members awaiting approval |
 | `members:approve` | `memberId` | Approve pending applicant |
-| `members:reject` | `memberId` | Reject pending applicant |
+| `members:reject` | `memberId` | Reject pending applicant, or remove an active member (Skool's "Remove from group": no ban, can rejoin) |
 | `members:ban` | `memberId` | Ban active member |
 | `members:batchApprove` | `memberIds: string[]` | Approve N members; per-item results |
 
