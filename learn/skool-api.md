@@ -73,7 +73,7 @@ You save the `cookies` string and pass it in every subsequent call instead of em
 | **Groups** | Get group metadata + label_options | Update Auto DM message |
 | **System** | Health check + SSR debug diagnostics | — |
 
-**36 actions total** as of v0.3.25 — see the [full actions reference](../docs/actions.md) for the exact `params` per action.
+**36 actions total** as of v0.5.2 — see the [full actions reference](../docs/actions.md) for the exact `params` per action.
 
 ## Common Skool API use cases
 
