@@ -18,7 +18,7 @@ To get notified of new releases:
 
 ### Added
 
-- **`members:remove` action** — remove an active member from the group without banning them. Same as Skool's "Remove from group" button: the member leaves immediately, shows as *Churned* (not *Banned*), and can rejoin through the normal join flow. Verified on 1,724 production removals at 1 call/second with no rate-limit errors. Use this when someone should leave but isn't a problem member — bans are permanent and visible, removals are reversible. See [Members docs](docs/members.md).
+- **`members:remove` action** — remove an active member from the group without banning them. Same as Skool's "Remove from group" button: the member leaves immediately, shows as *Churned* (not *Banned*), and can rejoin through the normal join flow. Verified on 1,724 production removals at 1 call/second with no rate-limit errors. See [Members docs](docs/members.md).
 
 ### Fixed
 
@@ -32,15 +32,25 @@ To get notified of new releases:
 
 ## [0.4.5] — 2026-09-07
 
-**Promoted to `latest`.** Silent body wipes in `classroom:setBody` now refused with validation error.
+**Promoted to `latest`.** Covers library 0.4.4 + 0.4.5: better SSR 404 diagnosis and body validation for `classroom:setBody`.
 
 ### Added
 
+- **`GROUP_NOT_FOUND` error code** — a 404 from Skool's SSR endpoint when the group slug does not resolve or the authenticated account cannot access the group. Previously collapsed into `BUILDID_STALE` and sent the caller to re-run `auth:login`, which cannot fix a wrong slug or insufficient permissions. The error now says outright that re-authenticating won't help, and lists what to check: slug is only the segment after `skool.com/`, case matches (Skool slugs are case-sensitive), and the authenticated account can actually open the group. **A private group you have not joined answers exactly like one that does not exist** — this is now documented in the error message.
+- **`INVALID_GROUP_SLUG` error code** — rejects group slugs that cannot be valid (pasted URLs, paths with `/`, query strings, whitespace, empty strings) **before authenticating**, so a typo costs no Playwright login and no WAF token. The error names the correct value to use: passing `https://www.skool.com/my-community` answers with `Pass only the slug: "my-community"`.
 - **`MISSING_BODY` error code** — `classroom:setBody` now refuses calls where neither `bodyMarkdown` nor `bodyRaw` is present, before sending the request to Skool. Previously, Skool accepted the request and **silently erased the lesson content** while returning `200 OK`. The error message names both valid parameters explicitly, warns that passing `markdown`, `content`, or `body` (common typos) will be ignored, and explains that writing without a body would delete content rather than leave it unchanged. To intentionally clear a lesson, pass `bodyMarkdown: ""` explicitly. See [Classroom docs](docs/classroom.md).
+
+### Changed
+
+- **`BUILDID_STALE` now only fires when the response body actually looks like a buildId failure**, and the error message says which evidence it saw. A Cloudflare interstitial is called out separately — the fix is to wait ~30 seconds and retry, not to re-authenticate.
 
 ### Fixed
 
 - README FAQ incorrectly said `setBody` "takes **markdown**", which reads like the parameter name. Now explicitly names `bodyMarkdown`. Action tables were already correct.
+
+### Notes
+
+- The remaining unknown: what a private group with no membership returns when accessed. Documented as a possibility, not as measured fact.
 
 ---
 
@@ -50,19 +60,9 @@ To get notified of new releases:
 
 ### Added
 
-- **`GROUP_NOT_FOUND` error code** — a 404 from Skool's SSR endpoint when the group slug does not resolve or the authenticated account cannot access the group. Previously collapsed into `BUILDID_STALE` and sent the caller to re-run `auth:login`, which cannot fix a wrong slug or insufficient permissions. The error now says outright that re-authenticating won't help, and lists what to check: slug is only the segment after `skool.com/`, case matches (Skool slugs are case-sensitive), and the authenticated account can actually open the group. **A private group you have not joined answers exactly like one that does not exist** — this is now documented in the error message.
-- **`INVALID_GROUP_SLUG` error code** — rejects group slugs that cannot be valid (pasted URLs, paths with `/`, query strings, whitespace, empty strings) **before authenticating**, so a typo costs no Playwright login and no WAF token. The error names the correct value to use: passing `https://www.skool.com/my-community` answers with `Pass only the slug: "my-community"`.
 - **`POST_NOT_FOUND` error code** — post IDs shorter than 32 characters (common when copying from the `?p=` URL fragment, which uses an 8-character prefix) are now explicitly identified. Previously surfaced as a generic not-found error.
 - **`INPUT_VALIDATION` error messages now name the missing parameter** and which action expects it, reducing debugging round-trips.
-
-### Changed
-
-- **`BUILDID_STALE` now only fires when the response body actually looks like a buildId failure**, and the error message says which evidence it saw. A Cloudflare interstitial is called out separately — the fix is to wait ~30 seconds and retry, not to re-authenticate.
 - **`WAF_EXPIRED` error code** — when Skool returns HTTP 202 with an empty body (AWS WAF challenge), the error is now reported as `WAF_EXPIRED` with the hint "re-login needed", instead of the previous confusing `AUTH_ERROR "no buildId"`. Includes an anonymous health check to confirm whether Skool itself is up.
-
-### Notes
-
-- The remaining unknown: what a private group with no membership returns when accessed. Documented as a possibility, not as measured fact.
 
 ---
 

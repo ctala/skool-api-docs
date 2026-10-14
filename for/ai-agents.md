@@ -90,7 +90,7 @@ SKOOL_TOOL = {
                     "files:uploadImage", "files:uploadFile",
                     "groups:get", "groups:setAutoDM"
                 ],
-                "description": "Action to perform (36 actions total, actor v0.5.2)"
+                "description": "Action to perform (41 actions total, actor v0.5.2)"
             },
             "params": {
                 "type": "object",
