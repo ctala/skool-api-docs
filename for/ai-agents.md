@@ -81,10 +81,11 @@ SKOOL_TOOL = {
                 "type": "string",
                 "enum": [
                     "auth:login", "system:health", "system:debug",
-                    "posts:list", "posts:filter", "posts:get", "posts:create", "posts:update", "posts:delete",
+                    "posts:list", "posts:filter", "posts:get", "posts:create", "posts:createPoll", "posts:update", "posts:delete",
                     "posts:createComment", "posts:getComments", "posts:getCommentsFull", "posts:pin", "posts:unpin", "posts:vote",
-                    "members:list", "members:pending", "members:approve", "members:reject", "members:ban", "members:batchApprove",
+                    "members:list", "members:pending", "members:approve", "members:reject", "members:ban", "members:remove", "members:batchApprove",
                     "events:list", "events:upcoming",
+                    "notifications:list", "notifications:markRead", "notifications:markAllRead",
                     "classroom:listCourses", "classroom:getTree", "classroom:createCourse", "classroom:createFolder",
                     "classroom:createPage", "classroom:setBody", "classroom:updateCourse", "classroom:deleteUnit", "classroom:updateResources",
                     "files:uploadImage", "files:uploadFile",
