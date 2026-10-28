@@ -61,6 +61,7 @@ All actions use the same shape:
 | `members:remove` | `memberId` | Remove an active member — Skool's "Remove from group": no ban, can rejoin (0.5.0+) |
 | `members:ban` | `memberId` | Ban active member |
 | `members:batchApprove` | `memberIds: string[]` | Approve N members; per-item results |
+| `members:export` | `status?`, `tiers?`, `sortType?` | Bulk CSV export (email, tier, LTV, survey answers) — the only reliable way to get member emails |
 
 [→ Members docs](members.md)
 
