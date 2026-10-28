@@ -83,7 +83,7 @@ SKOOL_TOOL = {
                     "auth:login", "system:health", "system:debug",
                     "posts:list", "posts:filter", "posts:get", "posts:create", "posts:createPoll", "posts:update", "posts:delete",
                     "posts:createComment", "posts:getComments", "posts:getCommentsFull", "posts:pin", "posts:unpin", "posts:vote",
-                    "members:list", "members:pending", "members:approve", "members:reject", "members:ban", "members:remove", "members:batchApprove",
+                    "members:list", "members:pending", "members:approve", "members:reject", "members:ban", "members:remove", "members:batchApprove", "members:export",
                     "events:list", "events:upcoming",
                     "notifications:list", "notifications:markRead", "notifications:markAllRead",
                     "classroom:listCourses", "classroom:getTree", "classroom:createCourse", "classroom:createFolder",
@@ -91,7 +91,7 @@ SKOOL_TOOL = {
                     "files:uploadImage", "files:uploadFile",
                     "groups:get", "groups:setAutoDM"
                 ],
-                "description": "Action to perform (41 actions total, actor v0.5.2)"
+                "description": "Action to perform (42 actions total, actor v0.5.2)"
             },
             "params": {
                 "type": "object",
