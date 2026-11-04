@@ -12,6 +12,14 @@ To get notified of new releases:
 
 ---
 
+## [0.5.3] — 2026-10-28
+
+**Promoted to `latest`.** Maintenance release.
+
+### Fixed
+
+- **`system:health` reported the wrong version** — it showed `0.3.25` instead of the running build. The version now comes from a single source (the actor package), so `system:health` always reports the real version.
+
 ## [0.5.2] — 2026-09-28
 
 **Promoted to `latest`.** New member removal action and console action label fixes.
